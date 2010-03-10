@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  previous_points: 
+  indoor_games_points: 
+  outdoor_games_points: 
+  friend_points: 
+  spirit_points: 
+  deductions: 
+
+two:
+  name: MyString
+  previous_points: 
+  indoor_games_points: 
+  outdoor_games_points: 
+  friend_points: 
+  spirit_points: 
+  deductions: 

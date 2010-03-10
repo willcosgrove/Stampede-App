@@ -1,0 +1,53 @@
+<p>
+  <b>Lastname:</b>
+  <%=h @stampeder.lastname %>
+</p>
+
+<p>
+  <b>Firstname:</b>
+  <%=h @stampeder.firstname %>
+</p>
+
+<p>
+  <b>Team:</b>
+  <%= @stampeder.team.name %>
+</p>
+
+<p>
+  <b>Barcode:</b>
+  <%=h @stampeder.barcode %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @stampeder.phone %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @stampeder.address %>
+</p>
+
+<p>
+  <b>Grade:</b>
+  <%=h @stampeder.grade %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @stampeder.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%=h @stampeder.state %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%=h @stampeder.gender %>
+</p>
+
+
+<%= link_to 'Edit', edit_stampeder_path(@stampeder) %> |
+<%= link_to 'Back', stampeders_path %>

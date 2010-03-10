@@ -1,0 +1,38 @@
+<p>
+  <b>Name:</b>
+  <%=h @team.name %>
+</p>
+
+<p>
+  <b>Previous points:</b>
+  <%=h @team.previous_points %>
+</p>
+
+<p>
+  <b>Indoor games points:</b>
+  <%=h @team.indoor_games_points %>
+</p>
+
+<p>
+  <b>Outdoor games points:</b>
+  <%=h @team.outdoor_games_points %>
+</p>
+
+<p>
+  <b>Friend points:</b>
+  <%=h @team.friend_points %>
+</p>
+
+<p>
+  <b>Spirit points:</b>
+  <%=h @team.spirit_points %>
+</p>
+
+<p>
+  <b>Deductions:</b>
+  <%=h @team.deductions %>
+</p>
+
+
+<%= link_to 'Edit', edit_team_path(@team) %> |
+<%= link_to 'Back', teams_path %>

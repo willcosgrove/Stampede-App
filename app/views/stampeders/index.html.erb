@@ -1,0 +1,38 @@
+<h1>Listing stampeders</h1>
+
+<table>
+  <tr>
+    <th>Last Name</th>
+    <th>First Name</th>
+    <th>Team</th>
+    <th>Barcode</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>Grade</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Gender</th>
+  </tr>
+
+<% @stampeders.each do |stampeder| %>
+  <tr>
+    <td><%=h stampeder.lastname %></td>
+    <td><%=h stampeder.firstname %></td>
+    <td><%=h stampeder.team.name %></td>
+    <td><%=h stampeder.barcode %></td>
+    <td><%=h stampeder.phone %></td>
+    <td><%=h stampeder.address %></td>
+    <td><%=h stampeder.grade %></td>
+    <td><%=h stampeder.city %></td>
+    <td><%=h stampeder.state %></td>
+    <td><%=h stampeder.gender %></td>
+    <td><%= link_to 'Show', stampeder %></td>
+    <td><%= link_to 'Edit', edit_stampeder_path(stampeder) %></td>
+    <td><%= link_to 'Destroy', stampeder, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New stampeder', new_stampeder_path %>
