@@ -7,12 +7,13 @@
     body {
       padding: 0px;
       margin: 0px;
+      background: #0e1d1d;
     }
     header {
       margin: 0px;
       height: 49px;
       width: 100%;
-      background-color: #995656;
+      background: #409396 url('../../../public/images/header.png') repeat-x;
     }
     h1 {
       margin: 0px;
@@ -23,11 +24,105 @@
       font-size: 57pt;
       font-family: Arial;
     }
+    nav {
+      position: absolute;
+      left: 13%;
+    }
+    a {
+      text-decoration: none;
+    }
+    #nav_left_shadow {
+      float: left;
+    }
+    #nav_home {
+      float: left;
+      height: 37px;
+      border-left: 1px solid #334d65;
+      padding: 25px;
+      padding-top: 12px;
+      padding-bottom: 0px;
+      color: #334D65;
+      font-weight: bold;
+    }
+    #nav_home:hover {
+      background: #166852 url('../../../public/images/header.png') repeat-x;
+    }
+    #nav_registration {
+      float: left;
+      height: 37px;
+      padding: 25px;
+      padding-top: 12px;
+      padding-bottom: 0px;
+      border-left: 1px solid #334d65;
+      color: #334D65;
+      font-weight: bold;
+    }
+    #nav_outdoor_games {
+      float: left;
+      height: 37px;
+      padding: 25px;
+      padding-top: 12px;
+      padding-bottom: 0px;
+      border-left: 1px solid #334d65;
+      color: #334D65;
+      font-weight: bold;
+    }
+    #nav_indoor_games {
+      float: left;
+      height: 37px;
+      padding: 25px;
+      padding-top: 12px;
+      padding-bottom: 0px;
+      border-left: 1px solid #334d65;
+      color: #334D65;
+      font-weight: bold;
+    }
+    #nav_hosts {
+      float: left;
+      height: 37px;
+      padding: 25px;
+      padding-top: 12px;
+      padding-bottom: 0px;
+      border-left: 1px solid #334d65;
+      color: #334D65;
+      font-weight: bold;
+    }
+    #nav_media {
+      float: left;
+      height: 37px;
+      padding: 25px;
+      padding-top: 12px;
+      padding-bottom: 0px;
+      border-left: 1px solid #334d65;
+      color: #334D65;
+      font-weight: bold;
+    }
+    #nav_right_shadow {
+      float: left;
+      border-left: 1px solid #334d65;
+    }
+    #gradient {
+      position: absolute;
+      top: 50px;
+      height: 400px;
+      width: 100%;
+      background: url('../../../public/images/gradient.png');
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Stampede</h1>
+    <nav>
+      <img id="nav_left_shadow" src="../../../public/images/nav_left.png" \>
+      <a href="#home"><div id="nav_home">Home</div></a>
+      <a href="#registration"><div id="nav_registration">Registration</div></a>
+      <a href="#outdoor_games"><div id="nav_outdoor_games">Outdoor Games</div></a>
+      <a href="#indoor_games"><div id="nav_indoor_games">Indoor Games</div></a>
+      <a href="#hosts"><div id="nav_hosts">Hosts</div></a>
+      <a href="#media"><div id="nav_media">Media</div></a>
+      <img id="nav_right_shadow" src="../../../public/images/nav_right.png" \>
+    </nav>
   </header>
+  <div id="gradient"></div>
 </body>
 </html>
