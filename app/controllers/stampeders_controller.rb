@@ -1,4 +1,7 @@
 class StampedersController < ApplicationController
+
+  auto_complete_for :stampeder, :firstname, :lastname
+  
   # GET /stampeders
   # GET /stampeders.xml
   def index
@@ -43,6 +46,8 @@ class StampedersController < ApplicationController
   # POST /stampeders.xml
   def create
     @stampeder = Stampeder.new(params[:stampeder])
+    @stampeder.createSubgroup
+    @stampeder.parentphone.gsub!(/\D/, "")
 
     respond_to do |format|
       if @stampeder.save
@@ -61,6 +66,7 @@ class StampedersController < ApplicationController
   # PUT /stampeders/1.xml
   def update
     @stampeder = Stampeder.find(params[:id])
+    @stampeder.parentphone.gsub!(/\D/, "")
 
     respond_to do |format|
       if @stampeder.update_attributes(params[:stampeder])
