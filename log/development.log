@@ -4224,3 +4224,1991 @@ Rendering template within layouts/stampeders
 Rendering stampeders/new
 Rendered stampeders/_complete_stampeder_form (205.0ms)
 Completed in 263ms (View: 226, DB: 2) | 200 OK [http://localhost/stampeders/new]
+
+
+Processing StampedersController#new (for 127.0.0.1 at 2010-03-15 21:18:11) [GET]
+  [4;36;1mTeam Load (3.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/new
+Rendered stampeders/_complete_stampeder_form (205.0ms)
+Completed in 337ms (View: 251, DB: 3) | 200 OK [http://localhost/stampeders/new]
+
+
+Processing StampedersController#new (for 127.0.0.1 at 2010-03-15 21:20:17) [GET]
+  [4;35;1mTeam Load (3.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/new
+
+ActionView::TemplateError (undefined local variable or method `firstname' for #<ActionView::Base:0x937059c>) on line #72 of app/views/stampeders/_complete_stampeder_form.erb:
+69:   </p>
+70:   <p>
+71:     <%= f.label :brought_by %><br />
+72:     <%= text_field_with_auto_complete :stampeder, firstname %>
+73:   </p>
+74:   <p>
+75:     <%= f.label :team %><br />
+
+    app/views/stampeders/_complete_stampeder_form.erb:72
+    app/views/stampeders/_complete_stampeder_form.erb:1
+    app/views/stampeders/new.html.erb:3
+    app/controllers/stampeders_controller.rb:33:in `new'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (293.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StampedersController#new (for 127.0.0.1 at 2010-03-15 21:20:28) [GET]
+  [4;36;1mTeam Load (3.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/new
+Rendered stampeders/_complete_stampeder_form (67.0ms)
+Completed in 120ms (View: 87, DB: 3) | 200 OK [http://localhost/stampeders/new]
+
+
+Processing StampedersController#new (for 127.0.0.1 at 2010-03-15 21:20:54) [GET]
+  [4;35;1mTeam Load (4.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/new
+ERROR: compiling _run_erb_app47views47stampeders47_complete_stampeder_form46erb_locals_complete_stampeder_form_object RAISED compile error
+C:/Users/Will/Documents/My Dropbox/Will's Share/stampede_app/app/views/stampeders/_complete_stampeder_form.erb:72: syntax error, unexpected ':', expecting ')'
+...ith_auto_complete :stampeder :firstname, {}, {:method => :ge...
+                              ^
+C:/Users/Will/Documents/My Dropbox/Will's Share/stampede_app/app/views/stampeders/_complete_stampeder_form.erb:72: syntax error, unexpected ',', expecting tCOLON2 or '[' or '.'
+...ete :stampeder :firstname, {}, {:method => :get} ).to_s); @o...
+                              ^
+Function body:           def _run_erb_app47views47stampeders47_complete_stampeder_form46erb_locals_complete_stampeder_form_object(local_assigns)
+            old_output_buffer = output_buffer;complete_stampeder_form = local_assigns[:complete_stampeder_form];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ;  form_for(@stampeder) do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :first_name ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :firstname ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :last_name ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :lastname ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :gender ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.select :gender, [['select gender', ''], ['Boy', 'm'], ['Girl', 'f']] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :dob ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.date_select :dob, :start_year => Time.now.year - 18, :end_year => Time.now.year - 10, :include_blank => true, :use_month_numbers => true, :order => [:month, :day, :year] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :parent ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :parent ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :emergency_phone_number ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :parentphone ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :bracelet_number ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :barcode ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <!-- Vistor Stuff Should Go Here-->\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :grade ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.select :grade, [['select grade', ''], ['6th Grade', 6], ['7th Grade', 7], ['8th Grade', 8], ['9th Grade', 9]] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :school ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :school ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :studentphone ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :studentphone ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :text ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    Yes "; @output_buffer.concat(( f.radio_button :text, true ).to_s); @output_buffer.concat " No "; @output_buffer.concat(( f.radio_button :text, false ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :city, :value => "Fort Worth" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :state ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :state, :value => "TX" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :zip_code ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :zipcode ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :brought_by ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( text_field_with_auto_complete :stampeder :firstname, {}, {:method => :get} ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :team ).to_s); @output_buffer.concat "<br />\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.select :team_id, [['select a team', '']]+@teams.collect {|t| [t.name, t.id]} ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+ end ; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Will/Documents/My Dropbox/Will's Share/stampede_app/app/views/stampeders/_complete_stampeder_form.erb:84:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:20:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:19:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable_partial.rb:44:in `render_partial'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/partials.rb:184:in `render_partial'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:267:in `render'
+C:/Users/Will/Documents/My Dropbox/Will's Share/stampede_app/app/views/stampeders/new.html.erb:3:in `_run_erb_app47views47stampeders47new46html46erb'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:34:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:34:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:306:in `with_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:30:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:951:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:135:in `custom'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:179:in `respond'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:173:in `respond'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/mime_responds.rb:107:in `respond_to'
+C:/Users/Will/Documents/My Dropbox/Will's Share/stampede_app/app/controllers/stampeders_controller.rb:33:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/Will/Documents/My Dropbox/Will's Share/stampede_app/app/views/stampeders/_complete_stampeder_form.erb:72: syntax error, unexpected ':', expecting ')'
+...ith_auto_complete :stampeder :firstname, {}, {:method => :ge...
+                              ^
+C:/Users/Will/Documents/My Dropbox/Will's Share/stampede_app/app/views/stampeders/_complete_stampeder_form.erb:72: syntax error, unexpected ',', expecting tCOLON2 or '[' or '.'
+...ete :stampeder :firstname, {}, {:method => :get} ).to_s); @o...
+                              ^) on line #72 of app/views/stampeders/_complete_stampeder_form.erb:
+69:   </p>
+70:   <p>
+71:     <%= f.label :brought_by %><br />
+72:     <%= text_field_with_auto_complete :stampeder :firstname, {}, {:method => :get} %>
+73:   </p>
+74:   <p>
+75:     <%= f.label :team %><br />
+
+    app/views/stampeders/_complete_stampeder_form.erb:84:in `compile!'
+    app/views/stampeders/new.html.erb:3
+    app/controllers/stampeders_controller.rb:33:in `new'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (169.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StampedersController#new (for 127.0.0.1 at 2010-03-15 21:21:08) [GET]
+  [4;36;1mTeam Load (3.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/new
+Rendered stampeders/_complete_stampeder_form (86.0ms)
+Completed in 164ms (View: 111, DB: 3) | 200 OK [http://localhost/stampeders/new]
+
+
+Processing StampedersController#new (for 127.0.0.1 at 2010-03-15 21:22:12) [GET]
+  [4;35;1mTeam Load (3.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/new
+Rendered stampeders/_complete_stampeder_form (54.0ms)
+Completed in 101ms (View: 71, DB: 3) | 200 OK [http://localhost/stampeders/new]
+
+
+Processing StampedersController#index (for 127.0.0.1 at 2010-03-15 21:22:36) [GET]
+  [4;36;1mStampeder Load (5.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/index
+Completed in 139ms (View: 117, DB: 5) | 200 OK [http://localhost/stampeders]
+
+
+Processing StampedersController#new (for 127.0.0.1 at 2010-03-15 21:22:52) [GET]
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/new
+Rendered stampeders/_complete_stampeder_form (207.0ms)
+Completed in 339ms (View: 251, DB: 2) | 200 OK [http://localhost/stampeders/new]
+
+
+Processing StampedersController#new (for 127.0.0.1 at 2010-03-15 21:25:46) [GET]
+  [4;35;1mTeam Load (3.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/new
+Rendered stampeders/_complete_stampeder_form (59.0ms)
+Completed in 113ms (View: 78, DB: 3) | 200 OK [http://localhost/stampeders/new]
+
+
+Processing StampedersController#new (for 127.0.0.1 at 2010-03-15 21:27:13) [GET]
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/new
+Rendered stampeders/_complete_stampeder_form (55.0ms)
+Completed in 114ms (View: 67, DB: 2) | 200 OK [http://localhost/stampeders/new]
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) LIMIT 1[0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "email" = 'dietcokegal@gmail.com', "school" = 'A&M', "parent" = 'Sandra McLean', "parentphone" = '8176371145', "zipcode" = 76132, "friend_id" = 1, "text" = 't', "updated_at" = '2010-03-16 15:04:15' WHERE "id" = 2[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: stampeders.stampeder_id: SELECT * FROM "stampeders" WHERE ("stampeders".stampeder_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: stampeders.stampeder_id: SELECT * FROM "stampeders" WHERE ("stampeders".stampeder_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: stampeders.stampeder_id: SELECT * FROM "stampeders" WHERE ("stampeders".stampeder_id = 1) [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'red') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders".friend_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders".friend_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (3.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTeams (20100307214006)
+Migrating to CreateStampeders (20100307215806)
+Migrating to AddRelationshipToStampeders (20100307221203)
+Migrating to AddGradeGenderSubgroup (20100315173148)
+Migrating to ChangeGenderFromIntegerToString (20100315174545)
+Migrating to AddZipCodeToStampeder (20100315205326)
+Migrating to ChangePhoneFromIntegerToString (20100315210737)
+Migrating to AddingParentPhoneStudentPhoneDobParentSchoolTextEmailFriendId (20100315212037)
+Migrating to RemoveStudentphoneRenamePhoneToStudentphone (20100315221617)
+Migrating to AddFullNameToStampederForAutoComplete (20100316170547)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "stampeders" ADD "fullname" varchar(255)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("stampeders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_friend_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_team_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("teams")[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) LIMIT 1[0m
+  [4;35;1mStampeder Update (1.0ms)[0m   [0mUPDATE "stampeders" SET "email" = 'jesusfreak210@gmail.com', "school" = 'TVS', "parent" = 'Kim Cosgrove', "parentphone" = '8176371155', "zipcode" = 76132, "text" = 't', "updated_at" = '2010-03-16 17:11:31' WHERE "id" = 1[0m
+  [4;36;1mStampeder Update (1.0ms)[0m   [0;1mUPDATE "stampeders" SET "updated_at" = '2010-03-16 17:11:53', "fullname" = 'Will Cosgrove' WHERE "id" = 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) LIMIT 1[0m
+  [4;36;1mStampeder Update (1.0ms)[0m   [0;1mUPDATE "stampeders" SET "updated_at" = '2010-03-16 17:13:22', "fullname" = 'Kim Cosgrove' WHERE "id" = 2[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."firstname" = 'Ray') LIMIT 1[0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "email" = 'rayraypizzaman@gmail.com', "parentphone" = '8176371155', "updated_at" = '2010-03-16 17:14:41' WHERE "id" = 3[0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "updated_at" = '2010-03-16 17:14:46', "fullname" = 'Ray Cosgrove' WHERE "id" = 3[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 4) LIMIT 1[0m
+  [4;35;1mStampeder Update (1.0ms)[0m   [0mUPDATE "stampeders" SET "email" = 'davidh@mckinneychurch.net', "lastname" = 'Hedrick', "firstname" = 'David', "parentphone" = '5421361024', "updated_at" = '2010-03-16 17:16:05' WHERE "id" = 4[0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "updated_at" = '2010-03-16 17:16:29', "fullname" = 'David Hedrick' WHERE "id" = 4[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 5) LIMIT 1[0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "email" = 'seth.austin@gmail.com', "firstname" = 'Seth', "lastname" = 'Austin', "parentphone" = '8174521023', "updated_at" = '2010-03-16 17:17:38' WHERE "id" = 5[0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "updated_at" = '2010-03-16 17:17:44', "fullname" = 'Seth Austin' WHERE "id" = 5[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 6) LIMIT 1[0m
+  [4;35;1mStampeder Update (1.0ms)[0m   [0mUPDATE "stampeders" SET "email" = 'joe@schmoe.com', "updated_at" = '2010-03-16 17:19:04' WHERE "id" = 6[0m
+  [4;36;1mStampeder Update (1.0ms)[0m   [0;1mUPDATE "stampeders" SET "updated_at" = '2010-03-16 17:19:25', "fullname" = 'Joe Schmoe' WHERE "id" = 6[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 7) LIMIT 1[0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "email" = 'joe.s@gmail.com', "updated_at" = '2010-03-16 17:20:27' WHERE "id" = 7[0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "updated_at" = '2010-03-16 17:20:31', "fullname" = 'Joe Schmoe' WHERE "id" = 7[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 8) LIMIT 1[0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "email" = 'billy@gangly.net', "parentphone" = '8278725412', "updated_at" = '2010-03-16 17:22:15' WHERE "id" = 8[0m
+  [4;36;1mStampeder Update (1.0ms)[0m   [0;1mUPDATE "stampeders" SET "updated_at" = '2010-03-16 17:22:19', "fullname" = 'Billy Gangly' WHERE "id" = 8[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 9) LIMIT 1[0m
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 13:40:38) [GET]
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+
+ActionView::TemplateError (Called id for nil, which would mistakenly be 4 -- if you really wanted the id of nil, use object_id) on line #1 of app/views/stampeders/_complete_stampeder_form.erb:
+1: <% form_for(@stampeder) do |f| %>
+2:   <%= f.error_messages %>
+3: 
+4:   <p>
+
+    app/views/stampeders/_complete_stampeder_form.erb:1
+    app/views/stampeders/registration.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 13:41:12) [GET]
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (56.0ms)
+Completed in 117ms (View: 63, DB: 2) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 14:12:21) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (32.0ms)
+Completed in 59ms (View: 41, DB: 1) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 14:13:46) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (33.0ms)
+Completed in 62ms (View: 42, DB: 1) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 14:16:00) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (127.0ms)
+Completed in 201ms (View: 154, DB: 1) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:16:05) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"W"}}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%w%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 25ms (View: 14, DB: 2) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=W]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:16:07) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"Wi"}}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%wi%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 18ms (View: 7, DB: 1) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=Wi]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:16:07) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"Wil"}}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%wil%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 20ms (View: 6, DB: 2) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=Wil]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:16:09) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"r"}}
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%r%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 21ms (View: 7, DB: 3) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=r]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:23:14) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"wi"}}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%wi%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=wi]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:23:15) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"will"}}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%will%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=will]
+
+
+Processing StampedersController#create (for 127.0.0.1 at 2010-03-16 14:23:22) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"V1b2m6vmmzzCTMmggUbsiF7ZkB3h9oaHrRH4jDpTZqI=", "stampeder"=>{"team_id"=>"2", "city"=>"Fort Worth", "grade"=>"8", "text"=>"true", "zipcode"=>"76132", "fullname"=>"Will Cosgrove", "barcode"=>"9999", "parentphone"=>"(847)-568-2351", "dob(1i)"=>"1995", "dob(2i)"=>"8", "gender"=>"m", "lastname"=>"Scott", "firstname"=>"James", "dob(3i)"=>"2", "studentphone"=>"8174521352", "address"=>"78456 Scott Rd", "school"=>"TVS", "state"=>"TX", "email"=>"james.scott@gmail.com", "parent"=>"Gregory Scott"}}
+  [4;35;1mStampeder Create (2.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "text", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES('Fort Worth', 2, 8, '2010-03-16 19:23:22', '1995-08-02', '8m', 't', 76132, 9999, '8475682351', 'Will Cosgrove', 'Scott', 'James', 'm', '8174521352', '78456 Scott Rd', 'TVS', 'TX', '2010-03-16 19:23:22', 'Gregory Scott', 'james.scott@gmail.com', NULL)[0m
+Redirected to http://localhost:3000/stampeders/9
+Completed in 33ms (DB: 2) | 302 Found [http://localhost/stampeders]
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-03-16 14:23:22) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 9) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/show
+Completed in 106ms (View: 17, DB: 0) | 200 OK [http://localhost/stampeders/9]
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 14:25:57) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (24.0ms)
+Completed in 49ms (View: 29, DB: 1) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:02) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"r"}}
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%r%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 16ms (View: 5, DB: 3) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=r]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:05) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"ra"}}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%ra%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=ra]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:06) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"ray"}}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%ray%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=ray]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:07) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"ra"}}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%ra%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 14ms (View: 5, DB: 2) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=ra]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:09) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"r"}}
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%r%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 16ms (View: 5, DB: 3) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=r]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:13) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"he"}}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%he%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=he]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:26) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"r"}}
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%r%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 16ms (View: 6, DB: 2) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=r]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:29) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"ra"}}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%ra%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=ra]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:33) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"ray"}}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%ray%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=ray]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:36) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"ra"}}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%ra%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=ra]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:39) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"r"}}
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%r%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 16ms (View: 5, DB: 2) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=r]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:40) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"h"}}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%h%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 15ms (View: 6, DB: 2) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=h]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:26:59) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"h"}}
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%h%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 16ms (View: 6, DB: 2) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=h]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:27:05) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"Joe Schmo"}}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%joe schmo%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 14ms (View: 6, DB: 2) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=Joe%20Schmo]
+
+
+Processing StampedersController#auto_complete_for_stampeder_fullname (for 127.0.0.1 at 2010-03-16 14:27:05) [GET]
+  Parameters: {"stampeder"=>{"fullname"=>"J"}}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (LOWER(fullname) LIKE '%j%') ORDER BY fullname ASC LIMIT 10[0m
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/stampeders/auto_complete_for_stampeder_fullname?stampeder%5Bfullname%5D=J]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTeams (20100307214006)
+Migrating to CreateStampeders (20100307215806)
+Migrating to AddRelationshipToStampeders (20100307221203)
+Migrating to AddGradeGenderSubgroup (20100315173148)
+Migrating to ChangeGenderFromIntegerToString (20100315174545)
+Migrating to AddZipCodeToStampeder (20100315205326)
+Migrating to ChangePhoneFromIntegerToString (20100315210737)
+Migrating to AddingParentPhoneStudentPhoneDobParentSchoolTextEmailFriendId (20100315212037)
+Migrating to RemoveStudentphoneRenamePhoneToStudentphone (20100315221617)
+Migrating to AddFullNameToStampederForAutoComplete (20100316170547)
+Migrating to RemoveFullName (20100316194537)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("stampeders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_friend_id')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_team_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE INDEX "temp_index_altered_stampeders_on_friend_id" ON "altered_stampeders" ("friend_id")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE INDEX "temp_index_altered_stampeders_on_team_id" ON "altered_stampeders" ("team_id")[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mDROP TABLE "stampeders"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_stampeders")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('temp_index_altered_stampeders_on_team_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('temp_index_altered_stampeders_on_friend_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "altered_stampeders"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100316194537')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("stampeders")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_friend_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_team_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("teams")[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to RemoveFullName (20100316194537)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "stampeders" ADD "fullname" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100316194537'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("stampeders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_friend_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_team_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("teams")[0m
+  [4;36;1mStampeder Load (4.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 3) LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 4) LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 5) LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 6) LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 7) LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 8) LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 9) LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 10) LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "updated_at" = '2010-03-16 20:14:47', "fullname" = 'Will Cosgrove' WHERE "id" = 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = '--- :second
+') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) LIMIT 1[0m
+  [4;36;1mStampeder Update (1.0ms)[0m   [0;1mUPDATE "stampeders" SET "updated_at" = '2010-03-16 20:15:28', "fullname" = 'Kim Cosgrove' WHERE "id" = 2[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 3) LIMIT 1[0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "updated_at" = '2010-03-16 20:15:37', "fullname" = 'Ray Cosgrove' WHERE "id" = 3[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 4) LIMIT 1[0m
+  [4;35;1mStampeder Update (1.0ms)[0m   [0mUPDATE "stampeders" SET "updated_at" = '2010-03-16 20:15:41', "fullname" = 'David Hedrick' WHERE "id" = 4[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 3) LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 5) LIMIT 1[0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "updated_at" = '2010-03-16 20:15:48', "fullname" = 'Seth Austin' WHERE "id" = 5[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 6) LIMIT 1[0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "updated_at" = '2010-03-16 20:15:50', "fullname" = 'Joe Schmoe' WHERE "id" = 6[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 7) LIMIT 1[0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "updated_at" = '2010-03-16 20:15:53', "fullname" = 'Joe Schmoe' WHERE "id" = 7[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 8) LIMIT 1[0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "updated_at" = '2010-03-16 20:15:57', "fullname" = 'Billy Gangly' WHERE "id" = 8[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 9) LIMIT 1[0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "updated_at" = '2010-03-16 20:15:59', "fullname" = 'James Scott' WHERE "id" = 9[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 10) LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 9) LIMIT 1[0m
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 15:18:12) [GET]
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (133.0ms)
+Completed in 208ms (View: 159, DB: 2) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-03-16 15:18:17) [GET]
+  Parameters: {"id"=>"auto_complete_for_stampeder_friend_name", "stampeder"=>{"friend_name"=>"wi"}}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stampeder with ID=auto_complete_for_stampeder_friend_name):
+  app/controllers/stampeders_controller.rb:19:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-03-16 15:18:20) [GET]
+  Parameters: {"id"=>"auto_complete_for_stampeder_friend_name", "stampeder"=>{"friend_name"=>"wil"}}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stampeder with ID=auto_complete_for_stampeder_friend_name):
+  app/controllers/stampeders_controller.rb:19:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (61.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-03-16 15:18:21) [GET]
+  Parameters: {"id"=>"auto_complete_for_stampeder_friend_name", "stampeder"=>{"friend_name"=>"w"}}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stampeder with ID=auto_complete_for_stampeder_friend_name):
+  app/controllers/stampeders_controller.rb:19:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-03-16 15:18:22) [GET]
+  Parameters: {"id"=>"auto_complete_for_stampeder_friend_name", "stampeder"=>{"friend_name"=>"w"}}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stampeder with ID=auto_complete_for_stampeder_friend_name):
+  app/controllers/stampeders_controller.rb:19:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (59.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-03-16 15:18:24) [GET]
+  Parameters: {"id"=>"auto_complete_for_stampeder_friend_name", "stampeder"=>{"friend_name"=>"r"}}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stampeder with ID=auto_complete_for_stampeder_friend_name):
+  app/controllers/stampeders_controller.rb:19:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 15:18:43) [GET]
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (39.0ms)
+Completed in 76ms (View: 47, DB: 2) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#auto_complete_for_stampeder_friend_name (for 127.0.0.1 at 2010-03-16 15:18:48) [GET]
+  Parameters: {"stampeder"=>{"friend_name"=>"w"}}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: friend_name: SELECT * FROM "stampeders" WHERE (LOWER(friend_name) LIKE '%w%') ORDER BY friend_name ASC LIMIT 10[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: friend_name: SELECT * FROM "stampeders" WHERE (LOWER(friend_name) LIKE '%w%')  ORDER BY friend_name ASC LIMIT 10):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (68.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StampedersController#auto_complete_for_stampeder_friend_name (for 127.0.0.1 at 2010-03-16 15:18:50) [GET]
+  Parameters: {"stampeder"=>{"friend_name"=>"wi"}}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: friend_name: SELECT * FROM "stampeders" WHERE (LOWER(friend_name) LIKE '%wi%') ORDER BY friend_name ASC LIMIT 10[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: friend_name: SELECT * FROM "stampeders" WHERE (LOWER(friend_name) LIKE '%wi%')  ORDER BY friend_name ASC LIMIT 10):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (148.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StampedersController#auto_complete_for_stampeder_friend_name (for 127.0.0.1 at 2010-03-16 15:18:54) [GET]
+  Parameters: {"stampeder"=>{"friend_name"=>"d"}}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: friend_name: SELECT * FROM "stampeders" WHERE (LOWER(friend_name) LIKE '%d%') ORDER BY friend_name ASC LIMIT 10[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: friend_name: SELECT * FROM "stampeders" WHERE (LOWER(friend_name) LIKE '%d%')  ORDER BY friend_name ASC LIMIT 10):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (70.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 15:19:18) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (121.0ms)
+Completed in 196ms (View: 148, DB: 1) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#auto_complete_for_stampeder_friend_name (for 127.0.0.1 at 2010-03-16 15:19:24) [GET]
+  Parameters: {"stampeder"=>{"friend_name"=>"w"}}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: friend_name: SELECT * FROM "stampeders" WHERE (LOWER(friend_name) LIKE '%w%') ORDER BY friend_name ASC LIMIT 10[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: friend_name: SELECT * FROM "stampeders" WHERE (LOWER(friend_name) LIKE '%w%')  ORDER BY friend_name ASC LIMIT 10):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (73.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StampedersController#auto_complete_for_stampeder_friend_name (for 127.0.0.1 at 2010-03-16 15:19:26) [GET]
+  Parameters: {"stampeder"=>{"friend_name"=>"wi"}}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such column: friend_name: SELECT * FROM "stampeders" WHERE (LOWER(friend_name) LIKE '%wi%') ORDER BY friend_name ASC LIMIT 10[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: friend_name: SELECT * FROM "stampeders" WHERE (LOWER(friend_name) LIKE '%wi%')  ORDER BY friend_name ASC LIMIT 10):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (147.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StampedersController#auto_complete_for_stampeder_friend_name (for 127.0.0.1 at 2010-03-16 15:19:27) [GET]
+  Parameters: {"stampeder"=>{"friend_name"=>"d"}}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSQLite3::SQLException: no such column: friend_name: SELECT * FROM "stampeders" WHERE (LOWER(friend_name) LIKE '%d%') ORDER BY friend_name ASC LIMIT 10[0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: friend_name: SELECT * FROM "stampeders" WHERE (LOWER(friend_name) LIKE '%d%')  ORDER BY friend_name ASC LIMIT 10):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (66.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 15:22:36) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (25.0ms)
+Completed in 52ms (View: 31, DB: 1) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#auto_complete_for_stampeder_friend_name (for 127.0.0.1 at 2010-03-16 15:22:41) [GET]
+  Parameters: {"stampeder"=>{"friend_name"=>"w"}}
+
+ActionController::UnknownAction (No action responded to auto_complete_for_stampeder_friend_name. Actions: create, destroy, edit, index, new, registration, show, and update):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 15:23:22) [GET]
+  [4;35;1mTeam Load (2.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (32.0ms)
+Completed in 60ms (View: 42, DB: 2) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#auto_complete_for_stampeder_friend_name (for 127.0.0.1 at 2010-03-16 15:23:27) [POST]
+  Parameters: {"stampeder"=>{"friend_name"=>"w"}, "_"=>""}
+
+ActionController::UnknownAction (No action responded to auto_complete_for_stampeder_friend_name. Actions: create, destroy, edit, index, new, registration, show, and update):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StampedersController#show to js (for 127.0.0.1 at 2010-03-16 15:43:12) [GET]
+  Parameters: {"id"=>"autocomplete"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Stampeder with ID=autocomplete):
+  app/controllers/stampeders_controller.rb:17:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-16 15:44:00) [GET]
+
+ActionController::RoutingError (No route matches "/autocomplete.js" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:44:07) [GET]
+  [4;35;1mStampeder Load (3.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%%') [0m
+
+ActionView::MissingTemplate (Missing template stampeders/autocomplete.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:45:28) [GET]
+  [4;36;1mStampeder Load (4.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%%') [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/autocomplete
+Completed in 30ms (View: 14, DB: 4) | 200 OK [http://localhost/autocomplete]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-16 15:45:35) [GET]
+
+ActionController::RoutingError (No route matches "/autocomplete.js" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:46:33) [GET]
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%%') [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/autocomplete
+Completed in 22ms (View: 9, DB: 2) | 200 OK [http://localhost/autocomplete]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:47:12) [GET]
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%%') [0m
+
+Errno::ENOENT (No such file or directory - C:/Users/Video Edit/Documents/My Dropbox/Will Share/stampede_app/app/views/stampeders/autocomplete.js.erb):
+  app/controllers/stampeders_controller.rb:101:in `autocomplete'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (139.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:47:26) [GET]
+  [4;35;1mStampeder Load (3.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%%') [0m
+Rendering stampeders/autocomplete
+Completed in 25ms (View: 11, DB: 3) | 200 OK [http://localhost/autocomplete]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-16 15:47:30) [GET]
+
+ActionController::RoutingError (No route matches "/autocomplete.js" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:48:10) [GET]
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%%') [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/autocomplete
+Completed in 26ms (View: 11, DB: 3) | 200 OK [http://localhost/autocomplete]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-16 15:48:16) [GET]
+
+ActionController::RoutingError (No route matches "/autocomplete.js" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:49:13) [GET]
+  Parameters: {"search"=>"\"will\""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%"will"%') [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/autocomplete
+Completed in 16ms (View: 5, DB: 1) | 200 OK [http://localhost/autocomplete?search=%22will%22]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:49:23) [GET]
+  Parameters: {"search"=>"will"}
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%will%') [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/autocomplete
+Completed in 22ms (View: 10, DB: 2) | 200 OK [http://localhost/autocomplete?search=will]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:49:32) [GET]
+  Parameters: {"search"=>"r"}
+  [4;35;1mStampeder Load (3.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%r%') [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/autocomplete
+Completed in 21ms (View: 8, DB: 3) | 200 OK [http://localhost/autocomplete?search=r]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:50:14) [GET]
+  [4;36;1mStampeder Load (4.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%%') [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/autocomplete
+Completed in 22ms (View: 8, DB: 4) | 200 OK [http://localhost/autocomplete.js]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-16 15:50:19) [GET]
+
+ActionController::RoutingError (No route matches "/autocomplete" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:50:23) [GET]
+  [4;35;1mStampeder Load (4.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%%') [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/autocomplete
+Completed in 27ms (View: 10, DB: 4) | 200 OK [http://localhost/autocomplete.js]
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 15:52:18) [GET]
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (33.0ms)
+Completed in 61ms (View: 42, DB: 2) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:52:22) [GET]
+  Parameters: {"stampeder"=>{"friend_name"=>"w"}}
+  [4;35;1mStampeder Load (3.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%%') [0m
+Rendering stampeders/autocomplete
+Completed in 24ms (View: 11, DB: 3) | 200 OK [http://localhost/autocomplete.js?stampeder%5Bfriend_name%5D=w]
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 15:54:03) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (33.0ms)
+Completed in 65ms (View: 44, DB: 1) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:54:08) [GET]
+  Parameters: {"search"=>"w"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%w%') [0m
+Rendering stampeders/autocomplete
+Completed in 21ms (View: 8, DB: 1) | 200 OK [http://localhost/autocomplete.js?search=w]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:54:10) [GET]
+  Parameters: {"search"=>"r"}
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%r%') [0m
+Rendering stampeders/autocomplete
+Completed in 23ms (View: 7, DB: 3) | 200 OK [http://localhost/autocomplete.js?search=r]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 15:55:50) [GET]
+  Parameters: {"search"=>"w"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%w%') [0m
+Rendering stampeders/autocomplete
+Completed in 16ms (View: 4, DB: 2) | 200 OK [http://localhost/autocomplete.js?search=w]
+
+
+Processing StampedersController#create (for 127.0.0.1 at 2010-03-16 15:55:58) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"V1b2m6vmmzzCTMmggUbsiF7ZkB3h9oaHrRH4jDpTZqI=", "stampeder"=>{"team_id"=>"2", "city"=>"Fort Worth", "grade"=>"9", "text"=>"true", "zipcode"=>"76133", "barcode"=>"1764", "parentphone"=>"8174521365", "dob(1i)"=>"1996", "friend_name"=>"Will Cosgrove", "dob(2i)"=>"7", "gender"=>"f", "lastname"=>"Cracker", "firstname"=>"Grahamine", "dob(3i)"=>"21", "studentphone"=>"8174521369", "address"=>"4512 Sugar Ln", "school"=>"PHS", "state"=>"TX", "email"=>"grahamcrackers@yahoo.com", "parent"=>"Ross Lofer"}}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."fullname" = 'Will Cosgrove') LIMIT 1[0m
+  [4;35;1mStampeder Create (2.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "text", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES('Fort Worth', 2, 9, '2010-03-16 20:55:58', '1996-07-21', '9f', 't', 76133, 1764, '8174521365', NULL, 'Cracker', 'Grahamine', 'f', '8174521369', '4512 Sugar Ln', 'PHS', 'TX', '2010-03-16 20:55:58', 'Ross Lofer', 'grahamcrackers@yahoo.com', 1)[0m
+Redirected to http://localhost:3000/stampeders/10
+Completed in 44ms (DB: 3) | 302 Found [http://localhost/stampeders]
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-03-16 15:55:59) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 10) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/show
+Completed in 32ms (View: 18, DB: 0) | 200 OK [http://localhost/stampeders/10]
+
+
+Processing StampedersController#index (for 127.0.0.1 at 2010-03-16 15:57:46) [GET]
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/index
+Completed in 209ms (View: 167, DB: 3) | 200 OK [http://localhost/stampeders]
+
+
+Processing StampedersController#destroy (for 127.0.0.1 at 2010-03-16 15:57:56) [DELETE]
+  Parameters: {"authenticity_token"=>"V1b2m6vmmzzCTMmggUbsiF7ZkB3h9oaHrRH4jDpTZqI=", "id"=>"6"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 6) [0m
+  [4;36;1mStampeder Destroy (1.0ms)[0m   [0;1mDELETE FROM "stampeders" WHERE "id" = 6[0m
+Redirected to http://localhost:3000/stampeders
+Completed in 31ms (DB: 2) | 302 Found [http://localhost/stampeders/6]
+
+
+Processing StampedersController#index (for 127.0.0.1 at 2010-03-16 15:57:56) [GET]
+  [4;35;1mStampeder Load (8.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/index
+Completed in 126ms (View: 95, DB: 8) | 200 OK [http://localhost/stampeders]
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-16 16:11:06) [GET]
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Rendered stampeders/_complete_stampeder_form (34.0ms)
+Completed in 68ms (View: 51, DB: 2) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 16:12:22) [GET]
+  Parameters: {"search"=>"k"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%k%') [0m
+Rendering stampeders/autocomplete
+Completed in 105ms (View: 11, DB: 2) | 200 OK [http://localhost/autocomplete.js?search=k]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-03-16 16:12:22) [GET]
+  Parameters: {"search"=>"ki"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%ki%') [0m
+Rendering stampeders/autocomplete
+Completed in 15ms (View: 5, DB: 1) | 200 OK [http://localhost/autocomplete.js?search=ki]
+
+
+Processing StampedersController#create (for 127.0.0.1 at 2010-03-16 16:12:59) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"V1b2m6vmmzzCTMmggUbsiF7ZkB3h9oaHrRH4jDpTZqI=", "stampeder"=>{"team_id"=>"2", "city"=>"Fort Worth", "grade"=>"6", "text"=>"true", "zipcode"=>"76132", "barcode"=>"1524", "parentphone"=>"9113251401", "dob(1i)"=>"1994", "friend_name"=>"Kim Cosgrove", "dob(2i)"=>"8", "gender"=>"f", "lastname"=>"Last", "firstname"=>"First", "dob(3i)"=>"7", "studentphone"=>"5841232501", "address"=>"", "school"=>"TVS", "state"=>"TX", "email"=>"bla@bla.com", "parent"=>"Mommy"}}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."fullname" = 'Kim Cosgrove') LIMIT 1[0m
+  [4;36;1mStampeder Create (1.0ms)[0m   [0;1mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "text", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES('Fort Worth', 2, 6, '2010-03-16 21:12:59', '1994-08-07', '6f', 't', 76132, 1524, '9113251401', NULL, 'Last', 'First', 'f', '5841232501', '', 'TVS', 'TX', '2010-03-16 21:12:59', 'Mommy', 'bla@bla.com', 2)[0m
+Redirected to http://localhost:3000/stampeders/11
+Completed in 39ms (DB: 1) | 302 Found [http://localhost/stampeders]
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-03-16 16:13:00) [GET]
+  Parameters: {"id"=>"11"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 11) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/show
+Completed in 32ms (View: 17, DB: 1) | 200 OK [http://localhost/stampeders/11]
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders".friend_id = 2) [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 2) LIMIT 1[0m
+
+
+Processing StampedersController#index (for 127.0.0.1 at 2010-03-16 16:52:52) [GET]
+  [4;36;1mStampeder Load (4.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/index
+Completed in 211ms (View: 167, DB: 4) | 200 OK [http://localhost/stampeders]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 2) LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (30.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (193.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (325.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (197.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (191.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (177.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (110.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (136.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (110.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (117.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (126.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (123.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (120.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (250.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (105.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (133.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (129.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (132.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (131.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (157.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (154.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (11.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (129.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (166.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (135.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (144.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (151.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (146.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (141.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (144.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (154.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (144.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (143.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (140.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (93.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (107.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (131.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (123.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (129.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (142.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (113.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (134.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (120.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (133.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (121.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (121.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (133.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (99.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (110.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (122.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTeams (20100307214006)
+Migrating to CreateStampeders (20100307215806)
+Migrating to AddRelationshipToStampeders (20100307221203)
+Migrating to AddGradeGenderSubgroup (20100315173148)
+Migrating to ChangeGenderFromIntegerToString (20100315174545)
+Migrating to AddZipCodeToStampeder (20100315205326)
+Migrating to ChangePhoneFromIntegerToString (20100315210737)
+Migrating to AddingParentPhoneStudentPhoneDobParentSchoolTextEmailFriendId (20100315212037)
+Migrating to RemoveStudentphoneRenamePhoneToStudentphone (20100315221617)
+Migrating to AddFullNameToStampederForAutoComplete (20100316170547)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (5.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (7.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("stampeders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_friend_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_team_id')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("teams")[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (136.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (144.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (129.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (165.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (152.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (148.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (137.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (173.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (299.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (156.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (144.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (129.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (143.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (163.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (138.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (584.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (140.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (180.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (13.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (132.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (3.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (133.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (151.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (23.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (146.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (141.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (146.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (167.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (134.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (133.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (133.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (118.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (142.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (147.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (102.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (101.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (143.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (117.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (117.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (138.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (137.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (136.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (136.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (144.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (233.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (139.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (172.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (141.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (144.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (144.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (100.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (121.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (219.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (230.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (170.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (140.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (132.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (132.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (132.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (133.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (122.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (143.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (133.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (143.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (157.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (122.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (115.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (137.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (145.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (121.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (147.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (133.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (106.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (110.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (122.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (122.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (143.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (144.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (144.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (144.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (136.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (142.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (107.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (138.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (127.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (138.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (131.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (168.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (144.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (154.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (122.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (122.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (136.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (130.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (114.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (163.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (122.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (122.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (89.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (166.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (312.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (180.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (151.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (155.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (139.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (147.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (133.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (230.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (246.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (193.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (137.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (200.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (133.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (155.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (113.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (121.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (184.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (126.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (123.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (116.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (122.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (132.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (136.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (130.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (125.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (153.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (144.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (144.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (155.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (112.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (132.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (140.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (140.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (168.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (122.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (128.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (122.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (111.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (110.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (112.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (121.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (111.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (133.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (111.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (111.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (83.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (128.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (136.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (137.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (141.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (133.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (127.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (145.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (153.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (122.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (124.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (152.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (136.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (152.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (132.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (155.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (92.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" integer, "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" integer, "parentphone" varchar(255), "dob" date, "parent" varchar(255), "school" varchar(255), "text" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255)) [0m
+  [4;35;1mSQL (99.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;36;1mSQL (101.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (102.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "previous_points" integer, "indoor_games_points" integer, "outdoor_games_points" integer, "friend_points" integer, "spirit_points" integer, "deductions" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (100.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (116.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (89.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (83.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (107.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (93.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (81.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (110.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (87.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (84.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (91.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (91.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m

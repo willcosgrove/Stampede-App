@@ -3,21 +3,43 @@
 one:
   lastname: MyString
   firstname: MyString
-  barcode: 1
-  phone: 1
+  barcode: 1827
+  studentphone: 8176273892
   address: MyString
   grade: 1
   city: MyString
   state: MyString
-  gender: 1
+  team_id: 2
+  subgroup: 6f
+  gender: f
+  zipcode: 81726
+  parentphone: 1726378374
+  dob: 2009-11-12
+  parent: Kim Cosgrove
+  school: TVS
+  text: false
+  email: wil@jas.com
+  friend_id: nil
+  fullname: fullname fullname
 
 two:
   lastname: MyString
   firstname: MyString
-  barcode: 1
-  phone: 1
+  barcode: 1827
+  studentphone: 8176273892
   address: MyString
   grade: 1
   city: MyString
   state: MyString
-  gender: 1
+  team_id: 2
+  subgroup: 6f
+  gender: f
+  zipcode: 81726
+  parentphone: 1726378374
+  dob: 2009-11-12
+  parent: Kim Cosgrove
+  school: TVS
+  text: false
+  email: wil@jas.com
+  friend_id: nil
+  fullname: fullname fullname

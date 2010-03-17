@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100315221617) do
+ActiveRecord::Schema.define(:version => 20100316170547) do
 
   create_table "stampeders", :force => true do |t|
     t.string   "lastname"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20100315221617) do
     t.boolean  "text"
     t.string   "email"
     t.integer  "friend_id"
+    t.string   "fullname"
   end
 
   add_index "stampeders", ["friend_id"], :name => "index_stampeders_on_friend_id"

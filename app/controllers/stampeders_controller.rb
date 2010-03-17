@@ -1,6 +1,4 @@
 class StampedersController < ApplicationController
-
-  auto_complete_for :stampeder, :firstname, :lastname
   
   # GET /stampeders
   # GET /stampeders.xml
@@ -48,6 +46,7 @@ class StampedersController < ApplicationController
     @stampeder = Stampeder.new(params[:stampeder])
     @stampeder.createSubgroup
     @stampeder.parentphone.gsub!(/\D/, "")
+    
 
     respond_to do |format|
       if @stampeder.save
@@ -92,4 +91,18 @@ class StampedersController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  def registration
+    @teams = Team.find(:all)
+    @stampeder = Stampeder.new
+  end
+  
+  def autocomplete
+    @stampeders = Stampeder.find(:all, :conditions => ['fullname LIKE ?', "%#{params[:search]}%"])
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+   
 end

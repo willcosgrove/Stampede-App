@@ -69,7 +69,7 @@
   </p>
   <p>
     <%= f.label :brought_by %><br />
-    <%= f.text_field :friend_id %>
+    <%= text_field_with_auto_complete :stampeder, :friend_name, {}, { :url => autocomplete_path, :method => :get, :with => "'search=' + element.value" } %>
   </p>
   <p>
     <%= f.label :team %><br />

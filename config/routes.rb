@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.autocomplete 'autocomplete.js', :controller => 'Stampeders', :action => 'autocomplete'
+  map.registration 'registration', :controller => 'Stampeders', :action => 'registration'
   map.resources :stampeders
 
   map.resources :teams
