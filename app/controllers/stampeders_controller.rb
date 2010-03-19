@@ -46,6 +46,7 @@ class StampedersController < ApplicationController
     @stampeder = Stampeder.new(params[:stampeder])
     @stampeder.createSubgroup
     @stampeder.parentphone.gsub!(/\D/, "")
+    @stampeder.studentphone.gsub!(/\D/, "")
     
 
     respond_to do |format|
@@ -103,6 +104,10 @@ class StampedersController < ApplicationController
       format.html
       format.js
     end
+  end
+  
+  def signin
+    @stampeder = Stampeder.new
   end
    
 end

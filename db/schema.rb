@@ -9,12 +9,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100316170547) do
+ActiveRecord::Schema.define(:version => 20100319061656) do
+
+  create_table "signins", :force => true do |t|
+    t.integer  "stampeder_id"
+    t.date     "day_signed_in"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "signins", ["stampeder_id"], :name => "index_signins_on_stampeder_id"
 
   create_table "stampeders", :force => true do |t|
     t.string   "lastname"
     t.string   "firstname"
-    t.integer  "barcode"
+    t.string   "barcode"
     t.string   "studentphone"
     t.string   "address"
     t.integer  "grade"
@@ -25,12 +34,12 @@ ActiveRecord::Schema.define(:version => 20100316170547) do
     t.integer  "team_id"
     t.string   "subgroup"
     t.string   "gender"
-    t.integer  "zipcode"
+    t.string   "zipcode"
     t.string   "parentphone"
     t.date     "dob"
     t.string   "parent"
     t.string   "school"
-    t.boolean  "text"
+    t.boolean  "textmsg"
     t.string   "email"
     t.integer  "friend_id"
     t.string   "fullname"
@@ -49,6 +58,7 @@ ActiveRecord::Schema.define(:version => 20100316170547) do
     t.integer  "deductions"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "stampeders_count",     :default => 0
   end
 
 end

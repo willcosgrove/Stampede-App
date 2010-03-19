@@ -1,53 +1,128 @@
-<p>
-  <b>Lastname:</b>
-  <%=h @stampeder.lastname %>
-</p>
+<h1><%= @stampeder.lastname %>, <%= @stampeder.firstname %></h1>
 
-<p>
-  <b>Firstname:</b>
-  <%=h @stampeder.firstname %>
-</p>
+<div id="stampeder_info">
+  
+  <p>
+    <b>Gender:</b>
+    <%=h @stampeder.gender_for_view %>
+  </p>
+  
+  <p>
+    <b>Team:</b>
+    <%= @stampeder.team.name %>
+  </p>
+  
+  <p>
+    <b>Bracelet Number:</b>
+    <%=h @stampeder.barcode %>
+  </p>
+  
+  <% unless @stampeder.parent.blank? %>
+  <p>
+    <b>Parent:</b>
+    <%= @stampeder.parent %>
+  </p>
+  <% end %>
+  
+  <p>
+    <b>Emergency Contact:</b>
+    <%=h @stampeder.parentphone_for_view %>
+  </p>
+  
+  <p>
+    <b>Grade:</b>
+    <%=h @stampeder.grade %>th
+  </p>
+  
+  <% unless @stampeder.school.blank? %>
+  <p>
+    <b>School:</b>
+    <%= @stampeder.school %>
+  </p>
+  <% end %>
+  
+  <% unless @stampeder.address.blank? %>
+  <p>
+    <b>Address:</b>
+    <%=h @stampeder.address %>
+  </p>
+  <% end %>
+  
+  <% unless @stampeder.city.blank? %>
+  <p>
+    <b>City:</b>
+    <%=h @stampeder.city %>
+  </p>
+  <% end %>
+  
+  <% unless @stampeder.state.blank? %>
+  <p>
+    <b>State:</b>
+    <%=h @stampeder.state %>
+  </p>
+  <% end %>
+  
+  <% unless @stampeder.email.blank? %>
+  <p>
+    <b>Email:</b>
+    <%= @stampeder.email %>
+  </p>
+  <% end %>
+  
+  <% unless @stampeder.studentphone.blank? %>
+  <p>
+    <b>Student's Phone</b>
+    <%= @stampeder.studentphone_for_view %>
+  </p>
+  <% end %>
+  
+  <% unless @stampeder.textmsg.blank? %>
+  <p>
+    <b>Can we text <%= @stampeder.firstname %>?</b>
+    <% if @stampeder.textmsg %>
+    Yes
+    <% else %>
+    No
+    <% end %>
+  </p>
+  <% end %>
+  
+  <% unless @stampeder.dob.blank? %>
+  <p>
+    <b>Birthday</b>
+    <%= @stampeder.dob.to_s %>
+  </p>
+  <% end %>
+  
+  
+  <% if @stampeder.stampeder %>
+  <p>
+    <b>Brought By:</b>
+    <%=h @stampeder.stampeder.fullname %>
+  </p>
+  <% end %>
+</div>
 
-<p>
-  <b>Team:</b>
-  <%= @stampeder.team_id %>
-</p>
+<div id="stampeder_extra_info">
+  <% unless @stampeder.stampeders.blank? %>
+    <h3>Friends</h3>
+    <ul>
+      <% @stampeder.stampeders.each do |friend| %>
+        <li><%= friend.fullname %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  
+  <% unless @stampeder.signins.blank? %>
+      <h3>Days <%= @stampeder.firstname %> was here</h3>
+      <ul>
+        <% @stampeder.signins.each do |signins| %>
+        <li><%= signins.day_of_week %></li>
+        <% end %>
+      </ul>
+  <% end %>
+</div>
 
-<p>
-  <b>Barcode:</b>
-  <%=h @stampeder.barcode %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%=h @stampeder.parentphone %>
-</p>
-
-<p>
-  <b>Address:</b>
-  <%=h @stampeder.address %>
-</p>
-
-<p>
-  <b>Grade:</b>
-  <%=h @stampeder.grade %>
-</p>
-
-<p>
-  <b>City:</b>
-  <%=h @stampeder.city %>
-</p>
-
-<p>
-  <b>State:</b>
-  <%=h @stampeder.state %>
-</p>
-
-<p>
-  <b>Gender:</b>
-  <%=h @stampeder.gender %>
-</p>
-
-
-<%= link_to 'Edit', edit_stampeder_path(@stampeder) %> |
-<%= link_to 'Back', stampeders_path %>
+<div id="link_backs">
+  <%= link_to 'Edit', edit_stampeder_path(@stampeder) %> |  <%= link_to 'Back', stampeders_path %>
+</div>

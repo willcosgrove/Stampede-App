@@ -11,8 +11,13 @@
 <body>
 
 <p style="color: green"><%= flash[:notice] %></p>
-
+<div id="top_images">
+<%= image_tag("stampede10.png") %>
+<%= yield :top_images %>
+</div>
+<div id="content">
 <%= yield %>
+</div>
 
 </body>
 </html>

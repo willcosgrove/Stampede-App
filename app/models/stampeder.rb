@@ -1,7 +1,8 @@
 class Stampeder < ActiveRecord::Base
-  belongs_to :team
+  belongs_to :team, :counter_cache => true
   belongs_to :stampeder, :class_name => "Stampeder", :foreign_key => "friend_id"
   has_many :stampeders, :class_name => "Stampeder", :foreign_key => "friend_id"
+  has_many :signins
   
   validates_presence_of :firstname, :lastname, :grade, :gender, :message => "Can you make sure that you filled out first name, last name, grade, and gender?  We need those before we can go any further."
   #validates_inclusion_of :barcode, :in => 111111111..999999999, :message => 'invalid barcode'
@@ -9,6 +10,12 @@ class Stampeder < ActiveRecord::Base
   validates_format_of :studentphone, :with => /\d{10}/, :allow_nil => true, :message => "Can you make sure that the student phone number is correct?  I think it might be wrong."
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/, :allow_nil => true, :message => "Could you please double check the email address?  I don't think that's right."
   validates_length_of :zipcode, :is => 5, :message => "Could you please take a look at the zip code?  I don't think it's a real zip code."
+  validates_length_of :state, :is => 2, :allow_nil => true, :message => "Oops!  Make sure that the state field contains the two letter state abreviation rather than the full state name."
+  
+  def before_validation_on_create(record)
+    record.addCapitalization
+    record.addfullname
+  end
   
   def friend_name
     stampeder.name if stampeder
@@ -20,13 +27,28 @@ class Stampeder < ActiveRecord::Base
   
   def addfullname
     self.fullname = "#{self.firstname} #{self.lastname}"
-    save
   end
   
   def addCapitalization
     self.firstname.capitalize!
     self.lastname.capitalize!
-    self.parent.capitalize!
+    a = self.parent.split
+    a = a.collect do |x| x.capitalize end
+    self.parent = a.join(' ')
+  end
+  
+  def studentphone_for_view
+    num = self.studentphone.insert(0, "(")
+    num = num.insert(4, ")")
+    num = num.insert(5, "-")
+    num = num.insert(9, "-")
+  end
+  
+  def parentphone_for_view
+    num = self.parentphone.insert(0, "(")
+    num = num.insert(4, ")")
+    num = num.insert(5, "-")
+    num = num.insert(9, "-")
   end
   
   def pickTeam
@@ -60,13 +82,28 @@ class Stampeder < ActiveRecord::Base
     end
     
     if self.stampeder
-      self.team = self.stampeder.team
+      self.team_id = self.stampeder.team_id
     end
+    self.save
     
   end
   
   def createSubgroup
     self.subgroup = self.grade.to_s + self.gender.to_s
+  end
+  
+  def performSignin
+    Signin.create(:stampeder_id => self.id, :day_signed_in => Time.now)
+  end
+  
+  def gender_for_view
+    if self.gender == "m"
+      return "Boy"
+    elsif self.gender == "f"
+      return "Girl"
+    else
+      return nil
+    end
   end
   
 end

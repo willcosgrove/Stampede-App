@@ -1,8 +1,9 @@
 ActionController::Routing::Routes.draw do |map|
+  map.registration_signin 'registration/signin', :controller => 'Stampeders', :action => 'signin'
   map.autocomplete 'autocomplete.js', :controller => 'Stampeders', :action => 'autocomplete'
   map.registration 'registration', :controller => 'Stampeders', :action => 'registration'
+  map.create_signin 'signin/create', :controller => 'Signins', :action => 'create'
   map.resources :stampeders
-
   map.resources :teams
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -33,6 +33,15 @@
   <%=h @team.deductions %>
 </p>
 
+<p>
+  <h3>Team Members</h3>
+  <ul>
+  <% @team.stampeders.each do |stampeder| %>
+  <li><%= link_to stampeder.fullname, stampeder %></li>
+  <% end %>
+  </ul>
+</p>
+
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>

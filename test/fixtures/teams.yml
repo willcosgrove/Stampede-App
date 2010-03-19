@@ -1,7 +1,8 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  name: MyString
+redteam:
+  id: 1
+  name: Red
   previous_points: 
   indoor_games_points: 
   outdoor_games_points: 
@@ -9,8 +10,29 @@ one:
   spirit_points: 
   deductions: 
 
-two:
-  name: MyString
+blueteam:
+  id: 2
+  name: Blue
+  previous_points: 
+  indoor_games_points: 
+  outdoor_games_points: 
+  friend_points: 
+  spirit_points: 
+  deductions: 
+
+greenteam:
+  id: 3
+  name: Green
+  previous_points: 
+  indoor_games_points: 
+  outdoor_games_points: 
+  friend_points: 
+  spirit_points: 
+  deductions: 
+
+yellowteam:
+  id: 4
+  name: Yellow
   previous_points: 
   indoor_games_points: 
   outdoor_games_points: 

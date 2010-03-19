@@ -1,12 +1,13 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+  id: 1
   lastname: MyString
   firstname: MyString
   barcode: 1827
   studentphone: 8176273892
   address: MyString
-  grade: 1
+  grade: 6
   city: MyString
   state: MyString
   team_id: 2
@@ -23,15 +24,16 @@ one:
   fullname: fullname fullname
 
 two:
+  id: 2
   lastname: MyString
   firstname: MyString
   barcode: 1827
   studentphone: 8176273892
   address: MyString
-  grade: 1
+  grade: 6
   city: MyString
   state: MyString
-  team_id: 2
+  team_id:
   subgroup: 6f
   gender: f
   zipcode: 81726
@@ -41,5 +43,5 @@ two:
   school: TVS
   text: false
   email: wil@jas.com
-  friend_id: nil
+  friend_id: 1
   fullname: fullname fullname

@@ -1,4 +1,4 @@
-body { background-color: #fff; color: #333; }
+body { background-color: #9cbbb6; color: #333; height: 100%; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -52,3 +52,114 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+#content {
+  width: 960px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  border: 1px solid #4e4e4e;
+  padding: 10px;
+  background: #FFFFFF;
+}
+
+#stampeder_info {
+  float: left;
+  padding: 10px;
+}
+
+#stampeder_extra_info {
+  float: left;
+  background: #f8ff94;
+  padding: 25px;
+  margin-left: 150px;
+  border: 1px dashed #fdbfff;
+}
+
+#link_backs {
+  float: right;
+}
+
+#top_images {
+  margin-left: auto;
+  margin-right: auto;
+  width: 779px;
+}
+
+#registration_welcome {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  width: 589px;
+}
+
+#registration_buttons {
+  margin-top: 75px;
+}
+
+#sign_in_button {
+  width: 208px;
+  height: 124px;
+  background: url('../images/sign_in.png');
+  float: left;
+  margin: 45px;
+  margin-left: 70px;
+}
+
+#sign_in_button:hover {
+  background: url('../images/sign_in_hover.png');
+}
+
+#fill_in_button {
+  width: 208px;
+  height: 124px;
+  background: url('../images/fill_in.png');
+  float: left;
+  margin: 45px;
+}
+
+#fill_in_button:hover {
+  background: url('../images/fill_in_hover.png');
+}
+
+#view_all_button {
+  width: 208px;
+  height: 124px;
+  background: url('../images/view_all.png');
+  float: left;
+  margin: 45px;
+}
+
+#view_all_button:hover {
+  background: url('../images/view_all_hover.png');
+}
+
+.center {
+  text-align: center;
+}
+
+#barcode {
+  font-size: 32pt;
+  text-align: center;
+}
+
+#signin_field {
+  position: relative;
+  text-align: center;
+}
+
+.hidden {
+  display: none
+}
+
+#signin_flash {
+  position: relative;
+  background: #fffdc4;
+  text-align: center;
+  border: 1px solid black;
+  width: 275px;
+  height: 40px;
+  left: 340px;
+  top: -57px;
+  padding-top: 5px;
+}

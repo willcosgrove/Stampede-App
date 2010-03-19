@@ -1,0 +1,279 @@
+  [4;36;1mTeam Create (2.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 16:43:16', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:43:16')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 16:43:16', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:43:16')[0m
+  [4;36;1mTeam Create (0.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 16:43:16', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:43:16')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 16:43:16', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:43:16')[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 846144427) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 595880442) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 934553627) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 342049651) [0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 846144427) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 595880442) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 934553627) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 342049651) [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mTeam Create (1.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 16:44:29', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:44:29')[0m
+  [4;35;1mTeam Create (1.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 16:44:29', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:44:29')[0m
+  [4;36;1mTeam Create (0.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 16:44:29', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:44:29')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 16:44:29', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:44:29')[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 846144427) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 595880442) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 934553627) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 342049651) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 846144427) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 595880442) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 934553627) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 342049651) [0m
+  [4;36;1mTeam Create (1.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 16:44:45', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:44:45')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 16:44:45', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:44:45')[0m
+  [4;36;1mTeam Create (0.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 16:44:45', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:44:45')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 16:44:45', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:44:45')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 846144427) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 595880442) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 934553627) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 342049651) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 846144427) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 595880442) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 934553627) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 342049651) [0m
+  [4;36;1mTeam Create (1.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 16:45:09', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:45:09')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 16:45:09', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:45:09')[0m
+  [4;36;1mTeam Create (0.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 16:45:09', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:45:09')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 16:45:09', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:45:09')[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 846144427) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 595880442) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 934553627) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 342049651) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 846144427) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 595880442) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 934553627) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 342049651) [0m
+  [4;36;1mTeam Create (1.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 16:46:20', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:46:20')[0m
+  [4;35;1mTeam Create (1.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 16:46:20', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:46:20')[0m
+  [4;36;1mTeam Create (0.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 16:46:20', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:46:20')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 16:46:20', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:46:20')[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 846144427) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 595880442) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 934553627) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 342049651) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 846144427) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 595880442) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 934553627) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 342049651) [0m
+  [4;36;1mTeam Create (2.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 16:47:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:47:51')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 16:47:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:47:51')[0m
+  [4;36;1mTeam Create (0.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 16:47:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:47:51')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 16:47:51', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:47:51')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 846144427) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 595880442) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 934553627) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 342049651) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 846144427) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 595880442) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 934553627) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 342049651) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;36;1mTeam Create (1.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 16:48:36', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:48:36')[0m
+  [4;35;1mTeam Create (1.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 16:48:36', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:48:36')[0m
+  [4;36;1mTeam Create (0.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 16:48:36', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:48:36')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 16:48:36', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:48:36')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 846144427) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 595880442) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 934553627) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 342049651) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 846144427) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 595880442) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 934553627) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 342049651) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;36;1mTeam Create (2.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 16:49:43', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:49:43')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 16:49:43', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:49:43')[0m
+  [4;36;1mTeam Create (1.0ms)[0m   [0;1mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 16:49:43', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:49:43')[0m
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 16:49:43', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 16:49:43')[0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 846144427) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 595880442) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 934553627) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 342049651) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 846144427) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 595880442) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 934553627) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 342049651) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (1.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 17:12:20', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:12:20')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 17:12:20', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:12:20')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 17:12:20', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:12:20')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 17:12:20', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:12:20')[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (63.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (2.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 17:13:35', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:13:35')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (1.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 17:13:35', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:13:35')[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (1.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 17:13:35', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:13:35')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 17:13:35', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:13:35')[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (1.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 17:16:18', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:16:18')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (1.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 17:16:18', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:16:18')[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 17:16:18', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:16:18')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 17:16:18', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:16:18')[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (1.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 17:17:23', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:17:23')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 17:17:23', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:17:23')[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 17:17:23', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:17:23')[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (1.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 17:17:23', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:17:23')[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (61.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (2.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Red', '2010-03-17 17:18:12', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:18:12')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Blue', '2010-03-17 17:18:12', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:18:12')[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (0.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Green', '2010-03-17 17:18:12', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:18:12')[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+WARNING: Can't mass-assign these protected attributes: id
+  [4;35;1mTeam Create (1.0ms)[0m   [0mINSERT INTO "teams" ("name", "updated_at", "indoor_games_points", "previous_points", "spirit_points", "deductions", "outdoor_games_points", "friend_points", "created_at") VALUES('Yellow', '2010-03-17 17:18:12', NULL, NULL, NULL, NULL, NULL, NULL, '2010-03-17 17:18:12')[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (54.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
