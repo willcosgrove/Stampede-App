@@ -7,10 +7,12 @@
     <%=h @stampeder.gender_for_view %>
   </p>
   
+  <% unless @stampeder.team.blank? %>
   <p>
     <b>Team:</b>
     <%= @stampeder.team.name %>
   </p>
+  <% end %>
   
   <p>
     <b>Bracelet Number:</b>
@@ -24,10 +26,12 @@
   </p>
   <% end %>
   
+  <% unless @stampeder.parentphone.blank? %>
   <p>
     <b>Emergency Contact:</b>
     <%=h @stampeder.parentphone_for_view %>
   </p>
+  <% end %>
   
   <p>
     <b>Grade:</b>
@@ -103,6 +107,7 @@
   <% end %>
 </div>
 
+<% unless @stampeder.stampeders.blank? && @stampeder.signins.blank? %>
 <div id="stampeder_extra_info">
   <% unless @stampeder.stampeders.blank? %>
     <h3>Friends</h3>
@@ -113,7 +118,7 @@
     </ul>
   <% end %>
   
-  <% unless @stampeder.signins.blank? %>
+  <% unless @stampeder.signins.empty? %>
       <h3>Days <%= @stampeder.firstname %> was here</h3>
       <ul>
         <% @stampeder.signins.each do |signins| %>
@@ -122,6 +127,7 @@
       </ul>
   <% end %>
 </div>
+<% end %>
 
 <div id="link_backs">
   <%= link_to 'Edit', edit_stampeder_path(@stampeder) %> |  <%= link_to 'Back', stampeders_path %>

@@ -1,0 +1,44 @@
+<h1>Editing point</h1>
+
+<% form_for(@point) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :team_id %><br />
+    <%= f.text_field :team_id %>
+  </p>
+  <p>
+    <%= f.label :day %><br />
+    <%= f.date_select :day %>
+  </p>
+  <p>
+    <%= f.label :previous_points %><br />
+    <%= f.text_field :previous_points %>
+  </p>
+  <p>
+    <%= f.label :indoor_games %><br />
+    <%= f.text_field :indoor_games %>
+  </p>
+  <p>
+    <%= f.label :outdoor_games %><br />
+    <%= f.text_field :outdoor_games %>
+  </p>
+  <p>
+    <%= f.label :spirit_points %><br />
+    <%= f.text_field :spirit_points %>
+  </p>
+  <p>
+    <%= f.label :deductions %><br />
+    <%= f.text_field :deductions %>
+  </p>
+  <p>
+    <%= f.label :most_friends %><br />
+    <%= f.check_box :most_friends %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @point %> |
+<%= link_to 'Back', points_path %>

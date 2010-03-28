@@ -2,14 +2,10 @@
 <%= image_tag("registration.png") %>
 <% end %>
 
+<% content_for :top_of_body do %>
 <div id="signin_flash" style="display:none;">
-<span id="just_signed_in">Will Cosgrove</span><br /> has been signed in
-</div>
-
-<div id="signin_field">
-<h2 class="center">Type in stampeder's bracelet number</h2>
-<% form_remote_tag :url => create_signin_path do %>
-  <%= text_field_tag :barcode, nil, :size => 5 %>
-  <%= submit_tag 'Sign In', :class => 'hidden' %>
+<span id="just_signed_in">Will Cosgrove</span><br /> has been signed in</div>
 <% end %>
+<div id="registration_signin_form" class="center">
+<%= render :partial => 'registration_signin' %>
 </div>

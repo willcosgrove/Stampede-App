@@ -1,32 +1,28 @@
 <h1>Listing teams</h1>
-
+<% if @teams.empty? %>
+<h2>There are no teams</h2>
+<% else %>
 <table>
   <tr>
     <th>Name</th>
-    <th>Previous points</th>
-    <th>Indoor games points</th>
-    <th>Outdoor games points</th>
-    <th>Friend points</th>
-    <th>Spirit points</th>
-    <th>Deductions</th>
+    <th>Total Stampeders</th>
   </tr>
 
 <% @teams.each do |team| %>
   <tr>
     <td><%=h team.name %></td>
-    <td><%=h team.previous_points %></td>
-    <td><%=h team.indoor_games_points %></td>
-    <td><%=h team.outdoor_games_points %></td>
-    <td><%=h team.friend_points %></td>
-    <td><%=h team.spirit_points %></td>
-    <td><%=h team.deductions %></td>
-    <td><%= link_to 'Show', team %></td>
-    <td><%= link_to 'Edit', edit_team_path(team) %></td>
-    <td><%= link_to 'Destroy', team, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% if team.stampeders.empty? %>
+    <td>None</td>
+    <% else %>
+    <td><%=h team.stampeders.size %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>
-
+<% if @teams.size == 4 %>
+<img src="<%= "http://chart.apis.google.com/chart?cht=p3&chs=600x200&chd=t:#{@teams[0].stampeders.size},#{@teams[1].stampeders.size},#{@teams[2].stampeders.size},#{@teams[3].stampeders.size}&chco=eb4a41|25cf2e|3060d9|fbff00&chl=#{@teams[0].name}|#{@teams[1].name}|#{@teams[2].name}|#{@teams[3].name}" %>">
+<% end %>
 <br />
+<% end %>
 
 <%= link_to 'New team', new_team_path %>

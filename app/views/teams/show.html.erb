@@ -3,36 +3,7 @@
   <%=h @team.name %>
 </p>
 
-<p>
-  <b>Previous points:</b>
-  <%=h @team.previous_points %>
-</p>
-
-<p>
-  <b>Indoor games points:</b>
-  <%=h @team.indoor_games_points %>
-</p>
-
-<p>
-  <b>Outdoor games points:</b>
-  <%=h @team.outdoor_games_points %>
-</p>
-
-<p>
-  <b>Friend points:</b>
-  <%=h @team.friend_points %>
-</p>
-
-<p>
-  <b>Spirit points:</b>
-  <%=h @team.spirit_points %>
-</p>
-
-<p>
-  <b>Deductions:</b>
-  <%=h @team.deductions %>
-</p>
-
+<% unless @team.stampeders.empty? %>
 <p>
   <h3>Team Members</h3>
   <ul>
@@ -41,7 +12,11 @@
   <% end %>
   </ul>
 </p>
-
+<p>
+  <h3>Graph of subgroups</h3>
+  <img src="<%= "http://chart.apis.google.com/chart?cht=p3&chs=600x200&chd=t:#{@team.stampeders.find_all_by_subgroup("6m").size},#{@team.stampeders.find_all_by_subgroup("6f").size},#{@team.stampeders.find_all_by_subgroup("7m").size},#{@team.stampeders.find_all_by_subgroup("7f").size},#{@team.stampeders.find_all_by_subgroup("8m").size},#{@team.stampeders.find_all_by_subgroup("8f").size},#{@team.stampeders.find_all_by_subgroup("9m").size},#{@team.stampeders.find_all_by_subgroup("9f").size}&chl=6th%20Grade%20Boys|6th%20Grade%20Girls|7th%20Grade%20Boys|7th%20Grade%20Girls|8th%20Grade%20Boys|8th%20Grade%20Girls|9th%20Grade%20Boys|9th%20Grade%20Girls" %>">
+</p>
+<% end %>
 
 <%= link_to 'Edit', edit_team_path(@team) %> |
 <%= link_to 'Back', teams_path %>

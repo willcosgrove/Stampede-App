@@ -1,5 +1,7 @@
 <h1>Listing stampeders</h1>
-
+<% if @stampeders.empty? %>
+<h2>There are no stampeders</h2>
+<% else %>
 <table>
   <tr>
     <th>Last Name</th>
@@ -19,19 +21,14 @@
   <tr>
     <td><%=h stampeder.lastname %></td>
     <td><%=h stampeder.firstname %></td>
-    <td><%=h stampeder.team_id %></td>
+    <td><%=h stampeder.team.name unless stampeder.team.blank? %></td>
     <td><%=h stampeder.barcode %></td>
     <td><%=h stampeder.parentphone %></td>
     <td><%=h stampeder.address %></td>
     <td><%=h stampeder.grade %></td>
     <td><%=h stampeder.city %></td>
     <td><%=h stampeder.state %></td>
-    <td><% if (stampeder.gender == "m") %> 
-      <%= "Boy" %>
-    <% else %>
-      <%= "Girl" %>
-    <% end %>
-    </td>
+    <td><%=h stampeder.gender_for_view %></td>
     <td><%=h stampeder.subgroup %></td>
     <td><%= link_to 'Show', stampeder %></td>
     <td><%= link_to 'Edit', edit_stampeder_path(stampeder) %></td>
@@ -41,5 +38,5 @@
 </table>
 
 <br />
-
+<% end %>
 <%= link_to 'New stampeder', new_stampeder_path %>

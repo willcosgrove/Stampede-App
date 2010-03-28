@@ -1,52 +1,6 @@
 <h1>Editing stampeder</h1>
 
-<% form_for(@stampeder) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :lastname %><br />
-    <%= f.text_field :lastname %>
-  </p>
-  <p>
-    <%= f.label :firstname %><br />
-    <%= f.text_field :firstname %>
-  </p>
-  <p>
-    <%= f.label :team_id %><br />
-    <%= f.select :team_id, @teams.collect {|t| [t.name, t.id]} %>
-  </p>
-  <p>
-    <%= f.label :barcode %><br />
-    <%= f.text_field :barcode %>
-  </p>
-  <p>
-    <%= f.label :emergency_phone_number %><br />
-    <%= f.text_field :parentphone %>
-  </p>
-  <p>
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </p>
-  <p>
-    <%= f.label :grade %><br />
-    <%= f.text_field :grade %>
-  </p>
-  <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city %>
-  </p>
-  <p>
-    <%= f.label :state %><br />
-    <%= f.text_field :state %>
-  </p>
-  <p>
-    <%= f.label :gender %><br />
-    <%= f.text_field :gender %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+<%= render :partial => 'complete_stampeder_form' %>
 
 <%= link_to 'Show', @stampeder %> |
-<%= link_to 'Back', stampeders_path %>
+<%= link_to 'Back', :back %>

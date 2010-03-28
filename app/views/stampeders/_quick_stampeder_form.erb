@@ -1,81 +1,24 @@
-<% form_for(@stampeder) do |f| %>
+<% remote_form_for :stampeder, @stampeder, :url => register_stampeder_path do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :first_name %><br />
-    <%= f.text_field :firstname %>
-  </p>
-  <p>
-    <%= f.label :last_name %><br />
+    <%= f.label :first_name %>
+    <%= f.text_field :firstname %><br />
+    <%= f.label :last_name %>
     <%= f.text_field :lastname %>
   </p>
   <p>
-    <%= f.label :gender %><br />
-    <%= f.select :gender, [['select gender', ''], ['Boy', 'm'], ['Girl', 'f']] %>
-  </p>
-  <p>
-    <%= f.label :dob %><br />
-    <%= f.date_select :dob, :start_year => Time.now.year - 18, :end_year => Time.now.year - 10, :include_blank => true, :use_month_numbers => true, :order => [:month, :day, :year] %>
-  </p>
-  <p>
-    <%= f.label :parent %><br />
-    <%= f.text_field :parent %>
-  </p>
-  <p>
-    <%= f.label :emergency_phone_number %><br />
-    <%= f.text_field :parentphone %>
-  </p>
-  <p>
-  <p>
-    <%= f.label :bracelet_number %><br />
-    <%= f.text_field :barcode %>
-  </p>
-  <!-- Vistor Stuff Should Go Here-->
-  <p>
-    <%= f.label :grade %><br />
+    <%= f.label :gender %>
+    <%= f.select :gender, [['select gender', ''], ['Boy', 'm'], ['Girl', 'f']] %><br />
+    <%= f.label :grade %>
     <%= f.select :grade, [['select grade', ''], ['6th Grade', 6], ['7th Grade', 7], ['8th Grade', 8], ['9th Grade', 9]] %>
   </p>
   <p>
-    <%= f.label :school %><br />
-    <%= f.text_field :school %>
+    <%= f.label :brought_by %>
+    <%= text_field_with_auto_complete :stampeder, :friend_name, {}, { :url => autocomplete_path, :method => :get, :with => "'search=' + element.value", :value => '' } %>
   </p>
+  <!-- Vistor Stuff Should Go Here-->
   <p>
-    <%= f.label :studentphone %><br />
-    <%= f.text_field :studentphone %>
-  </p>
-  <p>
-    <%= f.label :text %><br />
-    Yes <%= f.radio_button :text, true %> No <%= f.radio_button :text, false %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :address %><br />
-    <%= f.text_field :address %>
-  </p>
-  <p>
-    <%= f.label :city %><br />
-    <%= f.text_field :city, :value => "Fort Worth" %>
-  </p>
-  <p>
-    <%= f.label :state %><br />
-    <%= f.text_field :state, :value => "TX" %>
-  </p>
-  <p>
-    <%= f.label :zip_code %><br />
-    <%= f.text_field :zipcode %>
-  </p>
-  <p>
-    <%= f.label :brought_by %><br />
-    <%= f.text_field :friend_id %>
-  </p>
-  <p>
-    <%= f.label :team %><br />
-    <%= f.select :team_id, [['select a team', '']]+@teams.collect {|t| [t.name, t.id]} %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Register Stampeder' %>
   </p>
 <% end %>

@@ -9,7 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100319061656) do
+ActiveRecord::Schema.define(:version => 20100326031145) do
+
+  create_table "points", :force => true do |t|
+    t.integer  "team_id"
+    t.date     "day"
+    t.integer  "previous_points"
+    t.integer  "indoor_games"
+    t.integer  "outdoor_games"
+    t.integer  "spirit_points"
+    t.integer  "deductions"
+    t.boolean  "most_friends"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "points", ["team_id"], :name => "index_points_on_team_id"
 
   create_table "signins", :force => true do |t|
     t.integer  "stampeder_id"
@@ -50,15 +65,8 @@ ActiveRecord::Schema.define(:version => 20100319061656) do
 
   create_table "teams", :force => true do |t|
     t.string   "name"
-    t.integer  "previous_points"
-    t.integer  "indoor_games_points"
-    t.integer  "outdoor_games_points"
-    t.integer  "friend_points"
-    t.integer  "spirit_points"
-    t.integer  "deductions"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "stampeders_count",     :default => 0
   end
 
 end

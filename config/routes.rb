@@ -1,5 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :points
+
+  map.registration_fill_in 'registration/fill_in', :controller => 'Stampeders', :action=> 'fill_in'
   map.registration_signin 'registration/signin', :controller => 'Stampeders', :action => 'signin'
+  map.register_stampeder 'registration/regster', :controller => 'Stampeders', :action => 'register_stampeder'
+  map.add_barcode 'registration/addbarcode', :controller => 'Stampeders', :action => 'add_barcode'
   map.autocomplete 'autocomplete.js', :controller => 'Stampeders', :action => 'autocomplete'
   map.registration 'registration', :controller => 'Stampeders', :action => 'registration'
   map.create_signin 'signin/create', :controller => 'Signins', :action => 'create'

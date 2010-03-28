@@ -1,0 +1,57 @@
+<h1>Listing points</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <% @points.each do |point| %>
+    <th><%= point.team.name %></th>
+    <% end %>
+  </tr>
+
+
+  <tr>
+    <td>Previous Points</td>
+    <% @points.each do |point| %>
+    <td><%=h point.previous_points %></td>
+    <% end %>
+  </tr>
+  
+  <tr>
+    <td>Outdoor Games</td>
+    <% @points.each do |point| %>
+    <td><%=h point.outdoor_games %></td>
+    <% end %>
+  </tr>
+  
+  <tr>
+    <td>Indoor Games</td>
+    <% @points.each do |point| %>
+    <td><%=h point.indoor_games %></td>
+    <% end %>
+  </tr>
+  
+  <tr>
+    <td>Friend Points</td>
+    <% @points.each do |point| %>
+    <td><%=h point.friend_points %></td>
+    <% end %>
+  </tr>
+  
+  <tr>
+    <td>Spirit Points</td>
+    <% @points.each do |point| %>
+    <td><%=h point.spirit_points %></td>
+    <% end %>
+  </tr>
+  
+  <tr>
+    <td>Deductions</td>
+    <% @points.each do |point| %>
+    <td><%=h point.deductions %></td>
+    <% end %>
+  </tr>
+</table>
+
+<br />
+
+<%= link_to 'New point', new_point_path %>

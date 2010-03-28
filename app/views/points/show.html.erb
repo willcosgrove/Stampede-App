@@ -1,0 +1,43 @@
+<p>
+  <b>Team:</b>
+  <%=h @point.team_id %>
+</p>
+
+<p>
+  <b>Day:</b>
+  <%=h @point.day %>
+</p>
+
+<p>
+  <b>Previous points:</b>
+  <%=h @point.previous_points %>
+</p>
+
+<p>
+  <b>Indoor games:</b>
+  <%=h @point.indoor_games %>
+</p>
+
+<p>
+  <b>Outdoor games:</b>
+  <%=h @point.outdoor_games %>
+</p>
+
+<p>
+  <b>Spirit points:</b>
+  <%=h @point.spirit_points %>
+</p>
+
+<p>
+  <b>Deductions:</b>
+  <%=h @point.deductions %>
+</p>
+
+<p>
+  <b>Most friends:</b>
+  <%=h @point.most_friends %>
+</p>
+
+
+<%= link_to 'Edit', edit_point_path(@point) %> |
+<%= link_to 'Back', points_path %>

@@ -1,0 +1,6 @@
+<h3><%= @stampeder.firstname %> is on the <%= @stampeder.team.name %> team</h3>
+<% form_remote_tag :url => add_barcode_path do %>
+  <%= text_field_tag :barcode, nil, :size => 5 %>
+  <%= hidden_field_tag :id, @stampeder.id %>
+  <%= submit_tag 'Set Bracelet Number', :class => 'hidden' %>
+<% end %>

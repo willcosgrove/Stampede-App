@@ -1,24 +1,30 @@
 class Stampeder < ActiveRecord::Base
-  belongs_to :team, :counter_cache => true
+  belongs_to :team
   belongs_to :stampeder, :class_name => "Stampeder", :foreign_key => "friend_id"
   has_many :stampeders, :class_name => "Stampeder", :foreign_key => "friend_id"
   has_many :signins
   
-  validates_presence_of :firstname, :lastname, :grade, :gender, :message => "Can you make sure that you filled out first name, last name, grade, and gender?  We need those before we can go any further."
-  #validates_inclusion_of :barcode, :in => 111111111..999999999, :message => 'invalid barcode'
-  validates_format_of :parentphone, :with => /\A\d{10}\z/, :message => "Could you please double check the emergency phone number?  I don't think it's right."
-  validates_format_of :studentphone, :with => /\d{10}/, :allow_nil => true, :message => "Can you make sure that the student phone number is correct?  I think it might be wrong."
-  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/, :allow_nil => true, :message => "Could you please double check the email address?  I don't think that's right."
-  validates_length_of :zipcode, :is => 5, :message => "Could you please take a look at the zip code?  I don't think it's a real zip code."
-  validates_length_of :state, :is => 2, :allow_nil => true, :message => "Oops!  Make sure that the state field contains the two letter state abreviation rather than the full state name."
   
-  def before_validation_on_create(record)
-    record.addCapitalization
-    record.addfullname
+  validates_presence_of :firstname, :lastname, :grade, :gender, :message => "- Can you make sure that you filled out first name, last name, grade, and gender?  We need those before we can go any further."
+  validates_format_of :parentphone, :with => /\A\d{10}\z/, :allow_nil => true, :allow_blank => true, :message => "- Could you please double check the emergency phone number?  I don't think it's right."
+  validates_format_of :studentphone, :with => /\d{10}/, :allow_nil => true, :allow_blank => true, :message => "- Can you make sure that the student phone number is correct?  I think it might be wrong."
+  validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/, :allow_nil => true, :allow_blank => true, :message => "- Could you please double check the email address?  I don't think that's right."
+  validates_length_of :zipcode, :is => 5, :allow_nil => true, :allow_blank => true, :message => "- Could you please take a look at the zip code?  I don't think it's a real zip code."
+  validates_length_of :state, :is => 2, :allow_nil => true, :allow_blank => true, :message => "- Oops!  Make sure that the state field contains the two letter state abreviation rather than the full state name."
+  
+  def before_validation
+    self.parentphone.gsub!(/\D/, "") unless self.parentphone.blank?    
+    self.studentphone.gsub!(/\D/, "") unless self.studentphone.blank?
+  end
+  
+  def before_create
+    self.addfullname
+    self.createSubgroup
+    self.pickTeam if self.team.blank?
   end
   
   def friend_name
-    stampeder.name if stampeder
+    self.stampeder.name if self.stampeder
   end
   
   def friend_name=(name)
@@ -72,7 +78,7 @@ class Stampeder < ActiveRecord::Base
     sortedTeamSizes = teamSizes.sort
     
     if sortedTeamSizes.last - sortedTeamSizes.first >= 5 && !self.stampeder
-      teamArrayID = teamSizes.index(sortedTeamSize.first)
+      teamArrayID = teamSizes.index(sortedTeamSizes.first)
       self.team = case teamArrayID
         when 0 then greenTeam
         when 1 then yellowTeam
@@ -84,7 +90,6 @@ class Stampeder < ActiveRecord::Base
     if self.stampeder
       self.team_id = self.stampeder.team_id
     end
-    self.save
     
   end
   
@@ -103,6 +108,14 @@ class Stampeder < ActiveRecord::Base
       return "Girl"
     else
       return nil
+    end
+  end
+  
+  def missingInfo?
+    if self.dob.blank? || self.parent.blank? || self.parentphone.blank? || self.barcode.blank? || self.school.blank? || self.studentphone.blank? || self.textmsg.blank? || self.email.blank? || self.address.blank? || self.city.blank? || self.state.blank? || self.zipcode.blank?
+      return true
+    else
+      return false
     end
   end
   
