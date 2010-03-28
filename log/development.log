@@ -14789,3 +14789,39 @@ Rendering teams/index
   [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
   [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
 Completed in 72ms (View: 45, DB: 7) | 200 OK [http://localhost/teams]
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-28 11:54:52) [GET]
+Rendering template within layouts/stampeders
+Rendering stampeders/registration
+Completed in 2785ms (View: 2783, DB: 0) | 200 OK [http://localhost/registration]
+
+
+Processing StampedersController#registration (for 127.0.0.1 at 2010-03-28 11:56:20) [GET]
+
+ActionController::UnknownAction (No action responded to registration. Actions: autocomplete, create, destroy, edit, index, new, show, and update):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-03-28 11:56:59) [GET]
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering registration/index
+Completed in 89ms (View: 20, DB: 2) | 200 OK [http://localhost/registration]
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-03-28 11:57:35) [GET]
+  [4;35;1mTeam Load (2.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/index
+Completed in 128ms (View: 22, DB: 2) | 200 OK [http://localhost/registration]

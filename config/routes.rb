@@ -6,7 +6,6 @@ ActionController::Routing::Routes.draw do |map|
   map.register_stampeder 'registration/regster', :controller => 'Registration', :action => 'register_stampeder'
   map.add_barcode 'registration/addbarcode', :controller => 'Registration', :action => 'add_barcode'
   map.autocomplete 'autocomplete.js', :controller => 'Stampeders', :action => 'autocomplete'
-  map.registration 'registration', :controller => 'Stampeders', :action => 'registration'
   map.create_signin 'signin/create', :controller => 'Signins', :action => 'create'
   map.resources :stampeders
   map.resources :teams

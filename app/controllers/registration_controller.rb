@@ -36,5 +36,9 @@ class RegistrationController < ApplicationController
       @plural = false
     end
   end
+  
+  def view_all
+    @stampeders = Stampeder.all
+  end
 
 end
