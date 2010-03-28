@@ -38,7 +38,12 @@ class RegistrationController < ApplicationController
   end
   
   def view_all
-    @stampeders = Stampeder.all
+    @t1Stampeders = Stampeder.find_by_team_id(1, :order => "lastname")
+    @t2Stampeders = Stampeder.find_by_team_id(2, :order => "lastname")
+    @t3Stampeders = Stampeder.find_by_team_id(3, :order => "lastname")
+    @t4Stampeders = Stampeder.find_by_team_id(4, :order => "lastname")
+    @stampeders = [@t1Stampeders, @t2Stampeders, @t3Stampeders, @t4Stampeders]
+    @teams = Team.all
   end
 
 end

@@ -1,4 +1,11 @@
-body { background-color: #2d2620; color: #333; height: 100%; }
+body {
+  background-color: #2d2620;
+  color: #333;
+  height: 100%;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+}
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -57,7 +64,7 @@ a:hover { color: #fff; background-color:#000; }
   min-height: 500px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 20px;
   border: 1px solid #4e4e4e;
   padding: 10px;
   background: #FFFFFF;
@@ -83,7 +90,9 @@ a:hover { color: #fff; background-color:#000; }
 #top_images {
   margin-left: auto;
   margin-right: auto;
-  width: 779px;
+  margin-top: 60px;
+  margin-bottom: 0px;
+  width: 655px;
 }
 
 #registration_welcome {
@@ -165,3 +174,115 @@ a:hover { color: #fff; background-color:#000; }
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
+
+/* For Header */
+#wrap {
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+  position: relative;
+}
+
+#main-nav {
+  margin: 0px 0px 0px 2px;
+  text-align: left;
+  min-height: 25px;
+  padding-top: 10px;
+  padding-left: 0px;
+}
+#main-handle {
+  width: 400px;
+  float: right;
+  margin-top: -1px;
+}
+#main-nav li {
+  display: inline;
+  list-style: none;
+}
+#main-nav li a {
+  margin-right: 5px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px;
+  outline: 0;
+  position: relative;
+  top: -2px;
+}
+#main-nav li a:hover, #main-nav li a.active {
+  background: #514539;
+}
+#sub-link-bar {
+  background: #514539;
+  min-height: 10px;
+  border-bottom: #645546 1px solid;
+}
+.sub-links {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: -30px;
+  text-align: left;
+  left: 0px;
+}
+#main-nav li .sub-links li a:hover{
+  background: #2d2620;
+}
+#main-nav li a.close{
+  display: none;  
+  position: absolute;
+}
+#main-nav li a.close:hover{
+  background: #900;
+}
+/* Thanks Spiffy Corners */ 
+.round {
+  display:block
+}
+.round * {
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#645546
+}
+.round1 {
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #443a30;
+  border-right:1px solid #443a30;
+  background:#56493c
+}
+.round2 {
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #322a23;
+  border-right:1px solid #322a23;
+  background:#594c3e
+}
+.round3 {
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #594c3e;
+  border-right:1px solid #594c3e;
+}
+.round4 {
+  border-left:1px solid #443a30;
+  border-right:1px solid #443a30
+}
+.round5 {
+  border-left:1px solid #56493c;
+  border-right:1px solid #56493c
+}
+.roundfg {
+  background:#645546
+}
+
+/* End Header */

@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Stampeders: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'scaffold' %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag 'header' %>
+</head>
+<body>
+<div id="sub-link-bar"></div>
+<div id="wrap">
+  <div id="main-handle">
+    <div class="roundfg">
+      <ul id="main-nav">
+        <li>
+          <%= link_to "home", root_path, :class => "main-link" %>
+          <ul class="sub-links">
+            <li><%= link_to "home", root_path %></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "Registration", registration_path, :class => "main-link" %>
+          <ul class="sub-links">
+            <li><%= link_to "sign in", registration_signin_path %></li>
+            <li><%= link_to "fill in", registration_fill_in_path %></li>
+            <li><%= link_to "view all", registration_view_all_path %></li>
+          </ul>
+        </li>
+        <li>
+          <%= link_to "points", points_path, :class => "main-link" %>
+          <ul class="sub-links">
+            <li><%= link_to "modify points", points_path %></li>
+          </ul>
+        </li>
+        <li><a class="close" title="Click to Collapse" href="#">X</a></li>
+      </ul>
+    </div>
+    <b class="round"> <b class="round5"></b> <b class="round4"></b> <b class="round3"></b> <b class="round2"><b></b></b> <b class="round1"><b></b></b></b>
+  </div>
+</div>
+<%= yield :top_of_body %>
+<p style="color: green"><%= flash[:notice] %></p>
+<div id="top_images">
+<%= image_tag("stampede10.png") %>
+<%= yield :top_images %>
+</div>
+<div id="content">
+<%= yield %>
+</div>
+
+</body>
+</html>

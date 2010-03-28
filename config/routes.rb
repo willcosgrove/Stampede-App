@@ -3,7 +3,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.registration_fill_in 'registration/fill_in', :controller => 'Registration', :action=> 'fill_in'
   map.registration_signin 'registration/signin', :controller => 'Registration', :action => 'signin'
-  map.register_stampeder 'registration/regster', :controller => 'Registration', :action => 'register_stampeder'
+  map.register_stampeder 'registration/register', :controller => 'Registration', :action => 'register_stampeder'
+  map.registration_view_all 'registration/view_all', :controller => 'Registration', :action => 'view_all' 
+  map.registration 'registration', :controller => 'Registration', :action => 'index'
   map.add_barcode 'registration/addbarcode', :controller => 'Registration', :action => 'add_barcode'
   map.autocomplete 'autocomplete.js', :controller => 'Stampeders', :action => 'autocomplete'
   map.create_signin 'signin/create', :controller => 'Signins', :action => 'create'
@@ -42,7 +44,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "welcome"
+  map.root :controller => "navigation"
 
   # See how all your routes lay out with "rake routes"
 

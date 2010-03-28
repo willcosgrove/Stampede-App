@@ -1,0 +1,24 @@
+<% remote_form_for :stampeder, @stampeder, :url => register_stampeder_path do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :first_name %>
+    <%= f.text_field :firstname %><br />
+    <%= f.label :last_name %>
+    <%= f.text_field :lastname %>
+  </p>
+  <p>
+    <%= f.label :gender %>
+    <%= f.select :gender, [['select gender', ''], ['Boy', 'm'], ['Girl', 'f']] %><br />
+    <%= f.label :grade %>
+    <%= f.select :grade, [['select grade', ''], ['6th Grade', 6], ['7th Grade', 7], ['8th Grade', 8], ['9th Grade', 9]] %>
+  </p>
+  <p>
+    <%= f.label :brought_by %>
+    <%= text_field_with_auto_complete :stampeder, :friend_name, {}, { :url => autocomplete_path, :method => :get, :with => "'search=' + element.value", :value => '' } %>
+  </p>
+  <!-- Vistor Stuff Should Go Here-->
+  <p>
+    <%= f.submit 'Register Stampeder' %>
+  </p>
+<% end %>
