@@ -1,21 +1,21 @@
-$(document).ready(function(){
-  $("#main-nav li a.main-link").mouseover(function(){
-    $("#main-nav li a.close").fadeIn();
-    $("#main-nav li a.main-link").removeClass("active");                         
-    $(this).addClass("active");                    
-    $("#sub-link-bar").animate({
+jQuery(document).ready(function(){
+  jQuery("#main-nav li a.main-link").mouseover(function(){
+    jQuery("#main-nav li a.close").fadeIn();
+    jQuery("#main-nav li a.main-link").removeClass("active");                         
+    jQuery(this).addClass("active");                    
+    jQuery("#sub-link-bar").animate({
       height: "40px"             
     });
-    $(".sub-links").hide();
-    $(this).siblings(".sub-links").fadeIn();
+    jQuery(".sub-links").hide();
+    jQuery(this).siblings(".sub-links").fadeIn();
   });
-  $("#main-nav li a.close").click(function(){
-    $("#main-nav li a.main-link").removeClass("active");                                           
-    $(".sub-links").fadeOut();
-    $("#sub-link-bar").animate({
+  jQuery("#main-nav li a.close").click(function(){
+    jQuery("#main-nav li a.main-link").removeClass("active");                                           
+    jQuery(".sub-links").fadeOut();
+    jQuery("#sub-link-bar").animate({
       height: "10px"             
     });   
-    $("#main-nav li a.close").fadeOut();
+    jQuery("#main-nav li a.close").fadeOut();
   });
   
   

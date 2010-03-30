@@ -12,6 +12,7 @@ class RegistrationController < ApplicationController
   def register_stampeder
     @stampeder = Stampeder.new(params[:stampeder])
     @stampeder.save
+    @teamname = @stampeder.team.name
   end
   
   def add_barcode

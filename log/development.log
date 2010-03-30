@@ -16534,3 +16534,245 @@ Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-03-2
 Rendering registration/register_stampeder
 Rendered registration/_add_barcode_form (6.0ms)
 Completed in 88ms (View: 21, DB: 5) | 200 OK [http://localhost/registration/register]
+
+
+Processing NavigationController#index (for 127.0.0.1 at 2010-03-29 18:00:11) [GET]
+Rendering template within layouts/navigation
+Rendering navigation/index
+Completed in 2734ms (View: 2731, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-03-29 18:03:59) [GET]
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/index
+Completed in 107ms (View: 46, DB: 2) | 200 OK [http://localhost/registration]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-03-29 18:04:37) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (18.0ms)
+Rendered registration/_register_new_stampeder (26.0ms)
+Rendered registration/_registration_signin (38.0ms)
+Completed in 80ms (View: 61, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-03-29 18:05:09) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"8HMw6WoleoHw11yjXeG7wisEmOEORvMI1uFzkbEQmIs=", "stampeder"=>{"grade"=>"8", "friend_name"=>"", "gender"=>"m", "lastname"=>"Gardener", "firstname"=>"Frank"}}
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (2.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 4, 8, '2010-03-29 23:05:09', NULL, '8m', NULL, NULL, NULL, NULL, 'Frank Gardener', 'Gardener', 'Frank', 'm', NULL, NULL, NULL, NULL, '2010-03-29 23:05:09', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (6.0ms)
+Completed in 197ms (View: 100, DB: 4) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-03-29 18:18:09) [GET]
+Rendering registration/register_stampeder
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #1 of app/views/registration/_add_barcode_form.erb:
+1: <h3><%= @stampeder.firstname %> is on the <%= @stampeder.team.name %> team</h3>
+2: <% form_remote_tag :url => add_barcode_path do %>
+3:   <%= text_field_tag :barcode, nil, :size => 5 %>
+4:   <%= hidden_field_tag :id, @stampeder.id %>
+
+    app/views/registration/_add_barcode_form.erb:1
+    app/views/registration/register_stampeder.rjs:1:in `__instance_exec0'
+    app/views/registration/register_stampeder.rjs:1:in `_run_rjs_app47views47registration47register_stampeder46rjs'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (92.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-03-29 18:22:44) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"8HMw6WoleoHw11yjXeG7wisEmOEORvMI1uFzkbEQmIs=", "stampeder"=>{"grade"=>"6", "friend_name"=>"", "gender"=>"m", "lastname"=>"Jobs", "firstname"=>"Steve"}}
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Create (1.0ms)[0m   [0;1mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 4, 6, '2010-03-29 23:22:44', NULL, '6m', NULL, NULL, NULL, NULL, 'Steve Jobs', 'Jobs', 'Steve', 'm', NULL, NULL, NULL, NULL, '2010-03-29 23:22:44', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (6.0ms)
+Completed in 78ms (View: 16, DB: 6) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-03-29 18:24:09) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/index
+Completed in 194ms (View: 135, DB: 1) | 200 OK [http://localhost/registration/]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-03-29 18:24:11) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (18.0ms)
+Rendered registration/_register_new_stampeder (24.0ms)
+Rendered registration/_registration_signin (35.0ms)
+Completed in 77ms (View: 59, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-03-29 18:24:24) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"8HMw6WoleoHw11yjXeG7wisEmOEORvMI1uFzkbEQmIs=", "stampeder"=>{"grade"=>"6", "friend_name"=>"", "gender"=>"m", "lastname"=>"Castanza", "firstname"=>"George"}}
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (2.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 1, 6, '2010-03-29 23:24:25', NULL, '6m', NULL, NULL, NULL, NULL, 'George Castanza', 'Castanza', 'George', 'm', NULL, NULL, NULL, NULL, '2010-03-29 23:24:25', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (6.0ms)
+Completed in 93ms (View: 22, DB: 7) | 200 OK [http://localhost/registration/register]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-29 18:26:19) [GET]
+
+ActionController::RoutingError (No route matches "/registration/register.htm" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-29 18:26:21) [GET]
+
+ActionController::RoutingError (No route matches "/registration/register.html" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-03-29 18:27:50) [GET]
+
+NoMethodError (undefined method `name' for nil:NilClass):
+  app/controllers/registration_controller.rb:15:in `register_stampeder'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (55.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-03-29 18:27:56) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/index
+Completed in 38ms (View: 12, DB: 1) | 200 OK [http://localhost/registration]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-03-29 18:27:58) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (12.0ms)
+Rendered registration/_register_new_stampeder (12.0ms)
+Rendered registration/_registration_signin (17.0ms)
+Completed in 45ms (View: 28, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing StampedersController#index (for 127.0.0.1 at 2010-03-29 18:28:21) [GET]
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/index
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Completed in 119ms (View: 100, DB: 5) | 200 OK [http://localhost/stampeders]
+
+
+Processing StampedersController#edit (for 127.0.0.1 at 2010-03-29 18:28:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTeam Load (2.0ms)[0m   [0mSELECT * FROM "teams" [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/edit
+Rendered stampeders/_complete_stampeder_form (43.0ms)
+Completed in 90ms (View: 63, DB: 3) | 200 OK [http://localhost/stampeders/1/edit]
+
+
+Processing StampedersController#update (for 127.0.0.1 at 2010-03-29 18:28:32) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"8HMw6WoleoHw11yjXeG7wisEmOEORvMI1uFzkbEQmIs=", "id"=>"1", "stampeder"=>{"team_id"=>"2", "city"=>"Fort Worth", "grade"=>"8", "zipcode"=>"", "barcode"=>"1993", "parentphone"=>"", "dob(1i)"=>"", "friend_name"=>"", "dob(2i)"=>"", "gender"=>"m", "lastname"=>"Cosgrove", "firstname"=>"Will", "dob(3i)"=>"", "studentphone"=>"", "address"=>"", "school"=>"", "state"=>"TX", "email"=>"", "parent"=>""}}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+
+NoMethodError (private method `gsub!' called for nil:NilClass):
+  app/controllers/stampeders_controller.rb:65:in `update'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mStampeder Update (11.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '1993', "updated_at" = '2010-03-29 23:33:27' WHERE "id" = 1[0m
