@@ -16776,3 +16776,1321 @@ Rendered rescues/_request_and_response (1.0ms)
 Rendering rescues/layout (internal_server_error)
   [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
   [4;35;1mStampeder Update (11.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '1993', "updated_at" = '2010-03-29 23:33:27' WHERE "id" = 1[0m
+
+
+Processing NavigationController#index (for 127.0.0.1 at 2010-04-01 13:45:10) [GET]
+Rendering template within layouts/navigation
+Rendering navigation/index
+Completed in 2299ms (View: 2295, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 13:45:19) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (28.0ms)
+Rendered registration/_register_new_stampeder (35.0ms)
+Rendered registration/_registration_signin (46.0ms)
+Completed in 207ms (View: 96, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:45:46) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"8", "friend_name"=>"", "gender"=>"f", "lastname"=>"Plus", "firstname"=>"Juice"}, "_"=>""}
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Create (1.0ms)[0m   [0;1mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 2, 8, '2010-04-01 18:45:46', NULL, '8f', NULL, NULL, NULL, NULL, 'Juice Plus', 'Plus', 'Juice', 'f', NULL, NULL, NULL, NULL, '2010-04-01 18:45:46', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (8.0ms)
+Completed in 251ms (View: 25, DB: 1) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:46:00) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"1237", "id"=>"7", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 7) [0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "barcode" = '1237', "updated_at" = '2010-04-01 18:46:00' WHERE "id" = 7[0m
+  [4;35;1mSignin Create (2.0ms)[0m   [0mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:46:00', 7, '2010-04-01 13:46:00', '2010-04-01 18:46:00')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (8.0ms)
+Rendered registration/_register_new_stampeder (10.0ms)
+Rendered registration/_registration_signin (13.0ms)
+Completed in 222ms (View: 24, DB: 5) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-04-01 13:46:59) [GET]
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+
+ActionView::TemplateError (undefined method `each' for #<Stampeder:0x8905eb8>) on line #9 of app/views/registration/view_all.html.erb:
+6: <ul>
+7:   <li><%= @teams[1].name %></li>
+8:   <ul>
+9:     <% @stampeders[1].each do |stampeder| %>
+10:     <li><%= link_to stampeder.name, stampeder_path(stampeder) %></li>
+11:     <% end %>
+12:   </ul>
+
+    app/views/registration/view_all.html.erb:9
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-04-01 13:49:02) [GET]
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+
+ActionView::TemplateError (undefined method `each' for #<Stampeder:0x875e998>) on line #9 of app/views/registration/view_all.html.erb:
+6: <ul>
+7:   <li><%= @teams[1].name %></li>
+8:   <ul>
+9:     <% @t1Stampeders.each do |stampeder| %>
+10:     <li><%= link_to stampeder.name, stampeder_path(stampeder) %></li>
+11:     <% end %>
+12:   </ul>
+
+    app/views/registration/view_all.html.erb:9
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (57.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 13:49:29) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (10.0ms)
+Rendered registration/_register_new_stampeder (11.0ms)
+Rendered registration/_registration_signin (14.0ms)
+Completed in 36ms (View: 23, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:49:41) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"6", "friend_name"=>"", "gender"=>"m", "lastname"=>"Pepper", "firstname"=>"Dr"}, "_"=>""}
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Create (1.0ms)[0m   [0;1mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 3, 6, '2010-04-01 18:49:41', NULL, '6m', NULL, NULL, NULL, NULL, 'Dr Pepper', 'Pepper', 'Dr', 'm', NULL, NULL, NULL, NULL, '2010-04-01 18:49:41', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (5.0ms)
+Completed in 146ms (View: 8, DB: 3) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:49:51) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"2323", "id"=>"8", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 8) [0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "barcode" = '2323', "updated_at" = '2010-04-01 18:49:51' WHERE "id" = 8[0m
+  [4;35;1mSignin Create (2.0ms)[0m   [0mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:49:51', 8, '2010-04-01 13:49:51', '2010-04-01 18:49:51')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (6.0ms)
+Rendered registration/_register_new_stampeder (6.0ms)
+Rendered registration/_registration_signin (11.0ms)
+Completed in 184ms (View: 16, DB: 5) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:50:08) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"6", "friend_name"=>"", "gender"=>"f", "lastname"=>"Springs", "firstname"=>"Ozarca"}, "_"=>""}
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Create (2.0ms)[0m   [0;1mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 2, 6, '2010-04-01 18:50:08', NULL, '6f', NULL, NULL, NULL, NULL, 'Ozarca Springs', 'Springs', 'Ozarca', 'f', NULL, NULL, NULL, NULL, '2010-04-01 18:50:08', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (4.0ms)
+Completed in 140ms (View: 8, DB: 4) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:50:14) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"1013", "id"=>"9", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 9) [0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "barcode" = '1013', "updated_at" = '2010-04-01 18:50:14' WHERE "id" = 9[0m
+  [4;35;1mSignin Create (2.0ms)[0m   [0mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:50:14', 9, '2010-04-01 13:50:14', '2010-04-01 18:50:14')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (8.0ms)
+Rendered registration/_register_new_stampeder (8.0ms)
+Rendered registration/_registration_signin (14.0ms)
+Completed in 219ms (View: 22, DB: 5) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:50:40) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"8", "friend_name"=>"", "gender"=>"f", "lastname"=>"Miller", "firstname"=>"Cameron"}, "_"=>""}
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Create (3.0ms)[0m   [0;1mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 4, 8, '2010-04-01 18:50:40', NULL, '8f', NULL, NULL, NULL, NULL, 'Cameron Miller', 'Miller', 'Cameron', 'f', NULL, NULL, NULL, NULL, '2010-04-01 18:50:40', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (6.0ms)
+Completed in 128ms (View: 11, DB: 7) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:50:45) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"5421", "id"=>"10", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 10) [0m
+  [4;36;1mStampeder Update (3.0ms)[0m   [0;1mUPDATE "stampeders" SET "barcode" = '5421', "updated_at" = '2010-04-01 18:50:45' WHERE "id" = 10[0m
+  [4;35;1mSignin Create (1.0ms)[0m   [0mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:50:45', 10, '2010-04-01 13:50:45', '2010-04-01 18:50:45')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (8.0ms)
+Rendered registration/_register_new_stampeder (8.0ms)
+Rendered registration/_registration_signin (13.0ms)
+Completed in 203ms (View: 20, DB: 5) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:51:06) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"7", "friend_name"=>"", "gender"=>"f", "lastname"=>"Berly", "firstname"=>"Kim"}, "_"=>""}
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Create (3.0ms)[0m   [0;1mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 2, 7, '2010-04-01 18:51:06', NULL, '7f', NULL, NULL, NULL, NULL, 'Kim Berly', 'Berly', 'Kim', 'f', NULL, NULL, NULL, NULL, '2010-04-01 18:51:06', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (5.0ms)
+Completed in 144ms (View: 9, DB: 5) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:51:12) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"7814", "id"=>"11", "_"=>""}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 11) [0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "barcode" = '7814', "updated_at" = '2010-04-01 18:51:13' WHERE "id" = 11[0m
+  [4;35;1mSignin Create (2.0ms)[0m   [0mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:51:13', 11, '2010-04-01 13:51:13', '2010-04-01 18:51:13')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (8.0ms)
+Rendered registration/_register_new_stampeder (9.0ms)
+Rendered registration/_registration_signin (13.0ms)
+Completed in 220ms (View: 19, DB: 6) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-04-01 13:51:34) [GET]
+  Parameters: {"search"=>"o"}
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%o%') [0m
+Rendering stampeders/autocomplete
+Completed in 35ms (View: 18, DB: 3) | 200 OK [http://localhost/autocomplete.js?search=o]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-04-01 13:51:34) [GET]
+  Parameters: {"search"=>"oz"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%oz%') [0m
+Rendering stampeders/autocomplete
+Completed in 23ms (View: 7, DB: 2) | 200 OK [http://localhost/autocomplete.js?search=oz]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:51:37) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"9", "friend_name"=>"Ozarca Springs", "gender"=>"m", "lastname"=>"Dover", "firstname"=>"Ben"}, "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."fullname" = 'Ozarca Springs') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (1.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 2, 9, '2010-04-01 18:51:37', NULL, '9m', NULL, NULL, NULL, NULL, 'Ben Dover', 'Dover', 'Ben', 'm', NULL, NULL, NULL, NULL, '2010-04-01 18:51:37', NULL, NULL, 9)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (4.0ms)
+Completed in 161ms (View: 9, DB: 5) | 200 OK [http://localhost/registration/register]
+
+
+Processing TeamsController#index (for 127.0.0.1 at 2010-04-01 13:51:52) [GET]
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/teams
+Rendering teams/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+Completed in 78ms (View: 63, DB: 3) | 200 OK [http://localhost/teams]
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 13:52:06) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendering template within layouts/teams
+Rendering teams/show
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (3.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 2) [0m
+Completed in 83ms (View: 60, DB: 11) | 200 OK [http://localhost/teams/2]
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 13:52:17) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendering template within layouts/teams
+Rendering teams/show
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 1) [0m
+Completed in 62ms (View: 42, DB: 7) | 200 OK [http://localhost/teams/1]
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 13:52:25) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+Rendering template within layouts/teams
+Rendering teams/show
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 3) [0m
+Completed in 63ms (View: 42, DB: 7) | 200 OK [http://localhost/teams/3]
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 13:52:29) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+Rendering template within layouts/teams
+Rendering teams/show
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 4) [0m
+Completed in 69ms (View: 48, DB: 8) | 200 OK [http://localhost/teams/4]
+
+
+Processing TeamsController#index (for 127.0.0.1 at 2010-04-01 13:52:49) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/teams
+Rendering teams/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+Completed in 52ms (View: 37, DB: 3) | 200 OK [http://localhost/teams/]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:53:33) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"1425", "id"=>"12", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 12) [0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '1425', "updated_at" = '2010-04-01 18:53:33' WHERE "id" = 12[0m
+  [4;36;1mSignin Create (4.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:53:33', 12, '2010-04-01 13:53:33', '2010-04-01 18:53:33')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (8.0ms)
+Rendered registration/_register_new_stampeder (10.0ms)
+Rendered registration/_registration_signin (14.0ms)
+Completed in 231ms (View: 20, DB: 7) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:53:54) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"8", "friend_name"=>"", "gender"=>"f", "lastname"=>"Card", "firstname"=>"Gift"}, "_"=>""}
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (2.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 1, 8, '2010-04-01 18:53:54', NULL, '8f', NULL, NULL, NULL, NULL, 'Gift Card', 'Card', 'Gift', 'f', NULL, NULL, NULL, NULL, '2010-04-01 18:53:54', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (4.0ms)
+Completed in 160ms (View: 8, DB: 5) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:54:02) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"6985", "id"=>"13", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 13) [0m
+  [4;35;1mStampeder Update (1.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '6985', "updated_at" = '2010-04-01 18:54:02' WHERE "id" = 13[0m
+  [4;36;1mSignin Create (1.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:54:02', 13, '2010-04-01 13:54:02', '2010-04-01 18:54:02')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (6.0ms)
+Rendered registration/_register_new_stampeder (7.0ms)
+Rendered registration/_registration_signin (10.0ms)
+Completed in 206ms (View: 15, DB: 3) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:54:16) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"7", "friend_name"=>"", "gender"=>"m", "lastname"=>"Hope", "firstname"=>"Bob"}, "_"=>""}
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (1.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 3, 7, '2010-04-01 18:54:16', NULL, '7m', NULL, NULL, NULL, NULL, 'Bob Hope', 'Hope', 'Bob', 'm', NULL, NULL, NULL, NULL, '2010-04-01 18:54:16', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (4.0ms)
+Completed in 142ms (View: 7, DB: 1) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:54:20) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"4538", "id"=>"14", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 14) [0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '4538', "updated_at" = '2010-04-01 18:54:20' WHERE "id" = 14[0m
+  [4;36;1mSignin Create (1.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:54:20', 14, '2010-04-01 13:54:20', '2010-04-01 18:54:20')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (6.0ms)
+Rendered registration/_register_new_stampeder (6.0ms)
+Rendered registration/_registration_signin (10.0ms)
+Completed in 298ms (View: 14, DB: 4) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:54:35) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"7", "friend_name"=>"", "gender"=>"m", "lastname"=>"Green", "firstname"=>"Charlie"}, "_"=>""}
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (2.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 2, 7, '2010-04-01 18:54:35', NULL, '7m', NULL, NULL, NULL, NULL, 'Charlie Green', 'Green', 'Charlie', 'm', NULL, NULL, NULL, NULL, '2010-04-01 18:54:35', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (4.0ms)
+Completed in 161ms (View: 7, DB: 4) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:54:39) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"4729", "id"=>"15", "_"=>""}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 15) [0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '4729', "updated_at" = '2010-04-01 18:54:39' WHERE "id" = 15[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:54:39', 15, '2010-04-01 13:54:39', '2010-04-01 18:54:39')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (7.0ms)
+Rendered registration/_register_new_stampeder (8.0ms)
+Rendered registration/_registration_signin (11.0ms)
+Completed in 246ms (View: 16, DB: 4) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:55:02) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"9", "friend_name"=>"", "gender"=>"m", "lastname"=>"Faoro", "firstname"=>"Greg"}, "_"=>""}
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (3.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 1, 9, '2010-04-01 18:55:02', NULL, '9m', NULL, NULL, NULL, NULL, 'Greg Faoro', 'Faoro', 'Greg', 'm', NULL, NULL, NULL, NULL, '2010-04-01 18:55:02', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (4.0ms)
+Completed in 155ms (View: 7, DB: 4) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:55:06) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"4381", "id"=>"16", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 16) [0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '4381', "updated_at" = '2010-04-01 18:55:06' WHERE "id" = 16[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:55:06', 16, '2010-04-01 13:55:06', '2010-04-01 18:55:06')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (6.0ms)
+Rendered registration/_register_new_stampeder (7.0ms)
+Rendered registration/_registration_signin (11.0ms)
+Completed in 243ms (View: 15, DB: 5) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing TeamsController#index (for 127.0.0.1 at 2010-04-01 13:55:46) [GET]
+  [4;35;1mTeam Load (2.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/teams
+Rendering teams/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+Completed in 38ms (View: 27, DB: 3) | 200 OK [http://localhost/teams/]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:56:05) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"7", "friend_name"=>"", "gender"=>"m", "lastname"=>"Hub", "firstname"=>"Belkin"}, "_"=>""}
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (2.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Create (2.0ms)[0m   [0;1mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 3, 7, '2010-04-01 18:56:05', NULL, '7m', NULL, NULL, NULL, NULL, 'Belkin Hub', 'Hub', 'Belkin', 'm', NULL, NULL, NULL, NULL, '2010-04-01 18:56:05', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (5.0ms)
+Completed in 273ms (View: 10, DB: 5) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:56:09) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"5545", "id"=>"17", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 17) [0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "barcode" = '5545', "updated_at" = '2010-04-01 18:56:09' WHERE "id" = 17[0m
+  [4;35;1mSignin Create (2.0ms)[0m   [0mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:56:10', 17, '2010-04-01 13:56:10', '2010-04-01 18:56:10')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (9.0ms)
+Rendered registration/_register_new_stampeder (12.0ms)
+Rendered registration/_registration_signin (20.0ms)
+Completed in 319ms (View: 27, DB: 5) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:56:40) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"9", "friend_name"=>"", "gender"=>"f", "lastname"=>"Heep", "firstname"=>"Imogen"}, "_"=>""}
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Create (2.0ms)[0m   [0;1mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 2, 9, '2010-04-01 18:56:40', NULL, '9f', NULL, NULL, NULL, NULL, 'Imogen Heep', 'Heep', 'Imogen', 'f', NULL, NULL, NULL, NULL, '2010-04-01 18:56:40', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (5.0ms)
+Completed in 168ms (View: 10, DB: 3) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:56:45) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"4414", "id"=>"18", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 18) [0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "barcode" = '4414', "updated_at" = '2010-04-01 18:56:45' WHERE "id" = 18[0m
+  [4;35;1mSignin Create (2.0ms)[0m   [0mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:56:45', 18, '2010-04-01 13:56:45', '2010-04-01 18:56:45')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (8.0ms)
+Rendered registration/_register_new_stampeder (8.0ms)
+Rendered registration/_registration_signin (13.0ms)
+Completed in 240ms (View: 20, DB: 5) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing TeamsController#index (for 127.0.0.1 at 2010-04-01 13:56:48) [GET]
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/teams
+Rendering teams/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+Completed in 62ms (View: 45, DB: 4) | 200 OK [http://localhost/teams/]
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 13:56:53) [GET]
+  Parameters: {"id"=>"2"}
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendering template within layouts/teams
+Rendering teams/show
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (4.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 2) [0m
+Completed in 91ms (View: 63, DB: 13) | 200 OK [http://localhost/teams/2]
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 13:57:11) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendering template within layouts/teams
+Rendering teams/show
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 1) [0m
+Completed in 144ms (View: 103, DB: 15) | 200 OK [http://localhost/teams/1]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:57:49) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"6", "friend_name"=>"", "gender"=>"f", "lastname"=>"Benford", "firstname"=>"Mark"}, "_"=>""}
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (2.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 4, 6, '2010-04-01 18:57:49', NULL, '6f', NULL, NULL, NULL, NULL, 'Mark Benford', 'Benford', 'Mark', 'f', NULL, NULL, NULL, NULL, '2010-04-01 18:57:49', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (4.0ms)
+Completed in 146ms (View: 8, DB: 5) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:58:00) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"8784", "id"=>"19", "_"=>""}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 19) [0m
+  [4;35;1mStampeder Update (1.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '8784', "updated_at" = '2010-04-01 18:58:00' WHERE "id" = 19[0m
+  [4;36;1mSignin Create (1.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:58:00', 19, '2010-04-01 13:58:00', '2010-04-01 18:58:00')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (6.0ms)
+Rendered registration/_register_new_stampeder (6.0ms)
+Rendered registration/_registration_signin (10.0ms)
+Completed in 339ms (View: 16, DB: 2) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:58:27) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"6", "friend_name"=>"", "gender"=>"f", "lastname"=>"Garner", "firstname"=>"Sandra"}, "_"=>""}
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (1.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 1, 6, '2010-04-01 18:58:27', NULL, '6f', NULL, NULL, NULL, NULL, 'Sandra Garner', 'Garner', 'Sandra', 'f', NULL, NULL, NULL, NULL, '2010-04-01 18:58:27', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (6.0ms)
+Completed in 174ms (View: 11, DB: 6) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:58:32) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"2587", "id"=>"20", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 20) [0m
+  [4;35;1mStampeder Update (1.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '2587', "updated_at" = '2010-04-01 18:58:32' WHERE "id" = 20[0m
+  [4;36;1mSignin Create (1.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:58:32', 20, '2010-04-01 13:58:32', '2010-04-01 18:58:32')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (8.0ms)
+Rendered registration/_register_new_stampeder (8.0ms)
+Rendered registration/_registration_signin (13.0ms)
+Completed in 307ms (View: 20, DB: 3) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 13:58:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendering template within layouts/teams
+Rendering teams/show
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 1) [0m
+Completed in 71ms (View: 48, DB: 8) | 200 OK [http://localhost/teams/1]
+
+
+Processing TeamsController#index (for 127.0.0.1 at 2010-04-01 13:58:47) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/teams
+Rendering teams/index
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+Completed in 55ms (View: 40, DB: 2) | 200 OK [http://localhost/teams/]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:59:24) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"7", "friend_name"=>"", "gender"=>"f", "lastname"=>"Beach", "firstname"=>"Caroline"}, "_"=>""}
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (1.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 3, 7, '2010-04-01 18:59:24', NULL, '7f', NULL, NULL, NULL, NULL, 'Caroline Beach', 'Beach', 'Caroline', 'f', NULL, NULL, NULL, NULL, '2010-04-01 18:59:24', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (5.0ms)
+Completed in 152ms (View: 9, DB: 4) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 13:59:28) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"6943", "id"=>"21", "_"=>""}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 21) [0m
+  [4;35;1mStampeder Update (1.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '6943', "updated_at" = '2010-04-01 18:59:28' WHERE "id" = 21[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 18:59:28', 21, '2010-04-01 13:59:28', '2010-04-01 18:59:28')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (7.0ms)
+Rendered registration/_register_new_stampeder (8.0ms)
+Rendered registration/_registration_signin (12.0ms)
+Completed in 234ms (View: 19, DB: 3) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-04-01 13:59:39) [GET]
+  Parameters: {"search"=>"c"}
+  [4;35;1mStampeder Load (3.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%c%') [0m
+Rendering stampeders/autocomplete
+Completed in 21ms (View: 6, DB: 3) | 200 OK [http://localhost/autocomplete.js?search=c]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-04-01 13:59:40) [GET]
+  Parameters: {"search"=>"co"}
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%co%') [0m
+Rendering stampeders/autocomplete
+Completed in 18ms (View: 6, DB: 2) | 200 OK [http://localhost/autocomplete.js?search=co]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-04-01 13:59:40) [GET]
+  Parameters: {"search"=>"ca"}
+  [4;35;1mStampeder Load (3.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%ca%') [0m
+Rendering stampeders/autocomplete
+Completed in 21ms (View: 6, DB: 3) | 200 OK [http://localhost/autocomplete.js?search=ca]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-04-01 13:59:42) [GET]
+  Parameters: {"search"=>"cao"}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%cao%') [0m
+Rendering stampeders/autocomplete
+Completed in 15ms (View: 2, DB: 0) | 200 OK [http://localhost/autocomplete.js?search=cao]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-04-01 13:59:45) [GET]
+  Parameters: {"search"=>"car"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%car%') [0m
+Rendering stampeders/autocomplete
+Completed in 18ms (View: 5, DB: 1) | 200 OK [http://localhost/autocomplete.js?search=car]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 13:59:48) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"8", "friend_name"=>"Caroline Beach", "gender"=>"m", "lastname"=>"Beach", "firstname"=>"Thomas"}, "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."fullname" = 'Caroline Beach') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (2.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 3, 8, '2010-04-01 18:59:48', NULL, '8m', NULL, NULL, NULL, NULL, 'Thomas Beach', 'Beach', 'Thomas', 'm', NULL, NULL, NULL, NULL, '2010-04-01 18:59:48', NULL, NULL, 21)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (4.0ms)
+Completed in 135ms (View: 7, DB: 6) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 14:00:04) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"7194", "id"=>"22", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 22) [0m
+  [4;35;1mStampeder Update (3.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '7194', "updated_at" = '2010-04-01 19:00:04' WHERE "id" = 22[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 19:00:05', 22, '2010-04-01 14:00:04', '2010-04-01 19:00:05')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (8.0ms)
+Rendered registration/_register_new_stampeder (8.0ms)
+Rendered registration/_registration_signin (12.0ms)
+Completed in 255ms (View: 19, DB: 6) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 14:00:09) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendering template within layouts/teams
+Rendering teams/show
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 1) [0m
+Completed in 71ms (View: 48, DB: 9) | 200 OK [http://localhost/teams/1]
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 14:00:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendering template within layouts/teams
+Rendering teams/show
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 1) [0m
+Completed in 145ms (View: 123, DB: 9) | 200 OK [http://localhost/teams/1]
+
+
+Processing TeamsController#index (for 127.0.0.1 at 2010-04-01 14:00:18) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/teams
+Rendering teams/index
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+Completed in 44ms (View: 31, DB: 2) | 200 OK [http://localhost/teams/]
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 14:00:21) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 5) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Team with ID=5):
+  app/controllers/teams_controller.rb:16:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (not_found)
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 14:00:28) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+Rendering template within layouts/teams
+Rendering teams/show
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 3) [0m
+Completed in 71ms (View: 49, DB: 8) | 200 OK [http://localhost/teams/3]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-04-01 14:01:30) [GET]
+  Parameters: {"search"=>"thom"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%thom%') [0m
+Rendering stampeders/autocomplete
+Completed in 19ms (View: 5, DB: 1) | 200 OK [http://localhost/autocomplete.js?search=thom]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 14:01:32) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"6", "friend_name"=>"Thomas Beach", "gender"=>"m", "lastname"=>"Shooke", "firstname"=>"Andy"}, "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."fullname" = 'Thomas Beach') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Create (2.0ms)[0m   [0;1mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 3, 6, '2010-04-01 19:01:32', NULL, '6m', NULL, NULL, NULL, NULL, 'Andy Shooke', 'Shooke', 'Andy', 'm', NULL, NULL, NULL, NULL, '2010-04-01 19:01:32', NULL, NULL, 22)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (4.0ms)
+Completed in 152ms (View: 8, DB: 6) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 14:02:09) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"3497", "id"=>"23", "_"=>""}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 23) [0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "barcode" = '3497', "updated_at" = '2010-04-01 19:02:09' WHERE "id" = 23[0m
+  [4;35;1mSignin Create (2.0ms)[0m   [0mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 19:02:09', 23, '2010-04-01 14:02:09', '2010-04-01 19:02:09')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (8.0ms)
+Rendered registration/_register_new_stampeder (10.0ms)
+Rendered registration/_registration_signin (14.0ms)
+Completed in 242ms (View: 21, DB: 4) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 14:02:14) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+Rendering template within layouts/teams
+Rendering teams/show
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 3) [0m
+Completed in 76ms (View: 49, DB: 12) | 200 OK [http://localhost/teams/3]
+
+
+Processing TeamsController#index (for 127.0.0.1 at 2010-04-01 14:05:11) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/teams
+Rendering teams/index
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+Completed in 40ms (View: 27, DB: 3) | 200 OK [http://localhost/teams/]
+
+
+Processing TeamsController#show (for 127.0.0.1 at 2010-04-01 14:05:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendering template within layouts/teams
+Rendering teams/show
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 1) [0m
+Completed in 53ms (View: 30, DB: 12) | 200 OK [http://localhost/teams/1]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 14:05:51) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"9", "friend_name"=>"", "gender"=>"f", "lastname"=>"Hinder", "firstname"=>"Kirsten"}, "_"=>""}
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (3.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 4, 9, '2010-04-01 19:05:51', NULL, '9f', NULL, NULL, NULL, NULL, 'Kirsten Hinder', 'Hinder', 'Kirsten', 'f', NULL, NULL, NULL, NULL, '2010-04-01 19:05:51', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (6.0ms)
+Completed in 143ms (View: 12, DB: 5) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 14:05:55) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"5493", "id"=>"24", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 24) [0m
+  [4;35;1mStampeder Update (1.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '5493', "updated_at" = '2010-04-01 19:05:55' WHERE "id" = 24[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 19:05:55', 24, '2010-04-01 14:05:55', '2010-04-01 19:05:55')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (6.0ms)
+Rendered registration/_register_new_stampeder (6.0ms)
+Rendered registration/_registration_signin (10.0ms)
+Completed in 243ms (View: 16, DB: 4) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-04-01 14:06:11) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "stampeder"=>{"grade"=>"9", "friend_name"=>"", "gender"=>"f", "lastname"=>"Mander", "firstname"=>"Sally"}, "_"=>""}
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Create (1.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "studentphone", "address", "school", "state", "created_at", "parent", "email", "friend_id") VALUES(NULL, 1, 9, '2010-04-01 19:06:11', NULL, '9f', NULL, NULL, NULL, NULL, 'Sally Mander', 'Mander', 'Sally', 'f', NULL, NULL, NULL, NULL, '2010-04-01 19:06:11', NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (4.0ms)
+Completed in 161ms (View: 7, DB: 8) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-04-01 14:06:16) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"0000", "id"=>"25", "_"=>""}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 25) [0m
+  [4;35;1mStampeder Update (3.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '0000', "updated_at" = '2010-04-01 19:06:16' WHERE "id" = 25[0m
+  [4;36;1mSignin Create (3.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 19:06:16', 25, '2010-04-01 14:06:16', '2010-04-01 19:06:16')[0m
+Rendering registration/add_barcode
+Rendered registration/_quick_stampeder_form (6.0ms)
+Rendered registration/_register_new_stampeder (7.0ms)
+Rendered registration/_registration_signin (11.0ms)
+Completed in 259ms (View: 15, DB: 6) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing TeamsController#index (for 127.0.0.1 at 2010-04-01 14:45:07) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/teams
+Rendering teams/index
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+Completed in 38ms (View: 27, DB: 2) | 200 OK [http://localhost/teams/]
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-04-01 14:46:00) [GET]
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+
+ActionView::TemplateError (undefined method `each' for #<Stampeder:0x88b2628>) on line #9 of app/views/registration/view_all.html.erb:
+6: <ul>
+7:   <li><%= @teams[1].name %></li>
+8:   <ul>
+9:     <% @t1Stampeders.each do |stampeder| %>
+10:     <li><%= link_to stampeder.name, stampeder_path(stampeder) %></li>
+11:     <% end %>
+12:   </ul>
+
+    app/views/registration/view_all.html.erb:9
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-04-01 14:48:28) [GET]
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+
+ActionView::TemplateError (undefined method `name' for #<Stampeder:0x873a304>) on line #10 of app/views/registration/view_all.html.erb:
+7:   <li><%= @teams[1].name %></li>
+8:   <ul>
+9:     <% @stampeders[1].each do |stampeder| %>
+10:     <li><%= link_to stampeder.name, stampeder_path(stampeder) %></li>
+11:     <% end %>
+12:   </ul>
+13:   <li><%= @teams[2].name %></li>
+
+    app/views/registration/view_all.html.erb:10
+    app/views/registration/view_all.html.erb:9:in `each'
+    app/views/registration/view_all.html.erb:9
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-04-01 14:49:04) [GET]
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+
+ActionView::TemplateError (undefined method `name' for nil:NilClass) on line #25 of app/views/registration/view_all.html.erb:
+22:     <li><%= link_to stampeder.fullname, stampeder_path(stampeder) %></li>
+23:     <% end %>
+24:   </ul>
+25:   <li><%= @teams[4].name %></li>
+26:   <ul>
+27:     <% @stampeders[4].each do |stampeder| %>
+28:     <li><%= link_to stampeder.fullname, stampeder_path(stampeder) %></li>
+
+    app/views/registration/view_all.html.erb:25
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (131.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-04-01 14:49:57) [GET]
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+Completed in 67ms (View: 30, DB: 9) | 200 OK [http://localhost/registration/view_all]
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-04-01 14:50:15) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 6) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/show
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders".friend_id = 6) [0m
+  [4;35;1mSignin Load (1.0ms)[0m   [0mSELECT * FROM "signins" WHERE ("signins".stampeder_id = 6) [0m
+Completed in 88ms (View: 65, DB: 2) | 200 OK [http://localhost/stampeders/6]
+
+
+Processing StampedersController#index (for 127.0.0.1 at 2010-04-01 14:50:17) [GET]
+  [4;36;1mStampeder Load (10.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/index
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Completed in 298ms (View: 268, DB: 13) | 200 OK [http://localhost/stampeders]
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-04-01 15:10:19) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/index
+Completed in 50ms (View: 26, DB: 1) | 200 OK [http://localhost/registration]
