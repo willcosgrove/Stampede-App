@@ -72,8 +72,8 @@
     <%= text_field_with_auto_complete :stampeder, :friend_name, {}, { :url => autocomplete_path, :method => :get, :with => "'search=' + element.value" } %>
   </p>
   <p>
-    <%= f.label :team %><br />
-    <%= f.select :team_id, [['select a team', '']]+@teams.collect {|t| [t.name, t.id]} %>
+    <%= f.label :notes %><br />
+    <%= f.text_area :notes %>
   </p>
   <p>
     <%= f.submit 'Save' %>
