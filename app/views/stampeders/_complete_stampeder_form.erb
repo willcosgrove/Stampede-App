@@ -37,7 +37,7 @@
   </p>
   <p>
     <%= f.label :school %><br />
-    <%= f.text_field :school %>
+    <%= text_field_with_auto_complete :stampeder, :school_name, {}, { :url => formatted_schools_path(:js), :method => :get, :with => "'search=' + element.value" } %>
   </p>
   <p>
     <%= f.label :studentphone %><br />
@@ -76,6 +76,6 @@
     <%= f.select :team_id, [['select a team', '']]+@teams.collect {|t| [t.name, t.id]} %>
   </p>
   <p>
-    <%= f.submit 'Create' %>
+    <%= f.submit 'Save' %>
   </p>
 <% end %>

@@ -62,8 +62,7 @@ class StampedersController < ApplicationController
   # PUT /stampeders/1.xml
   def update
     @stampeder = Stampeder.find(params[:id])
-    @stampeder.parentphone.gsub!(/\D/, "")
-
+    
     respond_to do |format|
       if @stampeder.update_attributes(params[:stampeder])
         flash[:notice] = 'Stampeder was successfully updated.'

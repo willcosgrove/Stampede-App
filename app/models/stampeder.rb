@@ -1,5 +1,6 @@
 class Stampeder < ActiveRecord::Base
   belongs_to :team
+  belongs_to :school
   belongs_to :stampeder, :class_name => "Stampeder", :foreign_key => "friend_id"
   has_many :stampeders, :class_name => "Stampeder", :foreign_key => "friend_id"
   has_many :signins
@@ -24,11 +25,19 @@ class Stampeder < ActiveRecord::Base
   end
   
   def friend_name
-    self.stampeder.name if self.stampeder
+    self.stampeder.fullname if self.stampeder
   end
   
   def friend_name=(name)
     self.stampeder = Stampeder.find_by_fullname(name) unless name.blank?
+  end
+  
+  def school_name
+    school.name if school
+  end
+  
+  def school_name=(name)
+    self.school = School.find_or_create_by_name(name) unless name.blank?
   end
   
   def addfullname
