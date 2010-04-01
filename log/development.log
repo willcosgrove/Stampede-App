@@ -18612,3 +18612,259 @@ DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass f
   [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."id" = 2) [0m
 Rendered stampeders/_complete_stampeder_form (37.0ms)
 Completed in 74ms (View: 48, DB: 3) | 200 OK [http://localhost/stampeders/10/edit]
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."firstname" = 'Will') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."firstname" = 'Will') LIMIT 1[0m
+  [4;35;1mSchool Load (1.0ms)[0m   [0mSELECT * FROM "schools" WHERE ("schools"."id" = 2) [0m
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:42:53) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (19.0ms)
+Rendered registration/_register_new_stampeder (26.0ms)
+Rendered registration/_registration_signin (81.0ms)
+Completed in 234ms (View: 123, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:42:57) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"1993", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '1993') LIMIT 1[0m
+  [4;35;1mSignin Create (2.0ms)[0m   [0mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:42:57', 1, '2010-04-01 16:42:57', '2010-04-01 21:42:57')[0m
+Rendering signins/create
+Completed in 149ms (View: 14, DB: 3) | 200 OK [http://localhost/registration/signin/create]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:45:48) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (11.0ms)
+Rendered registration/_register_new_stampeder (12.0ms)
+Rendered registration/_registration_signin (16.0ms)
+Completed in 42ms (View: 26, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:45:51) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"0000", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '0000') LIMIT 1[0m
+  [4;35;1mSignin Create (1.0ms)[0m   [0mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:45:51', 25, '2010-04-01 16:45:51', '2010-04-01 21:45:51')[0m
+Rendering signins/create
+Completed in 123ms (View: 7, DB: 2) | 200 OK [http://localhost/registration/signin/create]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:46:31) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (11.0ms)
+Rendered registration/_register_new_stampeder (12.0ms)
+Rendered registration/_registration_signin (16.0ms)
+Completed in 39ms (View: 24, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing StampedersController#index (for 127.0.0.1 at 2010-04-01 16:46:34) [GET]
+  [4;36;1mStampeder Load (8.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/index
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Completed in 277ms (View: 250, DB: 10) | 200 OK [http://localhost/stampeders]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:46:40) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"1013", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '1013') LIMIT 1[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:46:40', 9, '2010-04-01 16:46:40', '2010-04-01 21:46:40')[0m
+Rendering signins/create
+Completed in 121ms (View: 8, DB: 3) | 200 OK [http://localhost/registration/signin/create]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:47:09) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (13.0ms)
+Rendered registration/_register_new_stampeder (14.0ms)
+Rendered registration/_registration_signin (20.0ms)
+Completed in 57ms (View: 38, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:47:21) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"5421", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '5421') LIMIT 1[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:47:21', 10, '2010-04-01 16:47:21', '2010-04-01 21:47:21')[0m
+Rendering signins/create
+Completed in 216ms (View: 11, DB: 3) | 200 OK [http://localhost/registration/signin/create]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:48:18) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (10.0ms)
+Rendered registration/_register_new_stampeder (12.0ms)
+Rendered registration/_registration_signin (15.0ms)
+Completed in 38ms (View: 23, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:48:21) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"2323", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '2323') LIMIT 1[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:48:21', 8, '2010-04-01 16:48:21', '2010-04-01 21:48:21')[0m
+Rendering signins/create
+Completed in 130ms (View: 7, DB: 3) | 200 OK [http://localhost/registration/signin/create]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:49:25) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (11.0ms)
+Rendered registration/_register_new_stampeder (11.0ms)
+Rendered registration/_registration_signin (15.0ms)
+Completed in 45ms (View: 30, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:49:32) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"4414", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '4414') LIMIT 1[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:49:32', 18, '2010-04-01 16:49:32', '2010-04-01 21:49:32')[0m
+Rendering signins/create
+Completed in 114ms (View: 7, DB: 3) | 200 OK [http://localhost/registration/signin/create]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:49:53) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (14.0ms)
+Rendered registration/_register_new_stampeder (15.0ms)
+Rendered registration/_registration_signin (21.0ms)
+Completed in 53ms (View: 33, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:50:00) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"4381", "_"=>""}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '4381') LIMIT 1[0m
+  [4;36;1mSignin Create (3.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:50:00', 16, '2010-04-01 16:50:00', '2010-04-01 21:50:00')[0m
+Rendering signins/create
+Completed in 130ms (View: 8, DB: 5) | 200 OK [http://localhost/registration/signin/create]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:50:36) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (10.0ms)
+Rendered registration/_register_new_stampeder (12.0ms)
+Rendered registration/_registration_signin (15.0ms)
+Completed in 40ms (View: 24, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:50:47) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"5493", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '5493') LIMIT 1[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:50:47', 24, '2010-04-01 16:50:47', '2010-04-01 21:50:47')[0m
+Rendering signins/create
+Completed in 110ms (View: 7, DB: 3) | 200 OK [http://localhost/registration/signin/create]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:51:00) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (14.0ms)
+Rendered registration/_register_new_stampeder (15.0ms)
+Rendered registration/_registration_signin (20.0ms)
+Completed in 53ms (View: 33, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:51:11) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"4729", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '4729') LIMIT 1[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:51:11', 15, '2010-04-01 16:51:11', '2010-04-01 21:51:11')[0m
+Rendering signins/create
+Completed in 275ms (View: 11, DB: 3) | 200 OK [http://localhost/registration/signin/create]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:51:25) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (21.0ms)
+Rendered registration/_register_new_stampeder (25.0ms)
+Rendered registration/_registration_signin (32.0ms)
+Completed in 92ms (View: 56, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:51:31) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"1425", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '1425') LIMIT 1[0m
+  [4;36;1mSignin Create (1.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:51:31', 12, '2010-04-01 16:51:31', '2010-04-01 21:51:31')[0m
+Rendering signins/create
+Completed in 113ms (View: 9, DB: 2) | 200 OK [http://localhost/registration/signin/create]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:51:59) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (14.0ms)
+Rendered registration/_register_new_stampeder (15.0ms)
+Rendered registration/_registration_signin (21.0ms)
+Completed in 126ms (View: 32, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:52:06) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"6985", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '6985') LIMIT 1[0m
+  [4;36;1mSignin Create (1.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:52:06', 13, '2010-04-01 16:52:06', '2010-04-01 21:52:06')[0m
+Rendering signins/create
+Completed in 168ms (View: 8, DB: 2) | 200 OK [http://localhost/registration/signin/create]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:56:03) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (11.0ms)
+Rendered registration/_register_new_stampeder (11.0ms)
+Rendered registration/_registration_signin (14.0ms)
+Completed in 39ms (View: 24, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:56:06) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"2323", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '2323') LIMIT 1[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:56:06', 8, '2010-04-01 16:56:06', '2010-04-01 21:56:06')[0m
+Rendering signins/create
+Completed in 135ms (View: 14, DB: 3) | 200 OK [http://localhost/registration/signin/create]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-01 16:56:29) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_quick_stampeder_form (13.0ms)
+Rendered registration/_register_new_stampeder (14.0ms)
+Rendered registration/_registration_signin (20.0ms)
+Completed in 50ms (View: 31, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-01 16:56:32) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"rn8PxYoJcQU7AE1zJibsxJMLFrR4lRWUlVQJpvj2zSk=", "barcode"=>"3497", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '3497') LIMIT 1[0m
+  [4;36;1mSignin Create (3.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-01 21:56:32', 23, '2010-04-01 16:56:32', '2010-04-01 21:56:32')[0m
+Rendering signins/create
+Completed in 133ms (View: 10, DB: 4) | 200 OK [http://localhost/registration/signin/create]

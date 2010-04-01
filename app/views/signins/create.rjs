@@ -1,3 +1,4 @@
 page.replace_html 'just_signed_in', "#{@stampeder.fullname}"
-page[:signin_flash].visual_effect :appear
-page[:signin_flash].visual_effect :fade, :duration => 5
+page[:signin_flash].visual_effect :slide_down
+page[:signin_flash].visual_effect :slide_up, :delay => 5
+page[:barcode].value = ""
