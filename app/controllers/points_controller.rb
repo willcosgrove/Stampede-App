@@ -4,19 +4,26 @@ class PointsController < ApplicationController
   def index
     @today = Date.today
     @teams = Team.all
-    @points = Point.find_by_day(@today)
-    @points.each do |point|
-      if @teams.include?(point.team)
-        @teams -= point.team
+    @points = Point.find_all_by_day(@today)
+    if @points.empty?
+      @teams.each do |team|
+        team.points.create(:day => @today)
       end
-      
-      unless @teams.blank?
-        @teams.each do |team|
-          team.points.create(:day => @today)
+    else
+      @points.each do |point|
+        if @teams.include?(point.team)
+          @teams -= point.team
+        end
+        
+        unless @teams.blank?
+          @teams.each do |team|
+            team.points.create(:day => @today)
+          end
         end
       end
     end
-    @points = Point.find_by_day(@today)
+    @points = Point.find_all_by_day(@today)
+    @teams = Team.all
 
     respond_to do |format|
       format.html # index.html.erb
