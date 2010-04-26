@@ -6,6 +6,7 @@ class RemovePointFieldsFromTeams < ActiveRecord::Migration
     remove_column :teams, :friend_points
     remove_column :teams, :spirit_points
     remove_column :teams, :deductions
+    Team.create([{:name => 'Red'}, {:name => 'Green'}, {:name => 'Blue'}, {:name => 'Yellow'}])
   end
 
   def self.down

@@ -1,0 +1,2 @@
+page.replace_html 'confirmBox', :partial => 'registration/confirm_box', :object => @stampeder
+page << "jQuery('#confirmBox').overlay({ top: 272, expose: { color: '#fff', loadSpeed: 200, opacity: 0.5 }, closeOnClick: false, api: true }).load();"

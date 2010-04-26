@@ -97,7 +97,7 @@ class Stampeder < ActiveRecord::Base
     end
     
     if self.stampeder
-      self.team_id = self.stampeder.team_id
+      self.team = self.stampeder.team
     end
     
   end

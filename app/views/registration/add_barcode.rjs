@@ -1,5 +1,5 @@
-page.replace_html 'registration_signin_form', :partial => 'registration_signin'
+page.replace_html 'registration_signin_form', :partial => 'signin_page_forms'
 page.replace_html 'just_signed_in', "#{@lastSignedInStampeder.fullname}"
 page[:registration_signin_form].visual_effect :highlight
-page[:signin_flash].visual_effect :appear 
-page[:signin_flash].visual_effect :fade, :duration => 5
+page[:signin_flash].visual_effect :slide_down
+page[:signin_flash].visual_effect :slide_up, :delay => 5

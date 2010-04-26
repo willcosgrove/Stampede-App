@@ -7,7 +7,8 @@ ActionController::Routing::Routes.draw do |map|
   map.registration 'registration', :controller => 'Registration', :action => 'index'
   map.add_barcode 'registration/addbarcode', :controller => 'Registration', :action => 'add_barcode'
   map.autocomplete 'autocomplete.js', :controller => 'Stampeders', :action => 'autocomplete'
-  map.create_signin 'registration/signin/create', :controller => 'Signins', :action => 'create'
+  map.create_signin 'registration/signin/create/:id', :controller => 'Signins', :action => 'create'
+  map.confirm_signin 'registration/signin/confirm', :controller => 'Signins', :action => 'confirm'
   map.resources :stampeders
   map.resources :teams
   map.resources :points

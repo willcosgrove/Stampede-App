@@ -1,0 +1,3 @@
+<p id="confirmBoxQuestion">Do you want to sign in <%= @stampeder.fullname %>?</p>
+<%= link_to_remote "Yes", :url => create_signin_path(@stampeder), :html => { :class => 'close' } %>
+<%= link_to_function("No", nil, :class => 'close') do |page| page[:barcode].value = '' end %>

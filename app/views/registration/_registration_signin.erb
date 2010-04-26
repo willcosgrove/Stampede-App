@@ -1,9 +1,9 @@
-<div id="signin_field">
-<h2 class="center">Type in stampeder's bracelet number</h2>
-<% form_remote_tag :url => create_signin_path do %>
-  <%= text_field_tag :barcode, nil, :size => 5 %>
-  <%= submit_tag 'Sign In', :class => 'hidden' %>
-<% end %>
+<div id="confirmBox">
 </div>
-<hr />
-<%= render :partial => 'register_new_stampeder' %>
+<div id="signin_field">
+  <h2 class="center">Type in stampeder's bracelet number</h2>
+  <% form_remote_tag :url => confirm_signin_path do %>
+    <%= text_field_tag :barcode, nil, :size => 5 %>
+    <%= submit_tag 'Sign In', :class => 'hidden' %>
+  <% end %>
+</div>
