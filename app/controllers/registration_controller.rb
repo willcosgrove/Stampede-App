@@ -11,6 +11,7 @@ class RegistrationController < ApplicationController
   
   def register_stampeder
     @stampeder = Stampeder.new(params[:stampeder])
+    @stampeder.online_signup = false
     @stampeder.save
   end
   

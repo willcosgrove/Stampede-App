@@ -21,7 +21,7 @@ class Stampeder < ActiveRecord::Base
   def before_create
     self.addfullname
     self.createSubgroup
-    self.pickTeam if self.team.blank?
+    self.pickTeam if self.team.blank? && !self.online_signup
   end
   
   def friend_name

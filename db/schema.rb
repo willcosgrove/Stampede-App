@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100401232419) do
+ActiveRecord::Schema.define(:version => 20100427010751) do
 
   create_table "points", :force => true do |t|
     t.integer  "team_id"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(:version => 20100401232419) do
     t.string   "fullname"
     t.integer  "school_id"
     t.text     "notes"
+    t.boolean  "online_signup"
   end
 
   add_index "stampeders", ["friend_id"], :name => "index_stampeders_on_friend_id"
