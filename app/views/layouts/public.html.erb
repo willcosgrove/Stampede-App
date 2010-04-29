@@ -5,9 +5,10 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Stampeders: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'public' %>
-  <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag :defaults %>
   <%= javascript_include_tag 'header' %>
+  <%= yield(:head) %>
 </head>
 <body>
 <div id="sub-link-bar"></div>

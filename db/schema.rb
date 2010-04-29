@@ -9,7 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100427010751) do
+ActiveRecord::Schema.define(:version => 20100428234200) do
+
+  create_table "churches", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "points", :force => true do |t|
     t.integer  "team_id"
@@ -66,8 +72,10 @@ ActiveRecord::Schema.define(:version => 20100427010751) do
     t.integer  "school_id"
     t.text     "notes"
     t.boolean  "online_signup"
+    t.integer  "church_id"
   end
 
+  add_index "stampeders", ["church_id"], :name => "index_stampeders_on_church_id"
   add_index "stampeders", ["friend_id"], :name => "index_stampeders_on_friend_id"
   add_index "stampeders", ["school_id"], :name => "index_stampeders_on_school_id"
   add_index "stampeders", ["team_id"], :name => "index_stampeders_on_team_id"

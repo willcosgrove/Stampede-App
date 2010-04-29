@@ -1,2 +1,2 @@
 page.replace_html 'confirmBox', :partial => 'registration/confirm_box', :object => @stampeder
-page << "jQuery('#confirmBox').dialog()"
+page << "jQuery('#confirmBox').dialog( { model: true } )"

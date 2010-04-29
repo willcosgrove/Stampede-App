@@ -22460,3 +22460,607 @@ Processing SigninsController#create (for 127.0.0.1 at 2010-04-27 20:52:31) [POST
   [4;35;1mSignin Create (1.0ms)[0m   [0mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-28 01:52:32', 10, '2010-04-27 20:52:32', '2010-04-28 01:52:32')[0m
 Rendering signins/create
 Completed in 193ms (View: 15, DB: 3) | 200 OK [http://localhost/registration/signin/create/10]
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-04-28 16:28:26) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/index
+Completed in 2788ms (View: 2659, DB: 1) | 200 OK [http://localhost/registration]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-04-28 16:28:37) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_registration_signin (4.0ms)
+Rendered registration/_quick_stampeder_form (15.0ms)
+Rendered registration/_register_new_stampeder (21.0ms)
+Rendered registration/_signin_page_forms (38.0ms)
+Completed in 79ms (View: 61, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#confirm (for 127.0.0.1 at 2010-04-28 16:28:40) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"sSjy4AmLq7z2F58vmKlCU8SyB0gtk9GjnOJR9VHX1bA=", "barcode"=>"1993", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '1993') LIMIT 1[0m
+Rendering signins/confirm
+Rendered registration/_confirm_box (75.0ms)
+Completed in 107ms (View: 89, DB: 1) | 200 OK [http://localhost/registration/signin/confirm]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-28 16:28:46) [POST]
+  Parameters: {"authenticity_token"=>"sSjy4AmLq7z2F58vmKlCU8SyB0gtk9GjnOJR9VHX1bA=", "id"=>"1", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = '1') LIMIT 1[0m
+  [4;35;1mSignin Create (2.0ms)[0m   [0mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-28 21:28:46', 1, '2010-04-28 16:28:46', '2010-04-28 21:28:46')[0m
+Rendering signins/create
+Completed in 73ms (View: 15, DB: 3) | 200 OK [http://localhost/registration/signin/create/1]
+
+
+Processing SigninsController#confirm (for 127.0.0.1 at 2010-04-28 16:33:59) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"sSjy4AmLq7z2F58vmKlCU8SyB0gtk9GjnOJR9VHX1bA=", "barcode"=>"1993", "_"=>""}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '1993') LIMIT 1[0m
+Rendering signins/confirm
+Rendered registration/_confirm_box (8.0ms)
+Completed in 33ms (View: 16, DB: 0) | 200 OK [http://localhost/registration/signin/confirm]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-04-28 16:34:05) [POST]
+  Parameters: {"authenticity_token"=>"sSjy4AmLq7z2F58vmKlCU8SyB0gtk9GjnOJR9VHX1bA=", "id"=>"1", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = '1') LIMIT 1[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-04-28 21:34:05', 1, '2010-04-28 16:34:05', '2010-04-28 21:34:05')[0m
+Rendering signins/create
+Completed in 76ms (View: 8, DB: 3) | 200 OK [http://localhost/registration/signin/create/1]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 16:58:21) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47public47sign_up46html46erb at C:/Users/David Hedrick/stampede_app/app/views/public/sign_up.html.erb:36)
+
+ActionView::TemplateError (undefined method `friend_id_plus_150' for #<Stampeder:0x8964eb8>) on line #68 of app/views/public/sign_up.html.erb:
+65:   </p>
+66:   <p>
+67:     <%= f.label :referral_number %><br />
+68:     <%= f.text_field :friend_id_plus_150 %>
+69:   </p>
+70:   <p>
+71:     <%= f.submit 'Sign Up' %>
+
+    app/views/public/sign_up.html.erb:68
+    app/views/public/sign_up.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 17:03:33) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47public47sign_up46html46erb at C:/Users/David Hedrick/stampede_app/app/views/public/sign_up.html.erb:36)
+Completed in 59ms (View: 43, DB: 0) | 200 OK [http://localhost/public/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 17:25:51) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47public47sign_up46html46erb at C:/Users/David Hedrick/stampede_app/app/views/public/sign_up.html.erb:39)
+Completed in 119ms (View: 36, DB: 0) | 200 OK [http://localhost/public/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 17:26:21) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47public47sign_up46html46erb at C:/Users/David Hedrick/stampede_app/app/views/public/sign_up.html.erb:40)
+Completed in 74ms (View: 52, DB: 0) | 200 OK [http://localhost/public/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 17:26:52) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47public47sign_up46html46erb at C:/Users/David Hedrick/stampede_app/app/views/public/sign_up.html.erb:40)
+Completed in 122ms (View: 40, DB: 0) | 200 OK [http://localhost/public/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 17:27:04) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47public47sign_up46html46erb at C:/Users/David Hedrick/stampede_app/app/views/public/sign_up.html.erb:40)
+Completed in 75ms (View: 55, DB: 0) | 200 OK [http://localhost/public/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 17:56:44) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47public47sign_up46html46erb at C:/Users/David Hedrick/stampede_app/app/views/public/sign_up.html.erb:40)
+Completed in 189ms (View: 89, DB: 0) | 200 OK [http://localhost/public/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 17:59:10) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47public47sign_up46html46erb at C:/Users/David Hedrick/stampede_app/app/views/public/sign_up.html.erb:51)
+Completed in 58ms (View: 40, DB: 0) | 200 OK [http://localhost/public/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 17:59:40) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 67ms (View: 49, DB: 0) | 200 OK [http://localhost/public/sign_up]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-04-28 18:00:49) [GET]
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (name LIKE '%%') [0m
+
+ActionView::MissingTemplate (Missing template schools/index.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SchoolsController#show to js (for 127.0.0.1 at 2010-04-28 18:00:55) [GET]
+  Parameters: {"id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SchoolsController#show (for 127.0.0.1 at 2010-04-28 18:01:01) [GET]
+  Parameters: {"id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-04-28 18:01:16) [GET]
+
+ActionController::RoutingError (No route matches "/schools/index.js.erb" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SchoolsController#show to js (for 127.0.0.1 at 2010-04-28 18:01:21) [GET]
+  Parameters: {"id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SchoolsController#show to js (for 127.0.0.1 at 2010-04-28 18:01:36) [GET]
+  Parameters: {"search"=>"\"trin\"", "id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SchoolsController#show to js (for 127.0.0.1 at 2010-04-28 18:01:42) [GET]
+  Parameters: {"search"=>"trin", "id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SchoolsController#show to js (for 127.0.0.1 at 2010-04-28 18:02:01) [GET]
+  Parameters: {"search"=>"trin", "id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-04-28 18:02:09) [GET]
+  Parameters: {"search"=>"trin"}
+  [4;35;1mSchool Load (1.0ms)[0m   [0mSELECT * FROM "schools" WHERE (name LIKE '%trin%') [0m
+
+ActionView::MissingTemplate (Missing template schools/index.erb in view path app/views):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SchoolsController#show (for 127.0.0.1 at 2010-04-28 18:02:15) [GET]
+  Parameters: {"search"=>"trin", "id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing SchoolsController#show to js (for 127.0.0.1 at 2010-04-28 18:02:19) [GET]
+  Parameters: {"search"=>"trin", "id"=>"index"}
+
+ActionController::UnknownAction (No action responded to show. Actions: index):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-04-28 18:02:32) [GET]
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/index
+Completed in 124ms (View: 33, DB: 2) | 200 OK [http://localhost/registration]
+
+
+Processing RegistrationController#fill_in (for 127.0.0.1 at 2010-04-28 18:02:35) [GET]
+  [4;35;1mStampeder Load (11.0ms)[0m   [0mSELECT * FROM "stampeders" ORDER BY lastname[0m
+Rendering template within layouts/registration
+Rendering registration/fill_in
+Completed in 64ms (View: 29, DB: 11) | 200 OK [http://localhost/registration/fill_in]
+
+
+Processing StampedersController#edit (for 127.0.0.1 at 2010-04-28 18:02:38) [GET]
+  Parameters: {"id"=>"22"}
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 22) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/edit
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47stampeders47_complete_stampeder_form46erb_locals_complete_stampeder_form_object at C:/Users/David Hedrick/stampede_app/app/views/stampeders/_complete_stampeder_form.erb:40)
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."id" = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 21) [0m
+Rendered stampeders/_complete_stampeder_form (41.0ms)
+Completed in 107ms (View: 80, DB: 4) | 200 OK [http://localhost/stampeders/22/edit]
+
+
+Processing StampedersController#edit (for 127.0.0.1 at 2010-04-28 18:02:45) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 24) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/edit
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47stampeders47_complete_stampeder_form46erb_locals_complete_stampeder_form_object at C:/Users/David Hedrick/stampede_app/app/views/stampeders/_complete_stampeder_form.erb:40)
+Rendered stampeders/_complete_stampeder_form (21.0ms)
+Completed in 55ms (View: 30, DB: 3) | 200 OK [http://localhost/stampeders/24/edit]
+
+
+Processing SchoolsController#index to js (for 127.0.0.1 at 2010-04-28 18:02:48) [GET]
+  Parameters: {"search"=>"P"}
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (name LIKE '%P%') [0m
+Rendering schools/index
+Completed in 16ms (View: 7, DB: 1) | 200 OK [http://localhost/schools.js?search=P]
+
+
+Processing SchoolsController#index to js (for 127.0.0.1 at 2010-04-28 18:03:21) [GET]
+  [4;35;1mSchool Load (1.0ms)[0m   [0mSELECT * FROM "schools" WHERE (name LIKE '%%') [0m
+Rendering schools/index
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://localhost/schools.js]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 18:04:44) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 44ms (View: 27, DB: 0) | 200 OK [http://localhost/public/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 18:06:01) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 44ms (View: 28, DB: 0) | 200 OK [http://localhost/public/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 18:08:30) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 51ms (View: 35, DB: 0) | 200 OK [http://localhost/public/sign_up]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-04-28 18:08:37) [GET]
+  Parameters: {"search"=>"t"}
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (name LIKE '%t%') [0m
+Rendering schools/index
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://localhost/schools?search=t]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 18:19:15) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+
+ActionView::TemplateError (undefined method `church' for #<Stampeder:0x8b73074>) on line #42 of app/views/public/sign_up.html.erb:
+39:       </p>
+40:       <p>
+41:         <%= f.label :church %><br />
+42:         <%= f.text_field :church %>
+43:       </p>
+44:       <p>
+45:         I don't usually attend church<br />
+
+    app/views/public/sign_up.html.erb:42
+    app/views/public/sign_up.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTeams (20100307214006)
+Migrating to CreateStampeders (20100307215806)
+Migrating to AddRelationshipToStampeders (20100307221203)
+Migrating to AddGradeGenderSubgroup (20100315173148)
+Migrating to ChangeGenderFromIntegerToString (20100315174545)
+Migrating to AddZipCodeToStampeder (20100315205326)
+Migrating to ChangePhoneFromIntegerToString (20100315210737)
+Migrating to AddingParentPhoneStudentPhoneDobParentSchoolTextEmailFriendId (20100315212037)
+Migrating to RemoveStudentphoneRenamePhoneToStudentphone (20100315221617)
+Migrating to AddFullNameToStampederForAutoComplete (20100316170547)
+Migrating to ChangeZipCodeFromIntegerToString (20100317202549)
+Migrating to RenameTextToTextmsg (20100317230410)
+Migrating to CreateSignins (20100318011642)
+Migrating to AddIndexToSigninsStampederIdColumn (20100318033113)
+Migrating to AddCounterCacheToTeams (20100319015500)
+Migrating to ChangeBarcodeFromIntegerToString (20100319061656)
+Migrating to RemoveCounterCacheFromTeams (20100326012240)
+Migrating to CreatePoints (20100326025308)
+Migrating to RemovePointFieldsFromTeams (20100326025432)
+Migrating to AddIndexToPoints (20100326031145)
+Migrating to CreateSchools (20100401202401)
+Migrating to AddSchoolIdToStampeder (20100401202654)
+Migrating to RemoveSchoolColumnFromStampeder (20100401203917)
+Migrating to AddNotesToStampeder (20100401232419)
+Migrating to AddOnlineSignupBooleanToStampeder (20100427010751)
+Migrating to CreateChurches (20100428233840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "churches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100428233840')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("churches")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("points")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_points_on_team_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schools")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("signins")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_signins_on_stampeder_id')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("stampeders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_school_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_team_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_friend_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("teams")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTeams (20100307214006)
+Migrating to CreateStampeders (20100307215806)
+Migrating to AddRelationshipToStampeders (20100307221203)
+Migrating to AddGradeGenderSubgroup (20100315173148)
+Migrating to ChangeGenderFromIntegerToString (20100315174545)
+Migrating to AddZipCodeToStampeder (20100315205326)
+Migrating to ChangePhoneFromIntegerToString (20100315210737)
+Migrating to AddingParentPhoneStudentPhoneDobParentSchoolTextEmailFriendId (20100315212037)
+Migrating to RemoveStudentphoneRenamePhoneToStudentphone (20100315221617)
+Migrating to AddFullNameToStampederForAutoComplete (20100316170547)
+Migrating to ChangeZipCodeFromIntegerToString (20100317202549)
+Migrating to RenameTextToTextmsg (20100317230410)
+Migrating to CreateSignins (20100318011642)
+Migrating to AddIndexToSigninsStampederIdColumn (20100318033113)
+Migrating to AddCounterCacheToTeams (20100319015500)
+Migrating to ChangeBarcodeFromIntegerToString (20100319061656)
+Migrating to RemoveCounterCacheFromTeams (20100326012240)
+Migrating to CreatePoints (20100326025308)
+Migrating to RemovePointFieldsFromTeams (20100326025432)
+Migrating to AddIndexToPoints (20100326031145)
+Migrating to CreateSchools (20100401202401)
+Migrating to AddSchoolIdToStampeder (20100401202654)
+Migrating to RemoveSchoolColumnFromStampeder (20100401203917)
+Migrating to AddNotesToStampeder (20100401232419)
+Migrating to AddOnlineSignupBooleanToStampeder (20100427010751)
+Migrating to CreateChurches (20100428233840)
+Migrating to AddChurchIdToStampeder (20100428234200)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mALTER TABLE "stampeders" ADD "church_id" integer[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_church_id" ON "stampeders" ("church_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100428234200')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("churches")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("points")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_points_on_team_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("schools")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("signins")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_info('index_signins_on_stampeder_id')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("stampeders")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_church_id')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_school_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_team_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_friend_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("teams")[0m
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 18:50:56) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 191ms (View: 89, DB: 0) | 200 OK [http://localhost/public/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 18:58:39) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+
+ActionView::TemplateError (undefined local variable or method `churches_path' for #<ActionView::Base:0x8b6ce54>) on line #42 of app/views/public/sign_up.html.erb:
+39:       </p>
+40:       <p>
+41:         <%= f.label :church %><br />
+42:         <%= text_field_with_auto_complete :stampeder, :church_name, {}, { :url => churches_path, :format => :js, :method => :get, :with => "'search=' + element.value" } %>
+43:       </p>
+44:       <p>
+45:         I don't usually attend church<br />
+
+    app/views/public/sign_up.html.erb:42
+    app/views/public/sign_up.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (119.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-04-28 18:59:04) [GET]
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 45ms (View: 30, DB: 0) | 200 OK [http://localhost/public/sign_up]
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;35;1mChurch Load (0.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mChurch Create (2.0ms)[0m   [0;1mINSERT INTO "churches" ("name", "updated_at", "created_at") VALUES('McKinney Memorial Bible Church', '2010-04-29 00:00:02', '2010-04-29 00:00:02')[0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "updated_at" = '2010-04-29 00:00:05', "church_id" = 1 WHERE "id" = 1[0m
