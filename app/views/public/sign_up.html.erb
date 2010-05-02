@@ -28,11 +28,11 @@
   <p>
   <p>
     Do you attend McKinney?<br />
-    Yes <%= radio_button_tag 'church', 'McKinney Memorial Bible Church' %>
-    No <%= radio_button_tag 'attend_MMBC', 'No' %>
+    Yes <%= radio_button_tag 'church', 'McKinney Memorial Bible Church', false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();" %>
+    No <%= radio_button_tag 'church', nil, false, :onclick => "jQuery(\'#visitor_fields\').fadeIn();" %>
   </p>
     <%-# If they do not attend McKinney %>
-    <p id="visitor_fields">
+    <% content_tag :div, :id => "visitor_fields", :class => 'hidden' do -%>
       <p>
         <%= f.label :referral_number %><br />
         <%= text_field_tag 'referral number' %>
@@ -45,7 +45,7 @@
         I don't usually attend church<br />
         <%= check_box_tag 'attends_church', 'false', false %>
       </p>
-    <p>
+    <% end -%>
     
   <p>
     <%= f.label :grade %><br />
