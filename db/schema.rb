@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100428234200) do
+ActiveRecord::Schema.define(:version => 20100502195950) do
 
   create_table "churches", :force => true do |t|
     t.string   "name"
@@ -73,6 +73,7 @@ ActiveRecord::Schema.define(:version => 20100428234200) do
     t.text     "notes"
     t.boolean  "online_signup"
     t.integer  "church_id"
+    t.string   "parentemail"
   end
 
   add_index "stampeders", ["church_id"], :name => "index_stampeders_on_church_id"

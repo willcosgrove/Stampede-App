@@ -23357,3 +23357,117 @@ Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-02 14:10:23) [GET]
 Rendering template within layouts/public
 Rendering public/sign_up
 Completed in 55ms (View: 39, DB: 0) | 200 OK [http://localhost/public/sign_up]
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTeams (20100307214006)
+Migrating to CreateStampeders (20100307215806)
+Migrating to AddRelationshipToStampeders (20100307221203)
+Migrating to AddGradeGenderSubgroup (20100315173148)
+Migrating to ChangeGenderFromIntegerToString (20100315174545)
+Migrating to AddZipCodeToStampeder (20100315205326)
+Migrating to ChangePhoneFromIntegerToString (20100315210737)
+Migrating to AddingParentPhoneStudentPhoneDobParentSchoolTextEmailFriendId (20100315212037)
+Migrating to RemoveStudentphoneRenamePhoneToStudentphone (20100315221617)
+Migrating to AddFullNameToStampederForAutoComplete (20100316170547)
+Migrating to ChangeZipCodeFromIntegerToString (20100317202549)
+Migrating to RenameTextToTextmsg (20100317230410)
+Migrating to CreateSignins (20100318011642)
+Migrating to AddIndexToSigninsStampederIdColumn (20100318033113)
+Migrating to AddCounterCacheToTeams (20100319015500)
+Migrating to ChangeBarcodeFromIntegerToString (20100319061656)
+Migrating to RemoveCounterCacheFromTeams (20100326012240)
+Migrating to CreatePoints (20100326025308)
+Migrating to RemovePointFieldsFromTeams (20100326025432)
+Migrating to AddIndexToPoints (20100326031145)
+Migrating to CreateSchools (20100401202401)
+Migrating to AddSchoolIdToStampeder (20100401202654)
+Migrating to RemoveSchoolColumnFromStampeder (20100401203917)
+Migrating to AddNotesToStampeder (20100401232419)
+Migrating to AddOnlineSignupBooleanToStampeder (20100427010751)
+Migrating to CreateChurches (20100428233840)
+Migrating to AddChurchIdToStampeder (20100428234200)
+Migrating to AddParentEmailToStampeder (20100502195950)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mALTER TABLE "stampeders" ADD "parentemail" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100502195950')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("churches")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("points")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_points_on_team_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schools")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("signins")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_signins_on_stampeder_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("stampeders")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_church_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_school_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_team_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_friend_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("teams")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" LIMIT 1[0m
+Sent mail to 
+
+Date: Sun, 2 May 2010 19:53:07 -0500
+From: no-reply@stampede10.com
+Subject: Can't wait to see ya at Stampede!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+You're all signed up Will Cosgrove!
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "email" = 'jesusfreak210@gmail.com', "updated_at" = '2010-05-03 00:54:02' WHERE "id" = 1[0m
+Sent mail to jesusfreak210@gmail.com
+
+Date: Sun, 2 May 2010 19:54:08 -0500
+From: no-reply@stampede10.com
+To: jesusfreak210@gmail.com
+Subject: Can't wait to see ya at Stampede!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+You're all signed up Will Cosgrove!
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;35;1mStampeder Update (1.0ms)[0m   [0mUPDATE "stampeders" SET "parentemail" = 'dietcokegal@gmail.com', "parent" = 'Kim', "updated_at" = '2010-05-03 01:42:37' WHERE "id" = 1[0m
+Sent mail to jesusfreak210@gmail.com
+
+Date: Sun, 2 May 2010 20:43:30 -0500
+From: no-reply@stampede10.com
+To: jesusfreak210@gmail.com
+Subject: Can't wait to see ya at Stampede!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hey Will!
+
+We're so excited that you're coming to Stampede!  If you've never been, Stampede is an awesome event for middle schoolers, and incoming highschool freshmen, where you get to play games, worship with an awesome live band, and get to hear from an incredible speaker!
+Sent mail to dietcokegal@gmail.com
+
+Date: Sun, 2 May 2010 20:44:43 -0500
+From: no-reply@stampede10.com
+To: dietcokegal@gmail.com
+Subject: Your   has signed up for Stampede
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hey Kim,
+
+Will just signed up to go to Stampede.
+
+Stampede is an event for middle schoolers, and incoming highschool freshmen, where they'll get to play games, watch skits, sing along with some awesome music, and listen to an incredible speaker.
