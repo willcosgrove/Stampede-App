@@ -1,4 +1,4 @@
-<% form_for(@stampeder) do |f| %>
+<% form_for :stampeder, :url => { :controller => 'public', :action => 'register' } do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -28,8 +28,8 @@
   <p>
   <p>
     Do you attend McKinney?<br />
-    Yes <%= radio_button_tag 'church', 'McKinney Memorial Bible Church', false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();" %>
-    No <%= radio_button_tag 'church', nil, false, :onclick => "jQuery(\'#visitor_fields\').fadeIn();" %>
+    Yes <%= radio_button_tag 'church', @mmbc, false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();jQuery(\'#stampeder_church_name\').val(\'McKinney Memorial Bible Church\');" %>
+    No <%= radio_button_tag 'church', nil, false, :onclick => "jQuery(\'#visitor_fields\').fadeIn();jQuery(\'#stampeder_church_name\').val(\'\');" %>
   </p>
     <%-# If they do not attend McKinney %>
     <% content_tag :div, :id => "visitor_fields", :class => 'hidden' do -%>
@@ -56,7 +56,7 @@
     <%= text_field_with_auto_complete :stampeder, :school_name, {}, { :url => schools_path, :format => :js, :method => :get, :with => "'search=' + element.value" } %>
   </p>
   <p>
-    <%= f.label :studentphone %><br />
+    <%= f.label :your_cell %><br />
     <%= f.text_field :studentphone %>
   </p>
   <p>
@@ -64,8 +64,12 @@
     Yes <%= f.radio_button :textmsg, true %> No <%= f.radio_button :textmsg, false %>
   </p>
   <p>
-    <%= f.label :email %><br />
+    <%= f.label :email %> (optional)<br />
     <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :parent_email %><br />
+    <%= f.text_field :parentemail %>
   </p>
   <p>
     <%= f.label :address %><br />

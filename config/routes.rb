@@ -9,6 +9,7 @@ ActionController::Routing::Routes.draw do |map|
   map.autocomplete 'autocomplete.js', :controller => 'Stampeders', :action => 'autocomplete'
   map.create_signin 'registration/signin/create/:id', :controller => 'Signins', :action => 'create'
   map.confirm_signin 'registration/signin/confirm', :controller => 'Signins', :action => 'confirm'
+  map.sign_up 'sign_up', :controller => 'Public', :action => 'sign_up'
   map.resources :stampeders
   map.resources :teams
   map.resources :points

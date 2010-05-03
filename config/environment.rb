@@ -48,4 +48,7 @@ Rails::Initializer.run do |config|
     :authentication => :login
   }
   
+  # Constants
+  REFERRAL_CONSTANT = 12317
+  
 end
