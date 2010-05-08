@@ -1,4 +1,5 @@
 class StampedersController < ApplicationController
+  before_filter :authorize
   
   # GET /stampeders
   # GET /stampeders.xml

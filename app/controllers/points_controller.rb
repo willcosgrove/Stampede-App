@@ -1,4 +1,5 @@
 class PointsController < ApplicationController
+  before_filter :authorize
   # GET /points
   # GET /points.xml
   def index

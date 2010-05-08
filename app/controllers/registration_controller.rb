@@ -1,5 +1,6 @@
 class RegistrationController < ApplicationController
-
+  before_filter :authorize
+  
   def index
     @teams = Team.find(:all)
     @stampeder = Stampeder.new

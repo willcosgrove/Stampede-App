@@ -1,5 +1,6 @@
 class PublicController < ApplicationController
-
+  before_filter :authorize
+  
   def index
     
   end

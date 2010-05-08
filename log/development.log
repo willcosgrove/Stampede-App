@@ -23917,3 +23917,1629 @@ Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/]
   [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" ORDER BY teams.id DESC LIMIT 1[0m
   [4;35;1mTeam Destroy (2.0ms)[0m   [0mDELETE FROM "teams" WHERE "id" = 6[0m
   [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-04 15:57:40) [GET]
+
+ActionController::RoutingError (No route matches "/statistics" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-04 15:57:51) [GET]
+
+ActionController::RoutingError (No route matches "/statistic" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-04 15:58:39) [GET]
+
+SyntaxError (C:/Users/David Hedrick.media-vedit/stampede_app/app/controllers/statistics_controller.rb:8: `@6' is not allowed as an instance variable name
+C:/Users/David Hedrick.media-vedit/stampede_app/app/controllers/statistics_controller.rb:8: syntax error, unexpected $end, expecting kEND
+    @6m = Stampeder.find_by_subgroup("6m")
+      ^):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (25.4ms)
+Rendered rescues/_request_and_response (11.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-04 15:59:12) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') LIMIT 1[0m
+  [4;35;1mStampeder Load (9.8ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') LIMIT 1[0m
+  [4;35;1mStampeder Load (7.8ms)[0m   [0mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+
+ActionView::TemplateError (undefined method `size' for #<Stampeder:0xfdf4340>) on line #2 of app/views/statistics/index.html.erb:
+1: <h1>Subgroups by Team</h1>
+2: <img src="<%= "http://chart.apis.google.com/chart?cht=pc&chd=t:#{@red_6m.size},#{@red_7m.size},#{@red_8m.size},#{@red_9m.size},#{@red_6f.size},#{@red_7f.size},#{@red_8f.size},#{@red_9f.size}|{@green_6m.size},#{@green_7m.size},#{@green_8m.size},#{@green_9m.size},#{@green_6f.size},#{@green_7f.size},#{@green_8f.size},#{@green_9f.size}|{@blue_6m.size},#{@blue_7m.size},#{@blue_8m.size},#{@blue_9m.size},#{@blue_6f.size},#{@blue_7f.size},#{@blue_8f.size},#{@blue_9f.size}|{@yellow_6m.size},#{@yellow_7m.size},#{@yellow_8m.size},#{@yellow_9m.size},#{@yellow_6f.size},#{@yellow_7f.size},#{@yellow_8f.size},#{@yellow_9f.size}&chs=200x100" %>">
+
+    app/views/statistics/index.html.erb:2
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-04 16:00:11) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (6.8ms)[0m   [0mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+Completed in 113ms (View: 1, DB: 37) | 200 OK [http://localhost/statistics]
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-04 16:00:49) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (7.8ms)[0m   [0mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+Completed in 83ms (View: 4, DB: 35) | 200 OK [http://localhost/statistics]
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-04 16:00:57) [GET]
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (7.8ms)[0m   [0mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+Completed in 80ms (View: 1, DB: 34) | 200 OK [http://localhost/statistics]
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-04 16:04:12) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (7.8ms)[0m   [0mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+Completed in 118ms (View: 1, DB: 31) | 200 OK [http://localhost/statistics]
+
+
+Processing TeamsController#index (for 127.0.0.1 at 2010-05-04 16:06:39) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/teams
+Rendering teams/index
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+Completed in 4816ms (View: 4806, DB: 3) | 200 OK [http://localhost/teams]
+
+
+Processing StampedersController#index (for 127.0.0.1 at 2010-05-04 16:06:54) [GET]
+  [4;35;1mStampeder Load (8.8ms)[0m   [0mSELECT * FROM "stampeders" [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/index
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+Completed in 228ms (View: 205, DB: 11) | 200 OK [http://localhost/stampeders]
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-04 16:09:09) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (7.8ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+Completed in 85ms (View: 4, DB: 38) | 200 OK [http://localhost/statistics]
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-04 16:12:29) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (7.8ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+Completed in 85ms (View: 4, DB: 42) | 200 OK [http://localhost/statistics]
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-04 16:14:31) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (7.8ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+Completed in 121ms (View: 4, DB: 41) | 200 OK [http://localhost/statistics]
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-04 16:15:48) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (7.8ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+Completed in 85ms (View: 4, DB: 31) | 200 OK [http://localhost/statistics]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-04 16:15:59) [GET]
+
+ActionController::RoutingError (No route matches "/statistic" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-04 16:18:26) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (37.1ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (7.8ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+Completed in 122ms (View: 4, DB: 69) | 200 OK [http://localhost/statistics]
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-04 16:19:07) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (7.8ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+Completed in 85ms (View: 4, DB: 38) | 200 OK [http://localhost/statistics]
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-04 16:24:17) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') [0m
+  [4;36;1mStampeder Load (7.8ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+Completed in 85ms (View: 3, DB: 38) | 200 OK [http://localhost/statistics]
+/!\ FAILSAFE /!\  Wed May 05 17:49:47 -0500 2010
+  Status: 500 Internal Server Error
+  C:/Users/David Hedrick.media-vedit/stampede_app/app/controllers/application_controller.rb:23: syntax error, unexpected $end, expecting kEND
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+/!\ FAILSAFE /!\  Wed May 05 17:49:53 -0500 2010
+  Status: 500 Internal Server Error
+  C:/Users/David Hedrick.media-vedit/stampede_app/app/controllers/application_controller.rb:23: syntax error, unexpected $end, expecting kEND
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:80:in `const_missing'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+    C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-05 17:50:20) [GET]
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6m') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7m') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8m') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9m') [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '6f') [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '7f') [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '8f') [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4 AND "stampeders"."subgroup" = '9f') [0m
+  [4;35;1mStampeder Load (7.8ms)[0m   [0mSELECT * FROM "stampeders" [0m
+Rendering statistics/index
+Completed in 310ms (View: 29, DB: 35) | 200 OK [http://localhost/statistics]
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-05 17:50:29) [GET]
+
+NameError (undefined local variable or method `home_path' for #<StatisticsController:0xeb7e398>):
+  app/controllers/application_controller.rb:16:in `authorize'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.4ms)
+Rendered rescues/_request_and_response (15.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing StatisticsController#index (for 127.0.0.1 at 2010-05-05 17:51:10) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/statistics]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-05 17:51:11) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Completed in 16ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-05 17:51:17) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-05-05 17:51:26) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/registration]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-05 17:51:27) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing StampedersController#index (for 127.0.0.1 at 2010-05-05 17:52:32) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/stampeders]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-05 17:52:33) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-05 17:53:30) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-05-05 17:53:39) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/registration]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-05 17:53:39) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (13.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (240.0ms)[0m   [0;1mCREATE TABLE "churches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (171.0ms)[0m   [0;1mCREATE TABLE "points" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "team_id" integer, "day" date, "previous_points" integer, "indoor_games" integer, "outdoor_games" integer, "spirit_points" integer, "deductions" integer, "most_friends" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (101.0ms)[0m   [0mCREATE INDEX "index_points_on_team_id" ON "points" ("team_id")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (153.0ms)[0m   [0mCREATE TABLE "schools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (135.0ms)[0m   [0mCREATE TABLE "signins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "stampeder_id" integer, "day_signed_in" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (117.0ms)[0m   [0;1mCREATE INDEX "index_signins_on_stampeder_id" ON "signins" ("stampeder_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (124.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" varchar(255), "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" varchar(255), "parentphone" varchar(255), "dob" date, "parent" varchar(255), "textmsg" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255), "school_id" integer, "notes" text, "online_signup" boolean, "church_id" integer, "parentemail" varchar(255)) [0m
+  [4;35;1mSQL (87.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_church_id" ON "stampeders" ("church_id")[0m
+  [4;36;1mSQL (107.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;35;1mSQL (97.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_school_id" ON "stampeders" ("school_id")[0m
+  [4;36;1mSQL (114.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (109.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (112.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (99.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (161.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100502195950')[0m
+  [4;35;1mSQL (240.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (173.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (208.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (239.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (181.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (173.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (64.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (83.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (91.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (98.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (109.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100317202549')[0m
+  [4;36;1mSQL (89.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100317230410')[0m
+  [4;35;1mSQL (100.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100318011642')[0m
+  [4;36;1mSQL (122.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100318033113')[0m
+  [4;35;1mSQL (101.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100319015500')[0m
+  [4;36;1mSQL (105.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100319061656')[0m
+  [4;35;1mSQL (100.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100326012240')[0m
+  [4;36;1mSQL (97.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100326025308')[0m
+  [4;35;1mSQL (93.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100326031145')[0m
+  [4;36;1mSQL (229.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100401202401')[0m
+  [4;35;1mSQL (164.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100401202654')[0m
+  [4;36;1mSQL (99.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100401203917')[0m
+  [4;35;1mSQL (99.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100401232419')[0m
+  [4;36;1mSQL (123.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100427010751')[0m
+  [4;35;1mSQL (107.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100428233840')[0m
+  [4;36;1mSQL (106.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100428234200')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (103.0ms)[0m   [0;1mCREATE TABLE "churches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (79.0ms)[0m   [0;1mCREATE TABLE "points" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "team_id" integer, "day" date, "previous_points" integer, "indoor_games" integer, "outdoor_games" integer, "spirit_points" integer, "deductions" integer, "most_friends" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (89.0ms)[0m   [0mCREATE INDEX "index_points_on_team_id" ON "points" ("team_id")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (87.0ms)[0m   [0mCREATE TABLE "schools" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (89.0ms)[0m   [0mCREATE TABLE "signins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "stampeder_id" integer, "day_signed_in" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (131.0ms)[0m   [0;1mCREATE INDEX "index_signins_on_stampeder_id" ON "signins" ("stampeder_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (83.0ms)[0m   [0;1mCREATE TABLE "stampeders" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "lastname" varchar(255), "firstname" varchar(255), "barcode" varchar(255), "studentphone" varchar(255), "address" varchar(255), "grade" integer, "city" varchar(255), "state" varchar(255), "created_at" datetime, "updated_at" datetime, "team_id" integer, "subgroup" varchar(255), "gender" varchar(255), "zipcode" varchar(255), "parentphone" varchar(255), "dob" date, "parent" varchar(255), "textmsg" boolean, "email" varchar(255), "friend_id" integer, "fullname" varchar(255), "school_id" integer, "notes" text, "online_signup" boolean, "church_id" integer, "parentemail" varchar(255)) [0m
+  [4;35;1mSQL (91.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_church_id" ON "stampeders" ("church_id")[0m
+  [4;36;1mSQL (73.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_friend_id" ON "stampeders" ("friend_id")[0m
+  [4;35;1mSQL (108.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_school_id" ON "stampeders" ("school_id")[0m
+  [4;36;1mSQL (98.0ms)[0m   [0;1mCREATE INDEX "index_stampeders_on_team_id" ON "stampeders" ("team_id")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (378.0ms)[0m   [0;1mCREATE TABLE "teams" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (197.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (177.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mSQL (156.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100502195950')[0m
+  [4;35;1mSQL (89.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307214006')[0m
+  [4;36;1mSQL (99.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100307215806')[0m
+  [4;35;1mSQL (105.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100307221203')[0m
+  [4;36;1mSQL (126.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315173148')[0m
+  [4;35;1mSQL (158.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315174545')[0m
+  [4;36;1mSQL (189.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315205326')[0m
+  [4;35;1mSQL (234.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315210737')[0m
+  [4;36;1mSQL (335.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100315212037')[0m
+  [4;35;1mSQL (145.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100315221617')[0m
+  [4;36;1mSQL (90.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100316170547')[0m
+  [4;35;1mSQL (82.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100317202549')[0m
+  [4;36;1mSQL (84.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100317230410')[0m
+  [4;35;1mSQL (107.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100318011642')[0m
+  [4;36;1mSQL (88.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100318033113')[0m
+  [4;35;1mSQL (112.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100319015500')[0m
+  [4;36;1mSQL (90.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100319061656')[0m
+  [4;35;1mSQL (82.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100326012240')[0m
+  [4;36;1mSQL (98.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100326025308')[0m
+  [4;35;1mSQL (91.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100326031145')[0m
+  [4;36;1mSQL (141.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100401202401')[0m
+  [4;35;1mSQL (179.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100401202654')[0m
+  [4;36;1mSQL (224.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100401203917')[0m
+  [4;35;1mSQL (178.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100401232419')[0m
+  [4;36;1mSQL (286.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100427010751')[0m
+  [4;35;1mSQL (177.0ms)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('20100428233840')[0m
+  [4;36;1mSQL (217.0ms)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('20100428234200')[0m
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-07 18:13:04) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Completed in 149ms (View: 146, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing NavigationController#index (for 127.0.0.1 at 2010-05-07 18:17:49) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/navigation]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-07 18:17:49) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing NavigationController#index (for 127.0.0.1 at 2010-05-07 18:18:17) [GET]
+Rendering template within layouts/navigation
+Rendering navigation/index
+Completed in 49ms (View: 46, DB: 0) | 200 OK [http://localhost/navigation]
+
+
+Processing NavigationController#index (for 127.0.0.1 at 2010-05-07 18:18:20) [GET]
+Rendering template within layouts/navigation
+Rendering navigation/index
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/navigation]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-05-07 18:19:00) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_registration_signin (5.0ms)
+Rendered registration/_quick_stampeder_form (30.0ms)
+Rendered registration/_register_new_stampeder (44.0ms)
+Rendered registration/_signin_page_forms (61.0ms)
+Completed in 241ms (View: 121, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#confirm (for 127.0.0.1 at 2010-05-07 18:19:23) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"4/RXh9YKTORnDU5ihtDu6V2bfrhOO/Vc/qwJwMO5Rec=", "barcode"=>"1993", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '1993') LIMIT 1[0m
+Rendering signins/confirm
+Rendered registration/_confirm_box (12.0ms)
+Completed in 159ms (View: 135, DB: 1) | 200 OK [http://localhost/registration/signin/confirm]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-05-07 18:19:28) [POST]
+  Parameters: {"authenticity_token"=>"4/RXh9YKTORnDU5ihtDu6V2bfrhOO/Vc/qwJwMO5Rec=", "id"=>"1", "_"=>""}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = '1') LIMIT 1[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-05-07 23:19:28', 1, '2010-05-07 18:19:28', '2010-05-07 23:19:28')[0m
+Rendering signins/create
+Completed in 188ms (View: 26, DB: 4) | 200 OK [http://localhost/registration/signin/create/1]
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-05-07 18:19:46) [GET]
+  [4;35;1mStampeder Load (4.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (8.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (4.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (5.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+Completed in 152ms (View: 87, DB: 22) | 200 OK [http://localhost/registration/view_all]
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-05-07 18:19:49) [GET]
+  Parameters: {"id"=>"33"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 33) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/show
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders".friend_id = 33) [0m
+  [4;36;1mSignin Load (0.0ms)[0m   [0;1mSELECT * FROM "signins" WHERE ("signins".stampeder_id = 33) [0m
+Completed in 224ms (View: 197, DB: 3) | 200 OK [http://localhost/stampeders/33]
+
+
+Processing SigninsController#confirm (for 127.0.0.1 at 2010-05-07 18:19:59) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"4/RXh9YKTORnDU5ihtDu6V2bfrhOO/Vc/qwJwMO5Rec=", "barcode"=>"1141", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '1141') LIMIT 1[0m
+Rendering signins/confirm
+Rendered registration/_confirm_box (11.0ms)
+Completed in 38ms (View: 15, DB: 1) | 200 OK [http://localhost/registration/signin/confirm]
+
+
+Processing SigninsController#confirm (for 127.0.0.1 at 2010-05-07 18:21:04) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"4/RXh9YKTORnDU5ihtDu6V2bfrhOO/Vc/qwJwMO5Rec=", "barcode"=>"1141", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '1141') LIMIT 1[0m
+Rendering signins/confirm
+Rendered registration/_confirm_box (9.0ms)
+Completed in 30ms (View: 12, DB: 1) | 200 OK [http://localhost/registration/signin/confirm]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-05-07 18:21:06) [POST]
+  Parameters: {"authenticity_token"=>"4/RXh9YKTORnDU5ihtDu6V2bfrhOO/Vc/qwJwMO5Rec=", "id"=>"33", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = '33') LIMIT 1[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-05-07 23:21:06', 33, '2010-05-07 18:21:06', '2010-05-07 23:21:06')[0m
+Rendering signins/create
+Completed in 133ms (View: 10, DB: 3) | 200 OK [http://localhost/registration/signin/create/33]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-05-07 18:22:29) [GET]
+  Parameters: {"search"=>"wi"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%wi%') [0m
+Rendering stampeders/autocomplete
+Completed in 28ms (View: 13, DB: 2) | 200 OK [http://localhost/autocomplete.js?search=wi]
+
+
+Processing StampedersController#autocomplete (for 127.0.0.1 at 2010-05-07 18:22:29) [GET]
+  Parameters: {"search"=>"will"}
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%will%') [0m
+Rendering stampeders/autocomplete
+Completed in 101ms (View: 7, DB: 3) | 200 OK [http://localhost/autocomplete.js?search=will]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-05-07 18:22:34) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"4/RXh9YKTORnDU5ihtDu6V2bfrhOO/Vc/qwJwMO5Rec=", "stampeder"=>{"grade"=>"8", "friend_name"=>"Will Cosgrove", "gender"=>"f", "lastname"=>"McLean", "firstname"=>"Sandra"}, "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."fullname" = 'Will Cosgrove') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8f') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;35;1mStampeder Create (2.0ms)[0m   [0mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "church_id", "subgroup", "textmsg", "zipcode", "barcode", "parentphone", "fullname", "lastname", "firstname", "gender", "notes", "parentemail", "studentphone", "online_signup", "address", "state", "created_at", "parent", "email", "friend_id", "school_id") VALUES(NULL, 2, 8, '2010-05-07 23:22:34', NULL, NULL, '8f', NULL, NULL, NULL, NULL, 'Sandra McLean', 'McLean', 'Sandra', 'f', NULL, NULL, NULL, 'f', NULL, NULL, '2010-05-07 23:22:34', NULL, NULL, 1, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (8.0ms)
+Completed in 240ms (View: 26, DB: 5) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-05-07 18:22:51) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"4/RXh9YKTORnDU5ihtDu6V2bfrhOO/Vc/qwJwMO5Rec=", "barcode"=>"8842", "id"=>"44", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 44) [0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '8842', "updated_at" = '2010-05-07 23:22:51' WHERE "id" = 44[0m
+  [4;36;1mSignin Create (2.0ms)[0m   [0;1mINSERT INTO "signins" ("updated_at", "stampeder_id", "day_signed_in", "created_at") VALUES('2010-05-07 23:22:51', 44, '2010-05-07 18:22:51', '2010-05-07 23:22:51')[0m
+Rendering registration/add_barcode
+Rendered registration/_registration_signin (3.0ms)
+Rendered registration/_quick_stampeder_form (7.0ms)
+Rendered registration/_register_new_stampeder (9.0ms)
+Rendered registration/_signin_page_forms (15.0ms)
+Completed in 283ms (View: 29, DB: 5) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing SigninsController#confirm (for 127.0.0.1 at 2010-05-07 18:22:58) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"4/RXh9YKTORnDU5ihtDu6V2bfrhOO/Vc/qwJwMO5Rec=", "barcode"=>"8842", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '8842') LIMIT 1[0m
+Rendering signins/confirm
+Rendered registration/_confirm_box (9.0ms)
+Completed in 37ms (View: 15, DB: 1) | 200 OK [http://localhost/registration/signin/confirm]
+
+
+Processing RegistrationController#fill_in (for 127.0.0.1 at 2010-05-07 18:24:44) [GET]
+  [4;36;1mStampeder Load (13.0ms)[0m   [0;1mSELECT * FROM "stampeders" ORDER BY lastname[0m
+Rendering template within layouts/registration
+Rendering registration/fill_in
+Completed in 147ms (View: 34, DB: 13) | 200 OK [http://localhost/registration/fill_in]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-07 18:24:48) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-05-07 18:24:53) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_registration_signin (4.0ms)
+Rendered registration/_quick_stampeder_form (12.0ms)
+Rendered registration/_register_new_stampeder (13.0ms)
+Rendered registration/_signin_page_forms (18.0ms)
+Completed in 47ms (View: 30, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing RegistrationController#fill_in (for 127.0.0.1 at 2010-05-07 18:27:41) [GET]
+  [4;35;1mStampeder Load (14.0ms)[0m   [0mSELECT * FROM "stampeders" ORDER BY lastname[0m
+Rendering template within layouts/registration
+Rendering registration/fill_in
+Completed in 68ms (View: 27, DB: 14) | 200 OK [http://localhost/registration/fill_in]
+
+
+Processing StampedersController#edit (for 127.0.0.1 at 2010-05-07 18:28:44) [GET]
+  Parameters: {"id"=>"40"}
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 40) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/edit
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47stampeders47_complete_stampeder_form46erb_locals_complete_stampeder_form_object at C:/Users/Will/stampede_app/app/views/stampeders/_complete_stampeder_form.erb:40)
+  [4;36;1mSchool Load (2.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."id" = 1) [0m
+Rendered stampeders/_complete_stampeder_form (140.0ms)
+Completed in 200ms (View: 171, DB: 4) | 200 OK [http://localhost/stampeders/40/edit]
+
+
+Processing StampedersController#update (for 127.0.0.1 at 2010-05-07 18:29:20) [PUT]
+  Parameters: {"commit"=>"Save", "authenticity_token"=>"4/RXh9YKTORnDU5ihtDu6V2bfrhOO/Vc/qwJwMO5Rec=", "id"=>"40", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"8", "textmsg"=>"false", "zipcode"=>"76123", "school_name"=>"Paschal High School", "barcode"=>"", "parentphone"=>"8176371145", "dob(1i)"=>"1997", "notes"=>"He has asthma", "friend_name"=>"", "dob(2i)"=>"7", "gender"=>"f", "lastname"=>"Hooper", "firstname"=>"Brandy", "dob(3i)"=>"2", "studentphone"=>"8174251648", "address"=>"8437 Peach Dr", "state"=>"TX", "email"=>"brandy817218272@gmail.com", "parent"=>"Sandy"}}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 40) [0m
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."name" = 'Paschal High School') LIMIT 1[0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '', "notes" = 'He has asthma', "updated_at" = '2010-05-07 23:29:20' WHERE "id" = 40[0m
+Redirected to http://localhost:3000/stampeders/40/edit
+Completed in 117ms (DB: 2) | 302 Found [http://localhost/stampeders/40]
+
+
+Processing StampedersController#edit (for 127.0.0.1 at 2010-05-07 18:29:20) [GET]
+  Parameters: {"id"=>"40"}
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 40) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/edit
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47stampeders47_complete_stampeder_form46erb_locals_complete_stampeder_form_object at C:/Users/Will/stampede_app/app/views/stampeders/_complete_stampeder_form.erb:40)
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."id" = 1) [0m
+Rendered stampeders/_complete_stampeder_form (34.0ms)
+Completed in 69ms (View: 43, DB: 2) | 200 OK [http://localhost/stampeders/40/edit]
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-05-07 18:29:27) [GET]
+  [4;35;1mStampeder Load (3.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (7.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+Completed in 161ms (View: 32, DB: 16) | 200 OK [http://localhost/registration/view_all]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:45) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:45) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:46) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:46) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:47) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:48) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:48) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:49) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:50) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:50) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:51) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:51) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:52) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:52) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:53) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:53) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:54) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:54) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:55) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:55) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:35:56) [GET]
+Redirected to http://localhost:3000/
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:36:44) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-08 00:36:44) [GET]
+Rendering sessions/new
+Completed in 67ms (View: 64, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-08 00:36:49) [POST]
+  Parameters: {"authenticity_token"=>"4/RXh9YKTORnDU5ihtDu6V2bfrhOO/Vc/qwJwMO5Rec=", "password"=>"mmbcw3b"}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 00:36:50) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Completed in 27ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-08 00:36:54) [GET]
+  [4;36;1mChurch Load (0.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 221ms (View: 79, DB: 0) | 200 OK [http://localhost/sign_up]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-05-08 00:36:58) [GET]
+Redirected to http://localhost:3000/login
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-08 00:37:05) [GET]
+Rendering sessions/new
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-05-08 01:09:15) [GET]
+  Parameters: {"id"=>"33"}
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1ms (DB: 0) | 302 Found [http://localhost/stampeders/33]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-08 01:09:15) [GET]
+Rendering sessions/new
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-08 01:09:20) [POST]
+  Parameters: {"authenticity_token"=>"7imlgWxV9tX4mcRT9HpwOFsysTDOhsHeCzC+agyz1Sc=", "password"=>"mmbcw3b"}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-08 01:09:21) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Completed in 14ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-05-08 01:09:27) [GET]
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/index
+Completed in 136ms (View: 35, DB: 1) | 200 OK [http://localhost/registration]
+
+
+Processing RegistrationController#fill_in (for 127.0.0.1 at 2010-05-08 01:09:31) [GET]
+  [4;36;1mStampeder Load (14.0ms)[0m   [0;1mSELECT * FROM "stampeders" ORDER BY lastname[0m
+Rendering template within layouts/registration
+Rendering registration/fill_in
+Completed in 77ms (View: 34, DB: 14) | 200 OK [http://localhost/registration/fill_in]
+
+
+Processing StampedersController#edit (for 127.0.0.1 at 2010-05-08 01:09:33) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 6) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/edit
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47stampeders47_complete_stampeder_form46erb_locals_complete_stampeder_form_object at C:/Users/Will/stampede_app/app/views/stampeders/_complete_stampeder_form.erb:40)
+Rendered stampeders/_complete_stampeder_form (33.0ms)
+Completed in 104ms (View: 73, DB: 2) | 200 OK [http://localhost/stampeders/6/edit]
+
+
+Processing StampedersController#edit (for 127.0.0.1 at 2010-05-08 01:09:44) [GET]
+  Parameters: {"id"=>"13"}
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 13) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/edit
+DEPRECATION WARNING: formatted_schools_path() has been deprecated. Please pass format to the standard schools_path method instead.. (called from _run_erb_app47views47stampeders47_complete_stampeder_form46erb_locals_complete_stampeder_form_object at C:/Users/Will/stampede_app/app/views/stampeders/_complete_stampeder_form.erb:40)
+Rendered stampeders/_complete_stampeder_form (28.0ms)
+Completed in 154ms (View: 42, DB: 2) | 200 OK [http://localhost/stampeders/13/edit]

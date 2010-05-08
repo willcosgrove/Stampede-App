@@ -1,4 +1,5 @@
 class SigninsController < ApplicationController
+  before_filter :authorize
 
   def create
     @stampeder = Stampeder.find_by_id(params[:id])

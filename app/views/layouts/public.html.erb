@@ -12,6 +12,7 @@
 <body>
 <%= yield :top_of_body %>
 <p style="color: green"><%= flash[:notice] %></p>
+<p style="color: red"><%= flash[:error] %></p>
 <div id="top_images">
 <%= yield :top_images %>
 </div>

@@ -10,11 +10,15 @@ ActionController::Routing::Routes.draw do |map|
   map.create_signin 'registration/signin/create/:id', :controller => 'Signins', :action => 'create'
   map.confirm_signin 'registration/signin/confirm', :controller => 'Signins', :action => 'confirm'
   map.sign_up 'sign_up', :controller => 'Public', :action => 'sign_up'
+  map.login 'login', :controller => 'Sessions', :action => 'new'
+  map.logout 'logout', :controller => 'Sessions', :action => 'destroy'
   map.resources :stampeders
   map.resources :teams
   map.resources :points
   map.resources :schools
   map.resources :churches
+  map.resources :sessions
+  map.resources :statistics
 
   # The priority is based upon order of creation: first created -> highest priority.
 
