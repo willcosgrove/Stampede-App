@@ -12,7 +12,7 @@
   <%= javascript_include_tag 'header' %>
 </head>
 <body>
-
+<%= render :partial => 'shared_partials/nav' %>
 <p style="color: green"><%= flash[:notice] %></p>
 <div id="content">
 <%= yield %>

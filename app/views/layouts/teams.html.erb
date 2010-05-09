@@ -12,6 +12,7 @@
   <%= javascript_include_tag 'header' %>
 </head>
 <body>
+<%= render :partial => 'shared_partials/nav' %>
 <%= yield :top_of_body %>
 <p style="color: green"><%= flash[:notice] %></p>
 <div id="top_images">

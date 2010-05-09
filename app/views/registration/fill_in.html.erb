@@ -1,13 +1,13 @@
 <% if @stampeders.empty? %>
   <h2>There are no stampeders that need information filled in</h2>
 <% else %>
-  <h2>There <% if @plural %> <%= 'is'.pluralize %> <% else %> <%= 'is' %> <% end %> <%= @stampeders.size %> <% if @plural %> <%= 'stampeder'.pluralize %> <% else %> <%= 'stampeder' %> <% end %> that are missing information</h2>
+  <h2>Showing <%= pluralize(@stampeders.size, 'stampeder') %> missing information</h2>
 <% end %>
 
 <% unless @stampeders.empty? %>
   <ul>
     <% @stampeders.each do |stampeder| %>
-      <li><%= link_to stampeder.fullname, edit_stampeder_path(stampeder) %></li>
+      <li><%= link_to stampeder.fullname, edit_stampeder_path(stampeder) %> - Registered <%= time_ago_in_words(stampeder.created_at) %> ago</li>
     <% end %>
   </ul>
 <% end %>

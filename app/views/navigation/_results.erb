@@ -1,0 +1,8 @@
+<% if @stampeders %>
+  <h2><%= pluralize(@stampeders.size, 'Search Result') %></h2>
+  <ul>
+  <% @stampeders.each do |stampeder| %>
+    <li><b>Name:</b> <%= link_to stampeder.name, stampeder_path(stampeder) %><%= ", <b>Barcode:</b> #{stampeder.barcode}" if stampeder.barcode %><%= ", <b>Team:</b> #{stampeder.team.name}" if stampeder.team %><%= ", <b>Brought by:</b> #{stampeder.stampeder.name}" if stampeder.stampeder %></li>
+  <% end %>
+  </ul>
+<% end %>

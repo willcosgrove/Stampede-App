@@ -10,6 +10,9 @@
   <%= yield(:head) %>
 </head>
 <body>
+<% if admin? %>
+<%= render :partial => 'shared_partials/nav' %>
+<% end %>
 <%= yield :top_of_body %>
 <p style="color: green"><%= flash[:notice] %></p>
 <p style="color: red"><%= flash[:error] %></p>

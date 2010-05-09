@@ -25,6 +25,14 @@ class Stampeder < ActiveRecord::Base
     self.pickTeam if self.team.blank? && !self.online_signup
   end
   
+  def name
+    fullname
+  end
+  
+  def name=(name)
+    fullname = name unless name.blank?
+  end
+  
   def friend_name
     self.stampeder.fullname if self.stampeder
   end
