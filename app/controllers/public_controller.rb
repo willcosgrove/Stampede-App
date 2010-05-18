@@ -2,7 +2,6 @@ class PublicController < ApplicationController
   before_filter :authorize
   
   def index
-    
   end
   
   def sign_up
@@ -13,7 +12,7 @@ class PublicController < ApplicationController
   def register
     debugger
     @stampeder = Stampeder.new(params[:stampeder])
-    @stampeder.friend_id = params[:'referral number'] / REFERRAL_CONSTANT unless params[:'referral number'] == ""
+    @stampeder.friend_id = params[:'referral_code'] / REFERRAL_CONSTANT unless params[:'referral_code'] == ""
     @stampeder.online_signup = true
     
     respond_to do |format|

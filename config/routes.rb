@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.create_signin 'registration/signin/create/:id', :controller => 'Signins', :action => 'create'
   map.confirm_signin 'registration/signin/confirm', :controller => 'Signins', :action => 'confirm'
   map.sign_up 'sign_up', :controller => 'Public', :action => 'sign_up'
+  map.sign_up_with_code 'sign_up/:referral_code', :controller => 'Public', :action => 'sign_up'
   map.login 'login', :controller => 'Sessions', :action => 'new'
   map.logout 'logout', :controller => 'Sessions', :action => 'destroy'
   map.search 'search', :controller => 'Navigation', :action => 'search'

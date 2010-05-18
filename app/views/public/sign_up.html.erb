@@ -34,8 +34,8 @@
     <%-# If they do not attend McKinney %>
     <% content_tag :div, :id => "visitor_fields", :class => 'hidden' do -%>
       <p>
-        <%= f.label :referral_number %><br />
-        <%= text_field_tag 'referral number' %>
+        <%= f.label :referral_code %><br />
+        <%= text_field_tag 'referral_code', params[:referral_code] %>
       </p>
       <p>
         <%= f.label :church %><br />

@@ -30434,3 +30434,1795 @@ Rendering template within layouts/navigation
 Rendering navigation/search
 Rendered shared_partials/_nav (2.0ms)
 Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-09 09:02:34) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1671ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-09 09:02:37) [GET]
+Rendering sessions/new
+Completed in 138ms (View: 136, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-09 09:02:50) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "password"=>"mmbcw3b"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-09 09:02:51) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Rendered shared_partials/_nav (9.8ms)
+Completed in 42ms (View: 40, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:29) [GET]
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 32ms (View: 30, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:33) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"d"}
+  [4;36;1mStampeder Load (3.9ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%d%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,9,37,1)) [0m
+Rendered navigation/_results (5.9ms)
+Completed in 179ms (View: 10, DB: 6) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:34) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"da"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%da%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,4)) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 37) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:36) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"dav"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%dav%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:36) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"da"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%da%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 37) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 25ms (View: 4, DB: 3) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:37) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"d"}
+  [4;35;1mStampeder Load (3.9ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%d%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,9,37,1)) [0m
+Rendered navigation/_results (4.9ms)
+Completed in 65ms (View: 8, DB: 5) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:38) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:39) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"w"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%w%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:40) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"wi"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%wi%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:41) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"w"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%w%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:41) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:44) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"g"}
+  [4;36;1mStampeder Load (3.9ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%g%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (37,1)) [0m
+Rendered navigation/_results (4.9ms)
+Completed in 32ms (View: 7, DB: 5) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:45) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"gr"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%gr%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 24ms (View: 4, DB: 3) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:46) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"g"}
+  [4;35;1mStampeder Load (3.9ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%g%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (37,1)) [0m
+Rendered navigation/_results (4.9ms)
+Completed in 33ms (View: 8, DB: 5) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:47) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:50) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"d"}
+  [4;36;1mStampeder Load (3.9ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%d%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,9,37,1)) [0m
+Rendered navigation/_results (5.9ms)
+Completed in 34ms (View: 8, DB: 6) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:51) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"da"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%da%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,4)) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 37) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:51) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"dan"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%dan%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 37) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 3, DB: 3) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:53) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"dang"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%dang%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 37) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:55) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"dan"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%dan%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 37) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:55) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"da"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%da%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,4)) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 37) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 25ms (View: 3, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:12:56) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"d"}
+  [4;36;1mStampeder Load (2.9ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%d%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,9,37,1)) [0m
+Rendered navigation/_results (4.9ms)
+Completed in 34ms (View: 8, DB: 4) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:13:06) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:13:08) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"k"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%k%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 22) [0m
+Rendered navigation/_results (2.9ms)
+Completed in 28ms (View: 5, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:13:10) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"kl"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%kl%') [0m
+Rendered navigation/_results (0.0ms)
+Completed in 21ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:13:13) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"k"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%k%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 22) [0m
+Rendered navigation/_results (2.9ms)
+Completed in 28ms (View: 5, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:13:15) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (0.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-05-09 09:13:21) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 19) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/show
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders".friend_id = 19) [0m
+  [4;35;1mSignin Load (0.0ms)[0m   [0mSELECT * FROM "signins" WHERE ("signins".stampeder_id = 19) [0m
+Rendered shared_partials/_nav (1.0ms)
+Completed in 64ms (View: 52, DB: 0) | 200 OK [http://localhost/stampeders/19]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:13:33) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"w"}
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%w%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 24ms (View: 3, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:13:34) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"wil"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%wil%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:13:35) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"wi"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%wi%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-05-09 09:13:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/show
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mSchool Load (0.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."id" = 2) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders".friend_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "signins" WHERE ("signins".stampeder_id = 1) [0m
+  [4;35;1mSignin Load (2.0ms)[0m   [0mSELECT * FROM "signins" WHERE ("signins".stampeder_id = 1) [0m
+Rendered shared_partials/_nav (1.0ms)
+Completed in 52ms (View: 36, DB: 4) | 200 OK [http://localhost/stampeders/1]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:13:59) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"wi"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%wi%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 22ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:13:59) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"w"}
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%w%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 33ms (View: 5, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:00) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:07) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"d"}
+  [4;36;1mStampeder Load (5.9ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%d%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,9,37,1)) [0m
+Rendered navigation/_results (6.8ms)
+Completed in 49ms (View: 10, DB: 8) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:08) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"da"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%da%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,4)) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 37) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 25ms (View: 4, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:08) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"dan"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%dan%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 37) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:09) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"dang"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%dang%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 37) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:21) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"da"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%da%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 37) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 25ms (View: 4, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:21) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"dan"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%dan%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 37) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:21) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"d"}
+  [4;36;1mStampeder Load (5.9ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%d%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,9,37,1)) [0m
+Rendered navigation/_results (7.8ms)
+Completed in 49ms (View: 11, DB: 8) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:21) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"c"}
+  [4;35;1mStampeder Load (2.9ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%c%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (1,21)) [0m
+Rendered navigation/_results (4.9ms)
+Completed in 33ms (View: 7, DB: 4) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:21) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"cu"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%cu%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 477ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:22) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"cuop"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%cuop%') [0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:22) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:22) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"cuo"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%cuo%') [0m
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:22) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"cuo"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%cuo%') [0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:22) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"cu"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%cu%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 31ms (View: 5, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:14:23) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"cup"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%cup%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 32ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:17:39) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"cu"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%cu%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 4) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 3, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:17:40) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (0.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:17:40) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"c"}
+  [4;35;1mStampeder Load (3.9ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%c%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (1,21)) [0m
+Rendered navigation/_results (4.9ms)
+Completed in 33ms (View: 7, DB: 5) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:17:42) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"h"}
+  [4;36;1mStampeder Load (2.9ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%h%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,1,21)) [0m
+Rendered navigation/_results (4.9ms)
+Completed in 34ms (View: 8, DB: 3) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:17:43) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"he"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%he%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 4, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:17:43) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"hed"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%hed%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 56ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:17:44) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"he"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%he%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:17:45) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"h"}
+  [4;35;1mStampeder Load (3.9ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%h%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,1,21)) [0m
+Rendered navigation/_results (4.9ms)
+Completed in 34ms (View: 8, DB: 6) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:17:46) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:17:56) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"j"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%j%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (2,4)) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 26ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 09:17:58) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:41:53) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"h"}
+  [4;35;1mStampeder Load (3.9ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%h%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,1,21)) [0m
+Rendered navigation/_results (4.9ms)
+Completed in 34ms (View: 8, DB: 6) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:41:55) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (0.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:41:55) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"f"}
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%f%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,3,4)) [0m
+Rendered navigation/_results (2.9ms)
+Completed in 27ms (View: 4, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:41:56) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:41:56) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"d"}
+  [4;36;1mStampeder Load (2.9ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%d%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,9,37,1)) [0m
+Rendered navigation/_results (5.9ms)
+Completed in 67ms (View: 7, DB: 5) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:41:57) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:41:57) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:41:58) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"s"}
+  [4;35;1mStampeder Load (3.9ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%s%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,1,21)) [0m
+Rendered navigation/_results (6.8ms)
+Completed in 36ms (View: 8, DB: 6) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:41:58) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"k"}
+  [4;36;1mStampeder Load (2.9ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%k%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 22) [0m
+Rendered navigation/_results (2.9ms)
+Completed in 30ms (View: 6, DB: 4) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:41:59) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"ki"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%ki%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (2,3,4)) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 66ms (View: 5, DB: 3) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:00) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"kim"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%kim%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:02) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"ki"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%ki%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (2,3,4)) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 25ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:03) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"kim"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%kim%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:04) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"ki"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%ki%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (2,3,4)) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 4, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:05) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"k"}
+  [4;35;1mStampeder Load (2.9ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%k%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 22) [0m
+Rendered navigation/_results (3.9ms)
+Completed in 40ms (View: 7, DB: 4) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:05) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:06) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"g"}
+  [4;36;1mStampeder Load (4.9ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%g%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (37,1)) [0m
+Rendered navigation/_results (6.8ms)
+Completed in 46ms (View: 10, DB: 7) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:06) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"gr"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%gr%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 32ms (View: 5, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:07) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"gre"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%gre%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 189ms (View: 4, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:07) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"gree"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%gree%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 3, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:08) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"green"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%green%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 3, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:09) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greene"}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greene%') [0m
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:10) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"green"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%green%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:11) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greene"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greene%') [0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:13) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"green"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%green%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:13) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"gree"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%gree%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:14) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"gre"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%gre%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:14) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"gr"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%gr%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 57ms (View: 4, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:14) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"g"}
+  [4;35;1mStampeder Load (3.9ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%g%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (37,1)) [0m
+Rendered navigation/_results (5.9ms)
+Completed in 34ms (View: 7, DB: 5) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:14) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (0.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:16) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"g"}
+  [4;36;1mStampeder Load (3.9ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%g%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (37,1)) [0m
+Rendered navigation/_results (4.9ms)
+Completed in 34ms (View: 8, DB: 6) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:16) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"gr"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%gr%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 25ms (View: 3, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:18) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"gre"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%gre%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 58ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:18) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 31ms (View: 4, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:19) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg "}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg %') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 158ms (View: 5, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:19) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg f"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg f%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:19) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg fa"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg fa%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:20) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg fap"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg fap%') [0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:21) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg fapr"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg fapr%') [0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:21) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg faprp"}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg faprp%') [0m
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:22) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg fapr"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg fapr%') [0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:22) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg fap"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg fap%') [0m
+Completed in 11ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:22) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg fa"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg fa%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 57ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:24) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg f"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg f%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:24) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg "}
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg %') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 26ms (View: 4, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:24) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"greg"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%greg%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 27ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:25) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"gre"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%gre%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 183ms (View: 129, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:25) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"gr"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%gr%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 32ms (View: 5, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:25) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"g"}
+  [4;36;1mStampeder Load (4.9ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%g%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (37,1)) [0m
+Rendered navigation/_results (6.8ms)
+Completed in 48ms (View: 10, DB: 7) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:25) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:28) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"*"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%*%') [0m
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:29) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (2.0ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:31) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"\\"}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%\%') [0m
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:32) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:32) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"'"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%''%') [0m
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:33) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"';"}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%'';%') [0m
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:34) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"'"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%''%') [0m
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:34) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:35) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"."}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%.%') [0m
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:36) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:37) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>","}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%,%') [0m
+Completed in 14ms (View: 2, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:37) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:38) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"'"}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%''%') [0m
+Completed in 13ms (View: 2, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:38) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 13ms (View: 11, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:41) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"f"}
+  [4;35;1mStampeder Load (2.9ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%f%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,3,4)) [0m
+Rendered navigation/_results (2.9ms)
+Completed in 71ms (View: 6, DB: 3) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:42) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:43) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"s"}
+  [4;35;1mStampeder Load (5.9ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%s%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,1,21)) [0m
+Rendered navigation/_results (8.8ms)
+Completed in 51ms (View: 12, DB: 8) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:44) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:45) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"s"}
+  [4;36;1mStampeder Load (6.8ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%s%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,1,21)) [0m
+Rendered navigation/_results (8.8ms)
+Completed in 52ms (View: 12, DB: 9) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:46) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"sa"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%sa%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+Rendered navigation/_results (2.9ms)
+Completed in 71ms (View: 6, DB: 2) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:47) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"s"}
+  [4;36;1mStampeder Load (6.8ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%s%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,1,21)) [0m
+Rendered navigation/_results (8.8ms)
+Completed in 52ms (View: 13, DB: 9) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:48) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:49) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"w"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%w%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 31ms (View: 4, DB: 3) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:50) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:50) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"e"}
+  [4;35;1mStampeder Load (9.8ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%e%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,9,1,21)) [0m
+Rendered navigation/_results (12.7ms)
+Completed in 96ms (View: 17, DB: 13) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:54) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (2.0ms)
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:55) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"s"}
+  [4;36;1mStampeder Load (6.8ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%s%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,1,21)) [0m
+Rendered navigation/_results (8.8ms)
+Completed in 52ms (View: 13, DB: 9) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:56) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:56) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"i"}
+  [4;35;1mStampeder Load (4.9ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%i%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+Rendered navigation/_results (6.8ms)
+Completed in 37ms (View: 9, DB: 5) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:58) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:42:58) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"e"}
+  [4;36;1mStampeder Load (9.8ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%e%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,9,1,21)) [0m
+Rendered navigation/_results (12.7ms)
+Completed in 61ms (View: 17, DB: 12) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:43:01) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"eg"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%eg%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" = 1) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 31ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:43:02) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"e"}
+  [4;35;1mStampeder Load (9.8ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%e%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,9,1,21)) [0m
+Rendered navigation/_results (12.7ms)
+Completed in 60ms (View: 16, DB: 13) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:43:03) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 46ms (View: 10, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:43:04) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"s"}
+  [4;36;1mStampeder Load (6.8ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%s%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,1,21)) [0m
+Rendered navigation/_results (8.8ms)
+Completed in 51ms (View: 12, DB: 9) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:43:05) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"sa"}
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%sa%') [0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2)) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+Rendered navigation/_results (2.9ms)
+Completed in 36ms (View: 6, DB: 3) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:43:06) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"s"}
+  [4;36;1mStampeder Load (6.8ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%s%') [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" IN (1,2,3,4)) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" IN (22,1,21)) [0m
+Rendered navigation/_results (8.8ms)
+Completed in 51ms (View: 12, DB: 9) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:43:07) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>""}
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (1.0ms)
+Completed in 12ms (View: 10, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:43:13) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"j"}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE (fullname LIKE '%j%') [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."id" IN (2,4)) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+Rendered navigation/_results (2.0ms)
+Completed in 25ms (View: 4, DB: 3) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:43:13) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"ju"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%ju%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 24ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-09 11:43:13) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "_"=>"", "query"=>"jui"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE (fullname LIKE '%jui%') [0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+Rendered navigation/_results (1.0ms)
+Completed in 23ms (View: 4, DB: 1) | 200 OK [http://localhost/search]
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-05-09 11:43:15) [GET]
+  Parameters: {"id"=>"7"}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 7) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/show
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders".friend_id = 7) [0m
+  [4;35;1mSignin Load (0.0ms)[0m   [0mSELECT * FROM "signins" WHERE ("signins".stampeder_id = 7) [0m
+Rendered shared_partials/_nav (1.0ms)
+Completed in 34ms (View: 21, DB: 2) | 200 OK [http://localhost/stampeders/7]
+
+
+Processing RegistrationController#signin (for 127.0.0.1 at 2010-05-09 11:43:33) [GET]
+Rendering template within layouts/registration
+Rendering registration/signin
+Rendered registration/_registration_signin (2.9ms)
+Rendered registration/_quick_stampeder_form (26.4ms)
+Rendered registration/_register_new_stampeder (29.3ms)
+Rendered registration/_signin_page_forms (38.1ms)
+Rendered shared_partials/_nav (1.0ms)
+Completed in 117ms (View: 72, DB: 0) | 200 OK [http://localhost/registration/signin]
+
+
+Processing SigninsController#confirm (for 127.0.0.1 at 2010-05-09 11:43:48) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "barcode"=>"1993", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '1993') LIMIT 1[0m
+Rendering signins/confirm
+Rendered registration/_confirm_box (5.9ms)
+Completed in 24ms (View: 13, DB: 1) | 200 OK [http://localhost/registration/signin/confirm]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-05-09 11:43:51) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "id"=>"1", "_"=>""}
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = '1') LIMIT 1[0m
+  [4;36;1mSignin Create (1.0ms)[0m   [0;1mINSERT INTO "signins" ("created_at", "stampeder_id", "updated_at", "day_signed_in") VALUES('2010-05-09 16:43:51', 1, '2010-05-09 16:43:51', '2010-05-09 11:43:51')[0m
+Rendering signins/create
+Completed in 30ms (View: 8, DB: 1) | 200 OK [http://localhost/registration/signin/create/1]
+
+
+Processing SigninsController#confirm (for 127.0.0.1 at 2010-05-09 11:44:06) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "barcode"=>"1993", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '1993') LIMIT 1[0m
+Rendering signins/confirm
+Rendered registration/_confirm_box (4.9ms)
+Completed in 19ms (View: 7, DB: 1) | 200 OK [http://localhost/registration/signin/confirm]
+
+
+Processing RegistrationController#register_stampeder (for 127.0.0.1 at 2010-05-09 11:44:27) [POST]
+  Parameters: {"commit"=>"Register Stampeder", "authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "stampeder"=>{"grade"=>"7", "friend_name"=>"", "gender"=>"m", "lastname"=>"Knob", "firstname"=>"Volume"}, "_"=>""}
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (0.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '7m') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Create (1.0ms)[0m   [0;1mINSERT INTO "stampeders" ("address", "city", "grade", "created_at", "dob", "parent", "church_id", "subgroup", "textmsg", "updated_at", "zipcode", "notes", "barcode", "fullname", "lastname", "gender", "parentphone", "online_signup", "firstname", "studentphone", "team_id", "parentemail", "state", "email", "friend_id", "school_id") VALUES(NULL, NULL, 7, '2010-05-09 16:44:27', NULL, NULL, NULL, '7m', NULL, '2010-05-09 16:44:27', NULL, NULL, NULL, 'Volume Knob', 'Knob', 'm', NULL, 'f', 'Volume', NULL, 3, NULL, NULL, NULL, NULL, NULL)[0m
+Rendering registration/register_stampeder
+Rendered registration/_add_barcode_form (3.9ms)
+Completed in 113ms (View: 13, DB: 5) | 200 OK [http://localhost/registration/register]
+
+
+Processing RegistrationController#add_barcode (for 127.0.0.1 at 2010-05-09 11:44:31) [POST]
+  Parameters: {"commit"=>"Set Bracelet Number", "authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "barcode"=>"5574", "id"=>"45", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 45) [0m
+  [4;36;1mStampeder Update (1.0ms)[0m   [0;1mUPDATE "stampeders" SET "updated_at" = '2010-05-09 16:44:31', "barcode" = '5574' WHERE "id" = 45[0m
+  [4;35;1mSignin Create (0.0ms)[0m   [0mINSERT INTO "signins" ("created_at", "stampeder_id", "updated_at", "day_signed_in") VALUES('2010-05-09 16:44:31', 45, '2010-05-09 16:44:31', '2010-05-09 11:44:31')[0m
+Rendering registration/add_barcode
+Rendered registration/_registration_signin (2.0ms)
+Rendered registration/_quick_stampeder_form (4.9ms)
+Rendered registration/_register_new_stampeder (5.9ms)
+Rendered registration/_signin_page_forms (9.8ms)
+Completed in 63ms (View: 17, DB: 2) | 200 OK [http://localhost/registration/addbarcode]
+
+
+Processing SigninsController#confirm (for 127.0.0.1 at 2010-05-09 11:44:38) [POST]
+  Parameters: {"commit"=>"Sign In", "authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "barcode"=>"1993", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."barcode" = '1993') LIMIT 1[0m
+Rendering signins/confirm
+Rendered registration/_confirm_box (5.9ms)
+Completed in 56ms (View: 9, DB: 1) | 200 OK [http://localhost/registration/signin/confirm]
+
+
+Processing SigninsController#create (for 127.0.0.1 at 2010-05-09 11:44:42) [POST]
+  Parameters: {"authenticity_token"=>"nyQu94GZRF4t3KsPOIt2ymOph1Pifw/+Xf/qMj0IAY0=", "id"=>"1", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = '1') LIMIT 1[0m
+  [4;36;1mSignin Create (0.0ms)[0m   [0;1mINSERT INTO "signins" ("created_at", "stampeder_id", "updated_at", "day_signed_in") VALUES('2010-05-09 16:44:42', 1, '2010-05-09 16:44:42', '2010-05-09 11:44:42')[0m
+Rendering signins/create
+Completed in 35ms (View: 7, DB: 1) | 200 OK [http://localhost/registration/signin/create/1]
+  [4;36;1mSQL (4.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mStampeder Load (37.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (20.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (36.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (21.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (43.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (42.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (44.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (20.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (42.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (24.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (34.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (21.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (35.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (20.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (42.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (20.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (40.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (20.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (144.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (18.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (35.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (41.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (42.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (22.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (42.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (29.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (42.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (42.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (21.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (20.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-05-10 17:35:54) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 3737ms (DB: 0) | 302 Found [http://localhost/registration]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-10 17:35:59) [GET]
+Rendering sessions/new
+Completed in 213ms (View: 208, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-10 17:36:00) [POST]
+  Parameters: {"authenticity_token"=>"S2VhdsXd+orglV4jC6sGaiqdTwlo4p6RIy96T8M95zE=", "password"=>"mmbcw3b"}
+Redirected to http://localhost:3000/
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-10 17:36:00) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Rendered shared_partials/_nav (39.0ms)
+Completed in 133ms (View: 126, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mTeam Load (2.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (0.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (4.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mTeam Load (2.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;35;1mStampeder Load (4.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 2) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 4) [0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 1) [0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 3) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;35;1mStampeder Update (4.0ms)[0m   [0mUPDATE "stampeders" SET "team_id" = NULL, "updated_at" = '2010-05-10 22:37:19' WHERE "id" = 1[0m
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Red') LIMIT 1[0m
+  [4;35;1mTeam Load (2.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Blue') LIMIT 1[0m
+  [4;36;1mTeam Load (2.0ms)[0m   [0;1mSELECT * FROM "teams" WHERE ("teams"."name" = 'Green') LIMIT 1[0m
+  [4;35;1mTeam Load (2.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."name" = 'Yellow') LIMIT 1[0m
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 2) [0m
+  [4;35;1mStampeder Load (3.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 4) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."subgroup" = '8m') AND ("stampeders".team_id = 3) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 2) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 4) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 1) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" WHERE ("stampeders".team_id = 3) [0m
+  [4;36;1mStampeder Update (4.0ms)[0m   [0;1mUPDATE "stampeders" SET "team_id" = 3, "updated_at" = '2010-05-10 22:37:30' WHERE "id" = 1[0m
+
+
+Processing NavigationController#search (for 127.0.0.1 at 2010-05-10 20:19:51) [GET]
+Rendering template within layouts/navigation
+Rendering navigation/search
+Rendered shared_partials/_nav (2.0ms)
+Completed in 143ms (View: 139, DB: 0) | 200 OK [http://localhost/search]
+
+
+Processing RegistrationController#index (for 127.0.0.1 at 2010-05-10 21:10:10) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 3612ms (DB: 0) | 302 Found [http://localhost/registration/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-10 21:10:14) [GET]
+Rendering sessions/new
+Completed in 211ms (View: 204, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-10 21:10:15) [POST]
+  Parameters: {"authenticity_token"=>"RnS9ozJmKkpQ2+HaXezavHdshE0EKjjHIxPCmnuFqe8=", "password"=>"mmbcw3b"}
+Redirected to http://localhost:3000/
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-10 21:10:15) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Rendered shared_partials/_nav (34.0ms)
+Completed in 113ms (View: 107, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-05-10 21:10:22) [GET]
+  [4;36;1mStampeder Load (22.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (10.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (7.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (7.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (18.0ms)[0m   [0;1mSELECT * FROM "stampeders" ORDER BY lastname LIMIT 30 OFFSET 0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+Rendered shared_partials/_nav (3.0ms)
+Completed in 278ms (View: 97, DB: 66) | 200 OK [http://localhost/registration/view_all]
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-05-10 21:10:27) [GET]
+  Parameters: {"page"=>"2"}
+  [4;35;1mStampeder Load (7.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (11.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (8.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (8.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (14.0ms)[0m   [0mSELECT * FROM "stampeders" ORDER BY lastname LIMIT 30 OFFSET 30[0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+Rendered shared_partials/_nav (3.0ms)
+Completed in 189ms (View: 52, DB: 49) | 200 OK [http://localhost/registration/view_all?page=2]
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-05-10 21:10:31) [GET]
+  Parameters: {"page"=>"1"}
+  [4;35;1mStampeder Load (7.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (10.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (8.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (8.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (26.0ms)[0m   [0mSELECT * FROM "stampeders" ORDER BY lastname LIMIT 30 OFFSET 0[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "stampeders" [0m
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+Rendered shared_partials/_nav (3.0ms)
+Completed in 333ms (View: 63, DB: 61) | 200 OK [http://localhost/registration/view_all?page=1]
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-05-10 21:10:41) [GET]
+  Parameters: {"page"=>"2"}
+  [4;36;1mStampeder Load (13.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (20.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (14.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (14.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (22.0ms)[0m   [0;1mSELECT * FROM "stampeders" ORDER BY lastname LIMIT 30 OFFSET 30[0m
+  [4;35;1mTeam Load (2.0ms)[0m   [0mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+Rendered shared_partials/_nav (7.0ms)
+Completed in 318ms (View: 90, DB: 85) | 200 OK [http://localhost/registration/view_all?page=2]
+
+
+Processing RegistrationController#view_all (for 127.0.0.1 at 2010-05-10 21:11:04) [GET]
+  Parameters: {"page"=>"1"}
+  [4;36;1mStampeder Load (5.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 1) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (8.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 2) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (5.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 3) ORDER BY lastname[0m
+  [4;35;1mStampeder Load (5.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."team_id" = 4) ORDER BY lastname[0m
+  [4;36;1mStampeder Load (16.0ms)[0m   [0;1mSELECT * FROM "stampeders" ORDER BY lastname LIMIT 30 OFFSET 0[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT count(*) AS count_all FROM "stampeders" [0m
+  [4;36;1mTeam Load (1.0ms)[0m   [0;1mSELECT * FROM "teams" [0m
+Rendering template within layouts/registration
+Rendering registration/view_all
+Rendered shared_partials/_nav (2.0ms)
+Completed in 146ms (View: 43, DB: 42) | 200 OK [http://localhost/registration/view_all?page=1]
+
+
+Processing StampedersController#show (for 127.0.0.1 at 2010-05-11 11:41:56) [GET]
+  Parameters: {"id"=>"33"}
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 33) [0m
+Rendering template within layouts/stampeders
+Rendering stampeders/show
+  [4;35;1mTeam Load (1.0ms)[0m   [0mSELECT * FROM "teams" WHERE ("teams"."id" = 2) [0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders".friend_id = 33) [0m
+  [4;36;1mSignin Load (1.0ms)[0m   [0;1mSELECT * FROM "signins" WHERE ("signins".stampeder_id = 33) [0m
+Rendered shared_partials/_nav (15.0ms)
+Completed in 407ms (View: 317, DB: 7) | 200 OK [http://localhost/stampeders/33]
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-11 12:01:25) [GET]
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (10.0ms)
+Completed in 293ms (View: 233, DB: 1) | 200 OK [http://localhost/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-11 12:01:59) [GET]
+  Parameters: {"referral number"=>"1827"}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (3.0ms)
+Completed in 95ms (View: 54, DB: 1) | 200 OK [http://localhost/sign_up?referral%20number=1827]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-11 12:02:08) [GET]
+  Parameters: {"referral number"=>"1827"}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (2.0ms)
+Completed in 199ms (View: 51, DB: 1) | 200 OK [http://localhost/sign_up?referral%20number=1827]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-11 12:03:31) [GET]
+  Parameters: {"referral number"=>"1827"}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (2.0ms)
+Completed in 119ms (View: 77, DB: 1) | 200 OK [http://localhost/sign_up?referral%20number=1827]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-11 12:05:26) [GET]
+  Parameters: {"referral_code"=>"828213"}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (2.0ms)
+Completed in 235ms (View: 191, DB: 1) | 200 OK [http://localhost/sign_up?referral_code=828213]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-11 14:54:07) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 4037ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-11 14:54:12) [GET]
+Rendering sessions/new
+Completed in 219ms (View: 214, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-11 14:54:13) [POST]
+  Parameters: {"authenticity_token"=>"b1V9S4fPphwf07WAoCRzmxCXAl0URqJx3UEUaGnu1sM=", "password"=>"mmbcw3b"}
+Redirected to http://localhost:3000/
+Completed in 5ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-11 14:54:14) [GET]
+
+ActionView::MissingTemplate (Missing template public/index.erb in view path app/views):
+  app/controllers/public_controller.rb:5:in `index'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "barcode" = '1001', "updated_at" = '2010-05-18 00:50:55' WHERE "id" = 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;36;1mStampeder Update (3.0ms)[0m   [0;1mUPDATE "stampeders" SET "barcode" = '1993', "updated_at" = '2010-05-18 00:51:39' WHERE "id" = 1[0m
+  [4;35;1mStampeder Update (2.0ms)[0m   [0mUPDATE "stampeders" SET "barcode" = '1001', "updated_at" = '2010-05-18 00:51:45' WHERE "id" = 1[0m
+  [4;36;1mStampeder Update (2.0ms)[0m   [0;1mUPDATE "stampeders" SET "barcode" = '1993', "updated_at" = '2010-05-18 00:52:10' WHERE "id" = 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1) [0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) [0m
+  [4;36;1mStampeder Load (11.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-17 22:32:02) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 2111ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-17 22:32:04) [GET]
+Rendering sessions/new
+Completed in 110ms (View: 107, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-17 22:32:04) [POST]
+  Parameters: {"authenticity_token"=>"u5i87Cks/FjwoF3j6dJIIY22QIIIoxeCtu/JoskgtIo=", "password"=>"mmbcw3b"}
+Redirected to http://localhost:3000/
+Completed in 4ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-17 22:32:05) [GET]
+
+NameError (uninitialized constant Mime::PHP):
+  app/controllers/public_controller.rb:6:in `index'
+  app/controllers/public_controller.rb:5:in `index'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (131.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-17 22:33:18) [GET]
+Rendering template within layouts/public
+Rendering public/index
+
+ActionView::TemplateError (sign_up_url failed to generate from {:controller=>"Public", :action=>"sign_up"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: ["sign_up", :referral_code] - are they all satisfied?) on line #7 of app/views/public/index.html.erb:
+4: <h1>Welcome to the Stampede 2010 website!</h1>
+5: <h6>Note: we are currently beta testing.</h6>
+6: 
+7: <%= link_to "Sign up here!", sign_up_path %>
+
+    (eval):20:in `sign_up_path'
+    app/views/public/index.html.erb:7
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-17 22:34:38) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Rendered shared_partials/_nav (21.0ms)
+Completed in 60ms (View: 54, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-17 22:34:42) [GET]
+  [4;36;1mChurch Load (0.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (3.0ms)
+Completed in 110ms (View: 66, DB: 0) | 200 OK [http://localhost/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-17 22:34:55) [GET]
+  Parameters: {"referral_code"=>"154698"}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (2.0ms)
+Completed in 147ms (View: 48, DB: 1) | 200 OK [http://localhost/sign_up/154698]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-17 22:35:18) [GET]
+  Parameters: {"search"=>"M"}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%M%') [0m
+Rendering churches/index
+Completed in 27ms (View: 14, DB: 1) | 200 OK [http://localhost/churches?search=M]

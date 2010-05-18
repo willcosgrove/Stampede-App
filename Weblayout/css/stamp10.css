@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+
+body 
+	{
+		
+		background-color:#b3b39c;
+		background-repeat:repeat-y;
+		
+	}
+
+#mainwrapper
+	{
+		width: 1000px;
+		background-image:url(../stampede_bg.jpg);
+		position: relative;
+		margin:auto;
+		height:600px;
+	}
+
+.headwrapper
+	{
+		width: 1000px;
+		position: relative;
+		margin:auto;
+		height:150px;
+	}
+
+
+
+/* SWC Homepage Header and Footer */
+	
+.header
+	{
+		height: 75px;
+		width:1000px;
+		position:absolute;
+		top: 25px;
+		left: 0px;
+	}
+
+.logo
+	{
+		height:338px;
+		width:603px;
+		background-position:right;
+		background-repeat:no-repeat;
+		float:left;
+	}
+
+.footer
+	{
+		width:1000px;
+		height:75px;
+		margin:0 auto;
+		padding-left:20px;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size:10px;
+		color: #ddffff;
+	}
+.footer a
+	{
+		color: #ddffff;
+	}
+
+.topsection
+	{
+		height:40px;
+		width:300px;
+		position: absolute;
+		top: 123px;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size:30px;
+		color: #5e6060;
+		vertical-align:text-bottom;
+		padding-left: 15px;
+	}
+
+
+.contentgray
+	{
+		background-color:#5e6060;
+		width: 100%;
+		min-height:350px;
+		margin:0 auto;
+		position:absolute;
+		left:-1px;
+	}
+
+.contentwrapper
+	{
+		width: 1000px;
+		margin: 0 auto;
+		min-height: 350px;
+	}
+
+.contentarea
+	{
+		width: 785px;
+		min-height:350px;
+		float:right;
+		padding-left: 15px;
+		padding-right: 0px;
+		padding-top: 10px;
+		padding-bottom:10px;
+		margin:0px;
+	}
+		
+		
+.sidenavigationwrapper
+	{ 
+		width:200px;
+		min-height:350px;
+		float:right;
+		margin:0px;
+		position:relative;
+	}
+
+.topnavigation
+	{
+		width: 700px;
+		height: 75px;
+		float:left;
+	}
+
+	
+a img
+	{
+		border:0px;
+		text-align:justify
+	}
+	
+
+	

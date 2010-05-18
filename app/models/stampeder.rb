@@ -8,20 +8,32 @@ class Stampeder < ActiveRecord::Base
   
   
   validates_presence_of :firstname, :lastname, :grade, :gender, :message => "- Can you make sure that you filled out first name, last name, grade, and gender?  We need those before we can go any further."
-  validates_format_of :parentphone, :with => /\A\d{10}\z/, :allow_nil => true, :allow_blank => true, :message => "- Could you please double check the emergency phone number?  I don't think it's right."
-  validates_format_of :studentphone, :with => /\d{10}/, :allow_nil => true, :allow_blank => true, :message => "- Can you make sure that the student phone number is correct?  I think it might be wrong."
+  #validates_format_of :parentphone, :with => /\A\d{10}\z/, :allow_nil => true, :allow_blank => true, :message => "- Could you please double check the emergency phone number?  I don't think it's right."
+  #validates_format_of :studentphone, :with => /\d{10}/, :allow_nil => true, :allow_blank => true, :message => "- Can you make sure that the student phone number is correct?  I think it might be wrong."
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/, :allow_nil => true, :allow_blank => true, :message => "- Could you please double check the email address?  I don't think that's right."
   validates_length_of :zipcode, :is => 5, :allow_nil => true, :allow_blank => true, :message => "- Could you please take a look at the zip code?  I don't think it's a real zip code."
   validates_length_of :state, :is => 2, :allow_nil => true, :allow_blank => true, :message => "- Oops!  Make sure that the state field contains the two letter state abreviation rather than the full state name."
   
   def before_validation
-    self.parentphone.gsub!(/\D/, "") unless self.parentphone.blank?    
-    self.studentphone.gsub!(/\D/, "") unless self.studentphone.blank?
+    unless self.parentphone.blank?
+      self.parentphone.gsub!(/\A(1-)/, "")
+      self.parentphone.gsub!(/\D/, "")
+      self.parentphone.slice!(0,10)
+    end
+    unless self.studentphone.blank?
+      self.studentphone.gsub!(/\A(1-)/, "")
+      self.studentphone.gsub!(/\D/, "")
+      self.studentphone.slice!(0,10)
+    end
+    if self.zipcode.match(/\d{5}-\d{4}/)
+      self.zipcode.slice!(0,5)
+    end
   end
   
   def before_create
     self.addfullname
     self.createSubgroup
+    self.generate_and_set_barcode if self.online_signup
     self.pickTeam if self.team.blank? && !self.online_signup
   end
   
@@ -55,6 +67,10 @@ class Stampeder < ActiveRecord::Base
   
   def church_name=(name)
     self.church = Church.find_or_create_by_name(name) unless name.blank?
+  end
+  
+  def referral_code
+    id * REFERRAL_CONSTANT
   end
   
   def addfullname
@@ -113,7 +129,7 @@ class Stampeder < ActiveRecord::Base
       end
     end
     
-    if self.stampeder
+    unless self.stampeder.blank?
       self.team = self.stampeder.team
     end
     
@@ -143,6 +159,11 @@ class Stampeder < ActiveRecord::Base
     else
       return false
     end
+  end
+  
+  def generate_and_set_barcode
+    self.barcode = (id + 1000).to_s
+    save
   end
   
 end

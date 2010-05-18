@@ -1,26 +1,7 @@
 <h2>All Stampeders</h2>
 <ul>
-  <li><%= @teams[0].name %></li>
-  <ul>
-    <% @stampeders[0].each do |stampeder| %>
-    <li><%= link_to stampeder.fullname, stampeder_path(stampeder) %></li>
-    <% end %>
-  </ul>
-  <li><%= @teams[1].name %></li>
-  <ul>
-    <% @stampeders[1].each do |stampeder| %>
-    <li><%= link_to stampeder.fullname, stampeder_path(stampeder) %></li>
-    <% end %>
-  </ul>
-  <li><%= @teams[2].name %></li>
-  <ul>
-    <% @stampeders[2].each do |stampeder| %>
-    <li><%= link_to stampeder.fullname, stampeder_path(stampeder) %></li>
-    <% end %>
-  </ul>
-  <li><%= @teams[3].name %></li>
-  <ul>
-    <% @stampeders[3].each do |stampeder| %>
-    <li><%= link_to stampeder.fullname, stampeder_path(stampeder) %></li>
-    <% end %>
-  </ul>
+  <% @stampeders.each do |s| %>
+  <li><%= link_to s.fullname, stampeder_path(s) %>
+<% end %>
+</ul>
+<%= will_paginate @stampeders %>
