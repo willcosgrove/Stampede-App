@@ -32226,3 +32226,204 @@ Processing ChurchesController#index (for 127.0.0.1 at 2010-05-17 22:35:18) [GET]
   [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%M%') [0m
 Rendering churches/index
 Completed in 27ms (View: 14, DB: 1) | 200 OK [http://localhost/churches?search=M]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-18 16:48:02) [GET]
+Redirected to http://localhost:3000/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 1720ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-18 16:48:05) [GET]
+Rendering sessions/new
+Completed in 106ms (View: 104, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-18 16:48:19) [POST]
+  Parameters: {"authenticity_token"=>"aYl9tX3GzLRcU9V2rVsOzMzxvo/KGlHqRgAh1IPeMJE=", "password"=>"mmbcw3b"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing PublicController#index (for 127.0.0.1 at 2010-05-18 16:48:21) [GET]
+Rendering template within layouts/public
+Rendering public/index
+Rendered shared_partials/_nav (13.7ms)
+Completed in 38ms (View: 36, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-18 16:48:31) [GET]
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (2.9ms)
+Completed in 162ms (View: 103, DB: 1) | 200 OK [http://localhost/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-18 16:48:40) [GET]
+  Parameters: {"referral_code"=>"5487541"}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (2.9ms)
+Completed in 83ms (View: 48, DB: 1) | 200 OK [http://localhost/sign_up/5487541]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-18 16:51:31) [GET]
+  Parameters: {"referral_code"=>"5487541"}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (1.0ms)
+Completed in 42ms (View: 25, DB: 1) | 200 OK [http://localhost/sign_up/5487541]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-18 16:55:56) [GET]
+  [4;36;1mChurch Load (0.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (2.0ms)
+Completed in 110ms (View: 63, DB: 0) | 200 OK [http://localhost/sign_up]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-18 16:58:16) [GET]
+  Parameters: {"referral_code"=>"5246549"}
+  [4;35;1mChurch Load (0.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (1.0ms)
+Completed in 37ms (View: 21, DB: 0) | 200 OK [http://localhost/sign_up/5246549]
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" [0m
+  [4;35;1mChurch Create (1.0ms)[0m   [0mINSERT INTO "churches" ("name", "created_at", "updated_at") VALUES('Yohalla', '2010-05-19 01:59:28', '2010-05-19 01:59:28')[0m
+  [4;36;1mChurch Load (0.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'Yohalla') [0m
+  [4;35;1mChurch Destroy (1.0ms)[0m   [0mDELETE FROM "churches" WHERE "id" = 3[0m
+  [4;36;1mChurch Load (0.0ms)[0m   [0;1mSELECT * FROM "churches" [0m
+  [4;35;1mSchool Load (0.0ms)[0m   [0mSELECT * FROM "schools" [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTeams (20100307214006)
+Migrating to CreateStampeders (20100307215806)
+Migrating to AddRelationshipToStampeders (20100307221203)
+Migrating to AddGradeGenderSubgroup (20100315173148)
+Migrating to ChangeGenderFromIntegerToString (20100315174545)
+Migrating to AddZipCodeToStampeder (20100315205326)
+Migrating to ChangePhoneFromIntegerToString (20100315210737)
+Migrating to AddingParentPhoneStudentPhoneDobParentSchoolTextEmailFriendId (20100315212037)
+Migrating to RemoveStudentphoneRenamePhoneToStudentphone (20100315221617)
+Migrating to AddFullNameToStampederForAutoComplete (20100316170547)
+Migrating to ChangeZipCodeFromIntegerToString (20100317202549)
+Migrating to RenameTextToTextmsg (20100317230410)
+Migrating to CreateSignins (20100318011642)
+Migrating to AddIndexToSigninsStampederIdColumn (20100318033113)
+Migrating to AddCounterCacheToTeams (20100319015500)
+Migrating to ChangeBarcodeFromIntegerToString (20100319061656)
+Migrating to RemoveCounterCacheFromTeams (20100326012240)
+Migrating to CreatePoints (20100326025308)
+Migrating to AddIndexToPoints (20100326031145)
+Migrating to CreateSchools (20100401202401)
+Migrating to AddSchoolIdToStampeder (20100401202654)
+Migrating to RemoveSchoolColumnFromStampeder (20100401203917)
+Migrating to AddNotesToStampeder (20100401232419)
+Migrating to AddOnlineSignupBooleanToStampeder (20100427010751)
+Migrating to CreateChurches (20100428233840)
+Migrating to AddChurchIdToStampeder (20100428234200)
+Migrating to AddParentEmailToStampeder (20100502195950)
+Migrating to PopulateChurches (20100518215412)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mChurch Create (1.0ms)[0m   [0mINSERT INTO "churches" ("name", "created_at", "updated_at") VALUES('Wedgwood Baptist Church', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mChurch Create (0.0ms)[0m   [0;1mINSERT INTO "churches" ("name", "created_at", "updated_at") VALUES('First United Methodist Church of Ft. Worth', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mChurch Create (0.0ms)[0m   [0mINSERT INTO "churches" ("name", "created_at", "updated_at") VALUES('St. Patrick Cathedral', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mChurch Create (0.0ms)[0m   [0;1mINSERT INTO "churches" ("name", "created_at", "updated_at") VALUES('Broadway Baptist Church', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mChurch Create (1.0ms)[0m   [0mINSERT INTO "churches" ("name", "created_at", "updated_at") VALUES('First Presbyterian Church Of Ft. Worth', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mChurch Create (1.0ms)[0m   [0;1mINSERT INTO "churches" ("name", "created_at", "updated_at") VALUES('Christ Chapel Bible Church', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mChurch Create (1.0ms)[0m   [0mINSERT INTO "churches" ("name", "created_at", "updated_at") VALUES('St. Stephen Presbyterian Church', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mChurch Create (1.0ms)[0m   [0;1mINSERT INTO "churches" ("name", "created_at", "updated_at") VALUES('Irving Bible Church', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100518215412')[0m
+Migrating to PopulateSchools (20100518215420)
+  [4;36;1mSchool Create (1.0ms)[0m   [0;1mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('McLean Middle School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mSchool Create (0.0ms)[0m   [0mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Fort Worth Country Day', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mSchool Create (0.0ms)[0m   [0;1mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('North Richland Middle School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mSchool Create (0.0ms)[0m   [0mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Morningside Middle School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mSchool Create (0.0ms)[0m   [0;1mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Wedgwood Middle School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mSchool Create (0.0ms)[0m   [0mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Meadowbrook Middle School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mSchool Create (0.0ms)[0m   [0;1mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Riverside Middle School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mSchool Create (0.0ms)[0m   [0mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Hillwood Middle School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mSchool Create (0.0ms)[0m   [0;1mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Daggett Montessori School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mSchool Create (0.0ms)[0m   [0mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Montessori Childrens House', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mSchool Create (0.0ms)[0m   [0;1mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Southwest Christian School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mSchool Create (0.0ms)[0m   [0mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Crowley Middle School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mSchool Create (0.0ms)[0m   [0;1mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Rosemont Middle School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mSchool Create (0.0ms)[0m   [0mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('All Saints'' Episcopal School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mSchool Create (0.0ms)[0m   [0;1mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Kirkpatrick Middle School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mSchool Create (0.0ms)[0m   [0mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Brewer Middle School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mSchool Create (0.0ms)[0m   [0;1mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Lake Country Christian School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mSchool Create (0.0ms)[0m   [0mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Nolan Catholic High School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mSchool Create (0.0ms)[0m   [0;1mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('North Crowley High School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mSchool Create (0.0ms)[0m   [0mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Arlington Heights High School', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mSchool Create (0.0ms)[0m   [0;1mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Fort Worth Academey Of Fine Arts', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;35;1mSchool Create (0.0ms)[0m   [0mINSERT INTO "schools" ("name", "created_at", "updated_at") VALUES('Fort Worth Academey', '2010-05-19 02:29:46', '2010-05-19 02:29:46')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100518215420')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("churches")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("points")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_points_on_team_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schools")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("signins")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_signins_on_stampeder_id')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("stampeders")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_church_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_school_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_team_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_friend_id')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("teams")[0m
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-18 21:30:07) [GET]
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Rendered shared_partials/_nav (2.0ms)
+Completed in 109ms (View: 63, DB: 1) | 200 OK [http://localhost/sign_up]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-05-18 21:30:13) [GET]
+  Parameters: {"search"=>"mi"}
+  [4;35;1mSchool Load (1.0ms)[0m   [0mSELECT * FROM "schools" WHERE (name LIKE '%mi%') [0m
+Rendering schools/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/schools?search=mi]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-05-18 21:30:22) [GET]
+  Parameters: {"search"=>"m"}
+  [4;36;1mSchool Load (2.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (name LIKE '%m%') [0m
+Rendering schools/index
+Completed in 10ms (View: 2, DB: 2) | 200 OK [http://localhost/schools?search=m]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-18 21:30:32) [GET]
+  Parameters: {"search"=>"C"}
+  [4;35;1mChurch Load (2.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%C%') [0m
+Rendering churches/index
+Completed in 15ms (View: 7, DB: 2) | 200 OK [http://localhost/churches?search=C]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-18 21:30:39) [GET]
+  Parameters: {"search"=>"Southcliff Baptist Churc"}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%Southcliff Baptist Churc%') [0m
+Rendering churches/index
+Completed in 9ms (View: 2, DB: 1) | 200 OK [http://localhost/churches?search=Southcliff%20Baptist%20Churc]

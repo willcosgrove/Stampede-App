@@ -26,6 +26,28 @@
     <%= f.text_field :parentphone %>
   </p>
   <p>
+  <% if params[:referral_code] %>
+    <p>
+    Do you attend McKinney?<br />
+    Yes <%= radio_button_tag 'church', @mmbc, false, :disabled => true %>
+    No <%= radio_button_tag 'church', nil, true, :disabled => true %>
+  </p>
+    <%-# If they do not attend McKinney %>
+    <% content_tag :div, :id => "visitor_fields" do -%>
+      <p>
+        <%= f.label :referral_code %><br />
+        <%= text_field_tag 'referral_code', params[:referral_code], :disabled => true %>
+      </p>
+      <p>
+        <%= f.label :church %><br />
+        <%= text_field_with_auto_complete :stampeder, :church_name, {}, { :url => churches_path, :format => :js, :method => :get, :with => "'search=' + element.value" } %>
+      </p>
+      <p>
+        I don't usually attend church<br />
+        <%= check_box_tag 'attends_church', 'false', false %>
+      </p>
+    <% end -%>
+  <% else %>
   <p>
     Do you attend McKinney?<br />
     Yes <%= radio_button_tag 'church', @mmbc, false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();jQuery(\'#stampeder_church_name\').val(\'McKinney Memorial Bible Church\');" %>
@@ -46,7 +68,7 @@
         <%= check_box_tag 'attends_church', 'false', false %>
       </p>
     <% end -%>
-    
+  <% end %>
   <p>
     <%= f.label :grade %><br />
     <%= f.select :grade, [['select grade', ''], ['6th Grade', 6], ['7th Grade', 7], ['8th Grade', 8], ['9th Grade', 9]] %>
