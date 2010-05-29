@@ -46476,3 +46476,5 @@ Processing PublicController#registered (for 127.0.0.1 at 2010-05-28 18:30:46) [G
 Rendering template within layouts/public
 Rendering public/registered
 Completed in 39ms (View: 15, DB: 1) | 200 OK [http://localhost/public/registered/1]
+  [4;36;1mStampeder Load (21.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;35;1mStampeder Load (5.0ms)[0m   [0mSELECT * FROM "stampeders" LIMIT 1[0m

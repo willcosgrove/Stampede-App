@@ -189,4 +189,32 @@ class Stampeder < ActiveRecord::Base
     !self.online_signup
   end
   
+  def shared_on_facebook?
+    url = "http://api.facebook.com/restserver.php?method=links.getStats&urls=register.stampede10.com/with_friend/" + self.referral_code.to_s
+    responce = HTTParty.get(url)
+    if responce["links_getStats_response"]["link_stat"]["share_count"].to_i > 0
+      return true
+    else
+      return false
+    end
+  end
+  
+  def number_of_facebook_clicks
+    url = "http://api.facebook.com/restserver.php?method=links.getStats&urls=register.stampede10.com/with_friend/" + self.referral_code.to_s
+    responce = HTTParty.get(url)
+    responce["links_getStats_response"]["link_stat"]["click_count"].to_i
+  end
+  
+  def number_of_facebook_comments
+    url = "http://api.facebook.com/restserver.php?method=links.getStats&urls=register.stampede10.com/with_friend/" + self.referral_code.to_s
+    responce = HTTParty.get(url)
+    responce["links_getStats_response"]["link_stat"]["comment_count"].to_i
+  end
+  
+  def number_of_facebook_likes
+    url = "http://api.facebook.com/restserver.php?method=links.getStats&urls=register.stampede10.com/with_friend/" + self.referral_code.to_s
+    responce = HTTParty.get(url)
+    responce["links_getStats_response"]["link_stat"]["like_count"].to_i
+  end
+  
 end
