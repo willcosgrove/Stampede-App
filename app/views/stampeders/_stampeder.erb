@@ -1,0 +1,15 @@
+<div class="stampeder_signin_icon<%= " #{stampeder.team.name.downcase}_team" unless stampeder.team.nil? %> shadow" onclick="<%= remote_function(:url => { :controller => 'Signins', :action => 'create', :id => stampeder.id }) %>">
+  <p>
+    <%= stampeder.firstname %><br />
+    <%= stampeder.lastname %><br />
+    <% if !stampeder.studentphone.blank? %>
+      <%= phone_for_view(stampeder.studentphone) %><br />
+    <% elsif stampeder.parentphone.blank? %>
+      No phone number listed<br />
+    <% else %>
+      <%= phone_for_view(stampeder.parentphone) %><br />
+    <% end %>
+    <br />
+    <span class="center">Sign in</span>
+  </p>
+</div>

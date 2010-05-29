@@ -2,10 +2,154 @@ body {
   padding: 0px;
   margin: 0px;
   border: 0px;
+  background: #59554E;
 }
+
+#content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+#top_images {
+  height: 0px;;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+#heading {
+  position: absolute;
+  height: 60px;
+  width: 100%;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  background: #59554E;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#59554E), to(#383631));
+  text-align: center;
+}
+
+#box {
+  width: 700px;
+  margin: auto;
+  margin-top: 25px;
+  background: #F3F4E5;
+  border: 7px solid #E2E3D9;
+  padding: 10px;
+}
+
+h1 {
+  font-family: 'Vollkorn';
+}
+
+label {
+  display: block;
+  float: left;
+  width: 200px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+/*label:after {
+  content: ":"
+} */
 
 /* classes */
 
 .hidden {
   display: none;
+}
+
+.flash {
+  height: 0px;
+}
+
+.shadow {
+  box-shadow: 0px 0px 10px #222;
+  -moz-box-shadow: 0px 0px 10px #222;
+  -webkit-box-shadow: 0px 0px 10px #222;
+}
+
+#heading-one {
+  padding: 10px 20px;
+  margin-left: -37px;
+  margin-top: 0px;
+  position: relative;
+  width: 70%;
+}
+
+#heading-two {
+  padding: 10px 20px;
+  margin-left: -35px;
+  margin-top: 0px;
+  position: relative;
+  width: 60%;
+  background: #A42543;
+}
+
+#heading-three {
+  padding: 10px 20px;
+  margin-left: -37px;
+  margin-top: 0px;
+  position: relative;
+  width: 40%;
+}
+
+.fancy-heading {
+  background: #A1C1BE;
+  box-shadow: 1px 1px 3px #797979;
+  -moz-box-shadow: 1px 1px 3px #797979;  
+  -webkit-box-shadow: 1px 1px 3px #797979;
+  color: #F3F4E5;
+  text-shadow: 0px 1px -1px #797979;
+}
+
+.fancy-error-heading {
+  background: #A1C1BE;
+  box-shadow: 1px 1px 3px #252525;
+  -moz-box-shadow: 1px 1px 3px #252525;  
+  -webkit-box-shadow: 1px 1px 3px #252525;
+  color: #F3F4E5;
+  text-shadow: 0px 1px -1px #252525;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-left: 20px solid transparent;
+  border-top: 10px solid #89a7a4;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.error-arrow {
+  width: 0;
+  height: 0;
+  line-height: 0;
+  border-left: 20px solid transparent;
+  border-top: 10px solid #92213b;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+#errorExplanation {
+  background: #FF9494;
+  border: 5px solid #e48484;
+  padding: 10px;
+}
+
+.note {
+  float: right;
+  background: #F5F895;
+  border: 5px solid #dbdd85;
+  padding: 5px;
+  height: 40px;
+  vertical-align: middle;
 }

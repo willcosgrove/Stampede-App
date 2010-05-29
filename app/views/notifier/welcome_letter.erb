@@ -1,5 +1,18 @@
 Hey <%= @stampeder.firstname %>!
 
-We're so excited that you're coming to Stampede!  If you've never been, Stampede is an awesome event for middle schoolers, and incoming highschool freshmen, where you get to play games, worship with an awesome live band, and get to hear from an incredible speaker!
+We're so excited that you're coming to Stampede!  If you've never been, Stampede is an awesome event for middle schoolers, and incoming high school freshmen, where you get to play games, worship with an awesome live band, and get to hear from an incredible speaker!
 
-Invite your friends to go sign up
+Since online sign up is new, let me give you a run down of how you'll sign in on the first night of Stampede.
+
+There will be a specific desk, labeled Signin for Online Registrants, for you to sign at.  This way you'll be able to speed through the signin area, and won't have to wait like all those kids who didn't sign up online.  At the desk, you'll tell the signer-iner your name, and they will tell you which team you're on, and give you your Stampede bracelet.  You'll leave this on all week, since it is what we'll use to sign you in on the other days.
+
+Now, you're going to want to get your friends (that don't attend McKinney!) signed up, so they'll be on your team.  The only two ways for them to sign up and be guaranteed to be on the same team as you, is if you give them this link to sign up at: <%= sign_up_with_code_url(:host => "register.stampede10.com", :referral_code => @stampeder.referral_code) %>
+Or you can tell them your friend code, which is: <%= @stampeder.referral_code %>
+And they can use that when they go to sign up at the stampede website, by typing in your friend code into the friend code box on the form.
+
+If you do either one of those two steps, they will be guaranteed to be on your team, and your team will get 10,000 points!
+
+Thanks for signing up, now go invite all your friends!
+
+--
+Stampede Registration Team

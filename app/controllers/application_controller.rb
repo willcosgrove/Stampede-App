@@ -19,6 +19,6 @@ class ApplicationController < ActionController::Base
   end
   
   def admin?
-    session[:password] == "mmbcw3b"
+    session[:password] == "register10"
   end
 end

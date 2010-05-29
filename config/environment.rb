@@ -19,7 +19,8 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
-  config.gem 'will_paginate', :source => 'http://gemcutter.org'
+  config.gem 'will_paginate', :source => 'http://rubygems.org'
+  config.gem 'twilio', :source => 'http://rubygems.org'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -42,7 +43,7 @@ Rails::Initializer.run do |config|
   
   # Action-Mailer settings
   config.action_mailer.smtp_settings = {
-    :address => 'mail.stampede10.com',
+    :address => 'register.stampede10.com',
     :port => 26,
     :user_name => 'no-reply@stampede10.com',
     :password => 'mmbcw3b',
@@ -50,6 +51,8 @@ Rails::Initializer.run do |config|
   }
   
   # Constants
-  REFERRAL_CONSTANT = 12317
+  REFERRAL_CONSTANT = 12317.0
+  TWILIO_SID = "AC02b7cb522f4dcaa46ccb2bcac40e04ec"
+  TWILIO_AUTH_TOKEN = "08148ac0ef4edd17320e81417e53533a"
   
 end

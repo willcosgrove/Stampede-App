@@ -1,4 +1,6 @@
 page.replace_html 'just_signed_in', "#{@justSignedIn.fullname}"
 page[:signin_flash].visual_effect :slide_down
 page[:signin_flash].visual_effect :slide_up, :delay => 5
-page[:barcode].value = ""
+page[:query].value = ""
+page.replace_html 'results', ""
+page[:query].focus

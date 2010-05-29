@@ -1,24 +1,117 @@
-<% remote_form_for :stampeder, @stampeder, :url => register_stampeder_path do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :first_name %>
-    <%= f.text_field :firstname %><br />
-    <%= f.label :last_name %>
-    <%= f.text_field :lastname %>
-  </p>
-  <p>
-    <%= f.label :gender %>
-    <%= f.select :gender, [['select gender', ''], ['Boy', 'm'], ['Girl', 'f']] %><br />
-    <%= f.label :grade %>
-    <%= f.select :grade, [['select grade', ''], ['6th Grade', 6], ['7th Grade', 7], ['8th Grade', 8], ['9th Grade', 9]] %>
-  </p>
-  <p>
-    <%= f.label :brought_by %>
-    <%= text_field_with_auto_complete :stampeder, :friend_name, {}, { :url => autocomplete_path, :method => :get, :with => "'search=' + element.value", :value => '' } %>
-  </p>
-  <!-- Vistor Stuff Should Go Here-->
-  <p>
-    <%= f.submit 'Register Stampeder' %>
-  </p>
-<% end %>
+<div id="form">
+  <% remote_form_for :stampeder, @stampeder, :url => register_stampeder_path do |f| %>
+    <%= f.error_messages %>
+  
+    <p>
+      <%= f.label :first_name %>
+      <%= f.text_field :firstname %>
+    </p>
+    <p>
+      <%= f.label :last_name %>
+      <%= f.text_field :lastname %>
+    </p>
+    <p>
+      <%= f.label :gender %>
+      <%= f.select :gender, [['select gender', ''], ['Boy', 'm'], ['Girl', 'f']] %>
+    </p>
+    <p>
+      <%= f.label :dob %>
+      <%= f.date_select :dob, :start_year => Time.now.year - 18, :end_year => Time.now.year - 10, :include_blank => true, :use_month_numbers => true, :order => [:month, :day, :year] %>
+    </p>
+    <p>
+      <%= f.label :parent %>
+      <%= f.text_field :parent %>
+    </p>
+    <p>
+      <%= f.label :emergency_phone_number %>
+      <%= f.text_field :parentphone %>
+    </p>
+    <p>
+    <% if params[:referral_code] %>
+      <p>
+      <%= f.label :"Do you attend McKinney?" %>
+      Yes <%= radio_button_tag 'church', @mmbc, false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();jQuery(\'#stampeder_church_name\').val(\'McKinney Memorial Bible Church\');" %>
+      No <%= radio_button_tag 'church', nil, true, :onclick => "jQuery(\'#visitor_fields\').fadeIn();jQuery(\'#stampeder_church_name\').val(\'\');" %>
+    </p>
+      <%-# If they do not attend McKinney %>
+      <% content_tag :div, :id => "visitor_fields" do -%>
+        <p>
+          <%= f.label :"Friend of" %>
+          <%= @friend.fullname %>
+        </p>
+        <p>
+          <%= f.label :church %>
+          <%= text_field_with_auto_complete :stampeder, :church_name, {}, { :url => churches_path, :format => :js, :method => :get, :with => "'search=' + element.value" } %>
+        </p>
+        <p>
+          <%= f.label :"I don't usually attend church" %>
+          <%= check_box_tag 'attends_church', 'false', false %>
+        </p>
+      <% end -%>
+    <% else %>
+    <p>
+      <%= f.label :"Do you attend McKinney?" %>
+      Yes <%= radio_button_tag 'church', @mmbc, false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();jQuery(\'#stampeder_church_name\').val(\'McKinney Memorial Bible Church\');" %>
+      No <%= radio_button_tag 'church', nil, false, :onclick => "jQuery(\'#visitor_fields\').fadeIn();jQuery(\'#stampeder_church_name\').val(\'\');" %>
+    </p>
+      <%- # If they do not attend McKinney -%>
+      <% content_tag :div, :id => "visitor_fields", :class => 'hidden' do -%>
+        <p>
+          <%= f.label :brought_by %><br />
+          <%= text_field_with_auto_complete :stampeder, :friend_name, {}, { :url => autocomplete_path, :method => :get, :with => "'search=' + element.value" } %>
+        </p>
+        <p>
+          <%= f.label :church %>
+          <%= text_field_with_auto_complete :stampeder, :church_name, {}, { :url => churches_path, :format => :js, :method => :get, :with => "'search=' + element.value" } %>
+        </p>
+        <p>
+          <%= f.label :"I don't usually attend church" %>
+          <%= check_box_tag 'attends_church', 'false', false %>
+        </p>
+      <% end -%>
+    <% end %>
+    <p>
+      <%= f.label :grade %>
+      <%= f.select :grade, [['select grade', ''], ['6th Grade', 6], ['7th Grade', 7], ['8th Grade', 8], ['9th Grade', 9]] %>
+    </p>
+    <p>
+      <%= f.label :school %>
+      <%= text_field_with_auto_complete :stampeder, :school_name, {}, { :url => schools_path, :format => :js, :method => :get, :with => "'search=' + element.value" } %>
+    </p>
+    <p>
+      <%= f.label :your_cell %>
+      <%= f.text_field :studentphone %>
+    </p>
+    <p>
+      <%= f.label :can_we_text_you %>
+      Yes <%= f.radio_button :textmsg, true %> No <%= f.radio_button :textmsg, false %>
+    </p>
+    <p>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+    </p>
+    <p>
+      <%= f.label :parent_email %>
+      <%= f.text_field :parentemail %>
+    </p>
+    <p>
+      <%= f.label :address %>
+      <%= f.text_field :address %>
+    </p>
+    <p>
+      <%= f.label :city %>
+      <%= f.text_field :city, :value => "Fort Worth" %>
+    </p>
+    <p>
+      <%= f.label :state %>
+      <%= f.text_field :state, :value => "TX" %>
+    </p>
+    <p>
+      <%= f.label :zip_code %>
+      <%= f.text_field :zipcode %>
+    </p>
+    <p>
+      <%= f.submit 'Sign Up' %>
+    </p>
+  <% end %>
+</div>

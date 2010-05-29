@@ -1,26 +1,24 @@
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-  <title>Stampeders: <%= controller.action_name %></title>
+  <%= yield(:meta) %>
+  <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+  <title><%= yield :title %></title>
   <%= stylesheet_link_tag 'public' %>
   <%= stylesheet_link_tag 'header' %>
   <%= javascript_include_tag 'jquery' %>
   <%= javascript_include_tag 'header' %>
   <%= javascript_include_tag :defaults %>
   <%= yield(:head) %>
+  <script type="text/javascript">
+  if (top.location != location) {
+    top.location.href = document.location.href;
+  }
+</script>
 </head>
 <body>
-<% if admin? %>
-<%= render :partial => 'shared_partials/nav' %>
-<% end %>
 <%= yield :top_of_body %>
-<p style="color: green"><%= flash[:notice] %></p>
-<p style="color: red"><%= flash[:error] %></p>
-<div id="top_images">
-<%= yield :top_images %>
-</div>
 <div id="content">
 <%= yield %>
 </div>

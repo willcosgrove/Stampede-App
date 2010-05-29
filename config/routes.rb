@@ -9,11 +9,11 @@ ActionController::Routing::Routes.draw do |map|
   map.autocomplete 'autocomplete.js', :controller => 'Stampeders', :action => 'autocomplete'
   map.create_signin 'registration/signin/create/:id', :controller => 'Signins', :action => 'create'
   map.confirm_signin 'registration/signin/confirm', :controller => 'Signins', :action => 'confirm'
-  map.sign_up 'sign_up', :controller => 'Public', :action => 'sign_up'
-  map.sign_up_with_code 'sign_up/:referral_code', :controller => 'Public', :action => 'sign_up'
   map.login 'login', :controller => 'Sessions', :action => 'new'
   map.logout 'logout', :controller => 'Sessions', :action => 'destroy'
+  map.signin_search 'registration/signin/search', :controller => 'Registration', :action => 'search'
   map.search 'search', :controller => 'Navigation', :action => 'search'
+  map.registered 'registered', :controller => "Public", :action => 'registered'
   map.resources :stampeders
   map.resources :teams
   map.resources :points
@@ -21,6 +21,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :churches
   map.resources :sessions
   map.resources :statistics
+  map.sign_up_with_code 'with_friend/:referral_code', :controller => 'Public', :action => 'sign_up'
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -54,7 +55,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  map.root :controller => "public"
+  map.root :controller => 'Public', :action => 'sign_up'
 
   # See how all your routes lay out with "rake routes"
 

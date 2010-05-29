@@ -9,10 +9,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100518215420) do
+ActiveRecord::Schema.define(:version => 20100528161345) do
 
   create_table "churches", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "days", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -50,7 +55,6 @@ ActiveRecord::Schema.define(:version => 20100518215420) do
   create_table "stampeders", :force => true do |t|
     t.string   "lastname"
     t.string   "firstname"
-    t.string   "barcode"
     t.string   "studentphone"
     t.string   "address"
     t.integer  "grade"
@@ -74,6 +78,7 @@ ActiveRecord::Schema.define(:version => 20100518215420) do
     t.boolean  "online_signup"
     t.integer  "church_id"
     t.string   "parentemail"
+    t.integer  "day_id"
   end
 
   add_index "stampeders", ["church_id"], :name => "index_stampeders_on_church_id"

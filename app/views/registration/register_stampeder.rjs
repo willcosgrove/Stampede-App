@@ -1,2 +1,9 @@
-page.replace_html 'registration_signin_form', :partial => 'add_barcode_form'
-page[:registration_signin_form].visual_effect :highlight
+page.replace_html 'just_signed_in', "#{@justSignedIn.fullname}"
+page[:signin_flash].visual_effect :slide_down
+page[:signin_flash].visual_effect :slide_up, :delay => 5
+page[:register_new_stampeder].visual_effect :slide_up
+page[:registration_signin_form].visual_effect :slide_down
+page[:query].value = ""
+page.replace_html 'results', ""
+page[:query].focus
+page[:results].visual_effect :fade_in

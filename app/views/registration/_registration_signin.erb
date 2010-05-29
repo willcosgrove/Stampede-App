@@ -1,9 +1,12 @@
-<div id="confirmBox" title="Confirm?">
-</div>
-<div id="signin_field">
-  <h2 class="center">Type in stampeder's bracelet number</h2>
-  <% form_remote_tag :url => confirm_signin_path do %>
-    <%= text_field_tag :barcode, nil, :size => 5 %>
-    <%= submit_tag 'Sign In', :class => 'hidden' %>
+<div id="signin_search_field">
+  <% form_remote_tag :url => search_path do %>
+    <%= label_tag :query, "Type part of Stampeder's name" %><br />
+    <%= text_field_tag :query, params[:query] %>
+    <%= link_to_function('Add', "jQuery('#results').fadeOut(200);jQuery('#registration_signin_form').delay(200).hide( 'slide', {direction: 'up'} );jQuery('#register_new_stampeder').delay(600).show( 'slide', {direction: 'up'} )", { :id => 'add_button' } ) %>
   <% end %>
+  <%= observe_field :query, :url => signin_search_path, :frequency => 0.05, :with => 'query' %>
+</div>
+
+<div id="results">
+  <%= render(@stampeders) unless @stampeders.empty?%>
 </div>

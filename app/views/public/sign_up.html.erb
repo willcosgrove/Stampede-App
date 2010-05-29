@@ -1,115 +1,128 @@
+<%- content_for :meta do -%>
+<meta name="title" content="Sign up for Stampede <%= 'on #{@friend.fullname}\'s Team' if @friend %>" />
+  <meta name="description" content="Sign up for Stampede on your friend's team!" />
+<%- end -%>
+<% content_for :title do %>Sign up for Stampede <%= "on #{@friend.fullname}'s Team" if @friend %><% end %>
+<div id="box" class="shadow">
+<h1 id="heading-one" class="fancy-heading">Stampede Sign Up Form<span class="arrow"></span></h1>
+<% if @friend %>
+<h3 id="heading-three" class="fancy-heading">Referred by: <%= @friend.fullname %><span class="arrow"></span></h3>
+<% end %>
 <% form_for :stampeder, :url => { :controller => 'public', :action => 'register' } do |f| %>
-  <%= f.error_messages %>
+  <%= error_messages_for :stampeder, :header_message => 'Ay oh!  You messed something up...<span class="error-arrow"></span>', :message => "Here's a hint..." %>
 
   <p>
-    <%= f.label :first_name %><br />
+    <%= f.label :first_name %>
     <%= f.text_field :firstname %>
   </p>
   <p>
-    <%= f.label :last_name %><br />
+    <%= f.label :last_name %>
     <%= f.text_field :lastname %>
   </p>
   <p>
-    <%= f.label :gender %><br />
+    <%= f.label :gender %>
     <%= f.select :gender, [['select gender', ''], ['Boy', 'm'], ['Girl', 'f']] %>
   </p>
   <p>
-    <%= f.label :dob %><br />
+    <%= f.label :'Date Of Birth' %>
     <%= f.date_select :dob, :start_year => Time.now.year - 18, :end_year => Time.now.year - 10, :include_blank => true, :use_month_numbers => true, :order => [:month, :day, :year] %>
   </p>
   <p>
-    <%= f.label :parent %><br />
+    <%= f.label :"parent(s)" %>
     <%= f.text_field :parent %>
   </p>
   <p>
-    <%= f.label :emergency_phone_number %><br />
+    <%= f.label :emergency_phone_number %>
     <%= f.text_field :parentphone %>
   </p>
   <p>
-  <% if params[:referral_code] %>
+  <% if !params[:referral_code].blank? %> <!-- If Referral code exists -->
     <p>
-    Do you attend McKinney?<br />
-    Yes <%= radio_button_tag 'church', @mmbc, false, :disabled => true %>
-    No <%= radio_button_tag 'church', nil, true, :disabled => true %>
+    <%= f.label :"Do you attend McKinney?" %>
+    Yes <%= radio_button_tag 'church', @mmbc, false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();jQuery(\'#stampeder_church_name\').val(\'McKinney Memorial Bible Church\');" %>
+    No <%= radio_button_tag 'church', nil, true, :onclick => "jQuery(\'#visitor_fields\').fadeIn();jQuery(\'#stampeder_church_name\').val(\'\');" %>
   </p>
     <%-# If they do not attend McKinney %>
     <% content_tag :div, :id => "visitor_fields" do -%>
       <p>
-        <%= f.label :referral_code %><br />
-        <%= text_field_tag 'referral_code', params[:referral_code], :disabled => true %>
+        <%= f.label :"Friend of" %>
+        <%= @friend.fullname  %>
       </p>
       <p>
-        <%= f.label :church %><br />
+        <%= f.label :church %>
         <%= text_field_with_auto_complete :stampeder, :church_name, {}, { :url => churches_path, :format => :js, :method => :get, :with => "'search=' + element.value" } %>
       </p>
       <p>
-        I don't usually attend church<br />
+        <%= f.label :"I don't usually attend church" %>
         <%= check_box_tag 'attends_church', 'false', false %>
       </p>
     <% end -%>
-  <% else %>
-  <p>
-    Do you attend McKinney?<br />
-    Yes <%= radio_button_tag 'church', @mmbc, false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();jQuery(\'#stampeder_church_name\').val(\'McKinney Memorial Bible Church\');" %>
-    No <%= radio_button_tag 'church', nil, false, :onclick => "jQuery(\'#visitor_fields\').fadeIn();jQuery(\'#stampeder_church_name\').val(\'\');" %>
-  </p>
-    <%-# If they do not attend McKinney %>
-    <% content_tag :div, :id => "visitor_fields", :class => 'hidden' do -%>
-      <p>
-        <%= f.label :referral_code %><br />
-        <%= text_field_tag 'referral_code', params[:referral_code] %>
-      </p>
-      <p>
-        <%= f.label :church %><br />
-        <%= text_field_with_auto_complete :stampeder, :church_name, {}, { :url => churches_path, :format => :js, :method => :get, :with => "'search=' + element.value" } %>
-      </p>
-      <p>
-        I don't usually attend church<br />
-        <%= check_box_tag 'attends_church', 'false', false %>
-      </p>
+  <% else %> <!-- If referral code doesn't exist -->
+    <p>
+      <%= f.label :"Do you attend McKinney?" %>
+      Yes <%= radio_button_tag 'church', @mmbc, false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();jQuery(\'#stampeder_church_name\').val(\'McKinney Memorial Bible Church\');" %>
+      No <%= radio_button_tag 'church', nil, false, :onclick => "jQuery(\'#visitor_fields\').fadeIn();jQuery(\'#stampeder_church_name\').val(\'\');" %>
+    </p>
+      <%-# If they do not attend McKinney %>
+      <% content_tag :div, :id => "visitor_fields", :class => 'hidden' do -%>
+        <p>
+          <%= f.label :friend_code %>
+          <%= text_field_tag 'referral_code', params[:referral_code] %>
+          <span id="referral_lookup"></span>
+        </p>
+        <p>
+          <%= f.label :church %>
+          <%= text_field_with_auto_complete :stampeder, :church_name, {}, { :url => churches_path, :format => :js, :method => :get, :with => "'search=' + element.value" } %>
+        </p>
+        <p>
+          <%= f.label :"I don't usually attend church" %>
+          <%= check_box_tag 'attends_church', 'false', false %>
+        </p>
     <% end -%>
   <% end %>
   <p>
-    <%= f.label :grade %><br />
+    <%= f.label :grade %>
     <%= f.select :grade, [['select grade', ''], ['6th Grade', 6], ['7th Grade', 7], ['8th Grade', 8], ['9th Grade', 9]] %>
   </p>
   <p>
-    <%= f.label :school %><br />
+    <%= f.label :school %>
     <%= text_field_with_auto_complete :stampeder, :school_name, {}, { :url => schools_path, :format => :js, :method => :get, :with => "'search=' + element.value" } %>
   </p>
   <p>
-    <%= f.label :your_cell %><br />
+    <%= f.label :"Your cell (optional)" %>
     <%= f.text_field :studentphone %>
   </p>
   <p>
-    <%= f.label :can_we_text_you %><br />
+    <%= f.label :can_we_text_you %>
     Yes <%= f.radio_button :textmsg, true %> No <%= f.radio_button :textmsg, false %>
   </p>
   <p>
-    <%= f.label :email %> (optional)<br />
+    <%= f.label :"Email (optional)" %>
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.label :parent_email %><br />
+    <%= f.label :parent_email %>
     <%= f.text_field :parentemail %>
   </p>
   <p>
-    <%= f.label :address %><br />
+    <%= f.label :address %>
     <%= f.text_field :address %>
   </p>
   <p>
-    <%= f.label :city %><br />
+    <%= f.label :city %>
     <%= f.text_field :city, :value => "Fort Worth" %>
   </p>
   <p>
-    <%= f.label :state %><br />
+    <%= f.label :state %>
     <%= f.text_field :state, :value => "TX" %>
   </p>
   <p>
-    <%= f.label :zip_code %><br />
+    <%= f.label :zip_code %>
     <%= f.text_field :zipcode %>
   </p>
   <p>
     <%= f.submit 'Sign Up' %>
   </p>
 <% end %>
+<%= observe_field :referral_code, :url => { :action => :referral_lookup }, :with => :q %>
+</div>
