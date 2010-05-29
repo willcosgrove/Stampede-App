@@ -1,8 +1,10 @@
-<%- content_for :meta do -%>
-<meta name="title" content="Sign up for Stampede <%= 'on #{@friend.fullname}\'s Team' if @friend %>" />
-  <meta name="description" content="Sign up for Stampede on your friend's team!" />
-<%- end -%>
-<% content_for :title do %>Sign up for Stampede <%= "on #{@friend.fullname}'s Team" if @friend %><% end %>
+<% content_for :meta do %>
+<% if params[:referral_code] %>
+  <meta name="title" content="Sign up for Stampede on <%= @friend.fullname %>'s team" />
+  <meta name="description" content="Stampede is an event at McKinney Church in Fort Worth.  Every year hundreds of middle schoolers and freshmen come to Stampede." />
+  <% content_for :title do %>Sign up for Stampede on <%= @friend.fullname %>'s team<% end %>  
+<% end %>
+<% end %>
 <div id="box" class="shadow">
 <h1 id="heading-one" class="fancy-heading">Stampede Sign Up Form<span class="arrow"></span></h1>
 <% if @friend %>

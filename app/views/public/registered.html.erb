@@ -1,16 +1,10 @@
-<%- content_for :meta do -%>
-<meta name="title" content="title" />
-  <meta name="description" content="Sign up for Stampede on your friend's team!" />
-<%- end -%>
-<% content_for :title do %>Stampede!<% end %>
+<% content_for :title do %>All signed up!<% end %>
 <div id="box" class="shadow">
 <h1 id="heading-one" class="fancy-heading">You're all signed up <%= @stampeder.firstname %>!<span class="arrow"></span></h1>
 <p>We just sent an email your way, and it'll tell you how to get your friends signed up on the same team as you, and get your team 10,000 extra points!</p>
 <h1>Hey!</h1>
 <p>Get your <span style="transparency:0.25">(non-McKinney!)</span> friends to sign up by posting on Facebook!  Click on the Facebook icon to let your friends automatically join on your team, and get you 10,000 points!</p>
-<a target="blank" href="http://www.facebook.com/sharer.php?u=<%= CGI::escape("http://register.stampede10.com/with_friend/#{@stampeder.referral_code}") %>&t=Sign%20up%20for%20Stampede%20on%20<%= CGI::escape(@stampeder.fullname) %>'s%20Team!">
-  <%= image_tag('fbook_icon.png') %>
-</a>
+<hr/>
 <a name="fb_share" type="button" share_url="<%= "register.stampede10.com/with_friend/#{@stampeder.referral_code}" %>" title="Sign up as Will's Friend!">Share on Facebook</a> 
 <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
 </div>
