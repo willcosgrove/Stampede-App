@@ -47764,3 +47764,76 @@ Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-30 04:16:21) [GET]
 Rendering template within layouts/public
 Rendering public/sign_up
 Completed in 160ms (View: 110, DB: 3) | 200 OK [http://localhost/with_friend/73]
+
+
+Processing SmsController#index (for 127.0.0.1 at 2010-05-30 05:24:04) [GET]
+
+NoMethodError (undefined method `sms=' for #<Twilio::Verb:0x7ccfb30>):
+  app/controllers/sms_controller.rb:6:in `index'
+  twilio (2.8.0) lib/twilio/verb.rb:34:in `call'
+  twilio (2.8.0) lib/twilio/verb.rb:34:in `initialize'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  twilio (2.8.0) lib/twilio/verb.rb:34:in `initialize'
+  app/controllers/sms_controller.rb:5:in `new'
+  app/controllers/sms_controller.rb:5:in `index'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (83.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SmsController#index (for 127.0.0.1 at 2010-05-30 05:24:17) [GET]
+
+NoMethodError (undefined method `responce' for #<Twilio::Verb:0x7e614f8>):
+  app/controllers/sms_controller.rb:8:in `index'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SmsController#index (for 127.0.0.1 at 2010-05-30 05:24:26) [GET]
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/sms]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-30 05:35:38) [GET]
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 252ms (View: 118, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SmsController#index (for 127.0.0.1 at 2010-05-30 05:35:40) [GET]
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/sms]
+
+
+Processing SmsController#index (for 127.0.0.1 at 2010-05-30 05:46:10) [GET]
+  Parameters: {"http_method"=>:post}
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/sms]
+
+
+Processing SmsController#index (for 127.0.0.1 at 2010-05-30 05:51:26) [GET]
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/sms]

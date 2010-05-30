@@ -13,7 +13,8 @@ ActionController::Routing::Routes.draw do |map|
   map.logout 'logout', :controller => 'Sessions', :action => 'destroy'
   map.signin_search 'registration/signin/search', :controller => 'Registration', :action => 'search'
   map.search 'search', :controller => 'Navigation', :action => 'search'
-  map.registered 'registered/:id', :controller => "Public", :action => 'registered'
+  map.registered 'registered/:id', :controller => 'Public', :action => 'registered'
+  map.resources :sms
   map.resources :stampeders
   map.resources :teams
   map.resources :points

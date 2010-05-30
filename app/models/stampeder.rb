@@ -269,6 +269,14 @@ class Stampeder < ActiveRecord::Base
     sum
   end
   
+  def self.total_number_of_online_signups
+    sum = 0
+    Stampeder.all.each do |s|
+      sum += 1 if s.online_signup
+    end
+    sum
+  end
+  
   # def self.get_facebook_url
   #   temp = "http://api.facebook.com/restserver.php?method=links.getStats&urls="
   #   Stampeder.all.each do |s|
