@@ -1,0 +1,8 @@
+@media screen {
+@font-face {
+  font-family: 'Vollkorn';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Vollkorn'), url('http://themes.googleusercontent.com/font?kit=_3YMy3W41J9lZ9YHm0HVxA') format('truetype');
+}
+}

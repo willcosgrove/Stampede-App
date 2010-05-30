@@ -67,14 +67,4 @@ namespace :db do
     puts "Stampeders' teams picked in #{Time.now - t}"
     
   end
-  
-  task :populate_schools => :environment do
-    School.delete_all
-    School.create([{:name => "McLean Middle School (MMS)"},{:name => "Fort Worth Country Day (FWCDS)"},{:name => "North Richland Middle School (NRMS)"},{:name => "Morningside Middle School (MMS)"},{:name => "Wedgwood Middle School (WMS)"},{:name => "Meadowbrook Middle School (MMS)"},{:name => "Riverside Middle School (RMS)"},{:name => "Hillwood Middle School (HMS)"},{:name => "Daggett Montessori School (DMS)"},{:name => "Montessori Childrens House (MCH)"},{:name => "Southwest Christian School (SCS)"},{:name => "Crowley Middle School (CMS)"},{:name => "Rosemont Middle School (RMS)"},{:name => "All Saints' Episcopal School (ASES)"},{:name => "Kirkpatrick Middle School (KMS)"},{:name => "Brewer Middle School (BMS)"},{:name => "Lake Country Christian School (LCCS)"},{:name => "Nolan Catholic High School (NCHS)"},{:name => "North Crowley High School (NCHS)"},{:name => "Arlington Heights High School (AHHS)"},{:name => "Fort Worth Academey Of Fine Arts (FWAFA)"},{:name => "Fort Worth Academey (FWA)"},{:name => "Paschal High School (PHS)"},{:name => "Trinity Valley School (TVS)"},{:name => "Trinity Christian Academey (TCA)"}])
-  end
-  
-  task :populate_churches => :environment do
-    Church.delete_all
-    Church.create([{:name => "Wedgwood Baptist Church (WBC)"},{:name => "First United Methodist Church of Ft. Worth"},{:name => "St. Patrick Cathedral"},{:name => "Broadway Baptist Church (BBC)"},{:name => "First Presbyterian Church Of Ft. Worth"},{:name => "Christ Chapel Bible Church"},{:name => "St. Stephen Presbyterian Church"},{:name => "Irving Bible Church"}])
-  end
 end

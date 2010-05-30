@@ -52,7 +52,7 @@ Rails::Initializer.run do |config|
   }
   
   # Constants
-  REFERRAL_CONSTANT = 12317.0
+  REFERRAL_CONSTANT = 73.0
   TWILIO_SID = "AC02b7cb522f4dcaa46ccb2bcac40e04ec"
   TWILIO_AUTH_TOKEN = "08148ac0ef4edd17320e81417e53533a"
   

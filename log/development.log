@@ -46478,3 +46478,1289 @@ Rendering public/registered
 Completed in 39ms (View: 15, DB: 1) | 200 OK [http://localhost/public/registered/1]
   [4;36;1mStampeder Load (21.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
   [4;35;1mStampeder Load (5.0ms)[0m   [0mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;36;1mStampeder Load (43.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (50.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (49.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+  [4;35;1mStampeder Load (49.0ms)[0m   [0mSELECT * FROM "stampeders" [0m
+  [4;36;1mStampeder Load (134.0ms)[0m   [0;1mSELECT * FROM "stampeders" [0m
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 16:55:23) [GET]
+  [4;36;1mChurch Load (0.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+
+ActionView::TemplateError (undefined method `match' for nil:NilClass) on line #2 of app/views/public/sign_up.html.erb:
+1: <% content_for :meta do %>
+2: <% unless params[:referral_code].match(/\A\D*\Z/) && params[:referral_code] == "" %>
+3:   <meta name="title" content="Sign up for Stampede on <%= @friend.fullname %>'s team" />
+4:   <meta name="description" content="Stampede is an event at McKinney Church in Fort Worth.  Every year hundreds of middle schoolers and freshmen come to Stampede." />
+5:   <% content_for :title do %>Sign up for Stampede on <%= @friend.fullname %>'s team<% end %>  
+
+    app/views/public/sign_up.html.erb:2
+    app/views/public/sign_up.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (102.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 16:55:56) [GET]
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+
+ActionView::TemplateError (undefined method `fullname' for nil:NilClass) on line #3 of app/views/public/sign_up.html.erb:
+1: <% content_for :meta do %>
+2: <% unless params[:referral_code] == "" && params[:referral_code].match(/\A\D*\Z/) %>
+3:   <meta name="title" content="Sign up for Stampede on <%= @friend.fullname %>'s team" />
+4:   <meta name="description" content="Stampede is an event at McKinney Church in Fort Worth.  Every year hundreds of middle schoolers and freshmen come to Stampede." />
+5:   <% content_for :title do %>Sign up for Stampede on <%= @friend.fullname %>'s team<% end %>  
+6: <% end %>
+
+    app/views/public/sign_up.html.erb:3
+    app/views/public/sign_up.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (216.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 16:56:37) [GET]
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+
+ActionView::TemplateError (undefined method `match' for nil:NilClass) on line #2 of app/views/public/sign_up.html.erb:
+1: <% content_for :meta do %>
+2: <% unless params[:referral_code] != "" && params[:referral_code].match(/\A\D*\Z/) %>
+3:   <meta name="title" content="Sign up for Stampede on <%= @friend.fullname %>'s team" />
+4:   <meta name="description" content="Stampede is an event at McKinney Church in Fort Worth.  Every year hundreds of middle schoolers and freshmen come to Stampede." />
+5:   <% content_for :title do %>Sign up for Stampede on <%= @friend.fullname %>'s team<% end %>  
+
+    app/views/public/sign_up.html.erb:2
+    app/views/public/sign_up.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (98.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 17:06:26) [GET]
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+
+ActionView::TemplateError (undefined method `fullname' for nil:NilClass) on line #3 of app/views/public/sign_up.html.erb:
+1: <% content_for :meta do %>
+2: <% unless params[:referral_code] == "" && !params[:referral_code].match(/\A\D*\Z/) %>
+3:   <meta name="title" content="Sign up for Stampede on <%= @friend.fullname %>'s team" />
+4:   <meta name="description" content="Stampede is an event at McKinney Church in Fort Worth.  Every year hundreds of middle schoolers and freshmen come to Stampede." />
+5:   <% content_for :title do %>Sign up for Stampede on <%= @friend.fullname %>'s team<% end %>  
+6: <% end %>
+
+    app/views/public/sign_up.html.erb:3
+    app/views/public/sign_up.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (94.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 17:06:28) [GET]
+  [4;36;1mChurch Load (3.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+
+ActionView::TemplateError (undefined method `fullname' for nil:NilClass) on line #3 of app/views/public/sign_up.html.erb:
+1: <% content_for :meta do %>
+2: <% unless params[:referral_code] == "" && !params[:referral_code].match(/\A\D*\Z/) %>
+3:   <meta name="title" content="Sign up for Stampede on <%= @friend.fullname %>'s team" />
+4:   <meta name="description" content="Stampede is an event at McKinney Church in Fort Worth.  Every year hundreds of middle schoolers and freshmen come to Stampede." />
+5:   <% content_for :title do %>Sign up for Stampede on <%= @friend.fullname %>'s team<% end %>  
+6: <% end %>
+
+    app/views/public/sign_up.html.erb:3
+    app/views/public/sign_up.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (97.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 17:06:56) [GET]
+  [4;36;1mChurch Load (0.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+
+ActionView::TemplateError (undefined method `fullname' for nil:NilClass) on line #5 of app/views/public/sign_up.html.erb:
+2: <% unless params[:referral_code] == "" && !params[:referral_code].match(/\A\D*\Z/) %>
+3:   <meta name="title" content="Sign up for Stampede on <%= @friend.fullname unless @friend.nil? %>'s team" />
+4:   <meta name="description" content="Stampede is an event at McKinney Church in Fort Worth.  Every year hundreds of middle schoolers and freshmen come to Stampede." />
+5:   <% content_for :title do %>Sign up for Stampede on <%= @friend.fullname %>'s team<% end %>  
+6: <% end %>
+7: <% end %>
+8: <div id="box" class="shadow">
+
+    app/views/public/sign_up.html.erb:5
+    app/views/public/sign_up.html.erb:5
+    app/views/public/sign_up.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (104.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 17:07:16) [GET]
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 10497ms (View: 10447, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-05-29 17:07:57) [GET]
+  Parameters: {"search"=>"Tr"}
+  [4;36;1mSchool Load (38.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (name LIKE '%Tr%') [0m
+Rendering schools/index
+Completed in 110ms (View: 37, DB: 38) | 200 OK [http://localhost/schools?search=Tr]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 17:08:49) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "attends_church"=>"on", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"6", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"", "school_name"=>"Kirkpatrick Middle School (KMS)", "parentphone"=>"9872382736", "dob(1i)"=>"1992", "dob(2i)"=>"8", "gender"=>"m", "lastname"=>"Cosgrove", "firstname"=>"Eb", "dob(3i)"=>"8", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"7912 Vista Ridge Dr N", "state"=>"TX", "email"=>"", "parent"=>"Kim"}, "referral_code"=>""}
+  [4;35;1mSchool Load (1.0ms)[0m   [0mSELECT * FROM "schools" WHERE ("schools"."name" = 'Kirkpatrick Middle School (KMS)') LIMIT 1[0m
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 185ms (View: 63, DB: 3) | 200 OK [http://localhost/public/register]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 17:10:42) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "attends_church"=>"on", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"6", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"", "school_name"=>"Kirkpatrick Middle School (KMS)", "parentphone"=>"9872382736", "dob(1i)"=>"1992", "dob(2i)"=>"8", "gender"=>"m", "lastname"=>"Cosgrove", "firstname"=>"Eb", "dob(3i)"=>"8", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"7912 Vista Ridge Dr N", "state"=>"TX", "email"=>"", "parent"=>"Kim"}, "referral_code"=>""}
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."name" = 'Kirkpatrick Middle School (KMS)') LIMIT 1[0m
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 281ms (View: 85, DB: 2) | 200 OK [http://localhost/public/register]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 17:10:52) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "attends_church"=>"on", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"6", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"", "school_name"=>"Kirkpatrick Middle School (KMS)", "parentphone"=>"9872382736", "dob(1i)"=>"1992", "dob(2i)"=>"8", "gender"=>"m", "lastname"=>"Cosgrove", "firstname"=>"Eb", "dob(3i)"=>"8", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"7912 Vista Ridge Dr N", "state"=>"TX", "email"=>"", "parent"=>"Kim"}, "referral_code"=>""}
+  [4;35;1mSchool Load (1.0ms)[0m   [0mSELECT * FROM "schools" WHERE ("schools"."name" = 'Kirkpatrick Middle School (KMS)') LIMIT 1[0m
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 165ms (View: 69, DB: 2) | 200 OK [http://localhost/public/register]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 17:23:14) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "attends_church"=>"on", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"6", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"", "school_name"=>"Kirkpatrick Middle School (KMS)", "parentphone"=>"9872382736", "dob(1i)"=>"1992", "dob(2i)"=>"8", "gender"=>"m", "lastname"=>"Cosgrove", "firstname"=>"Eb", "dob(3i)"=>"8", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"7912 Vista Ridge Dr N", "state"=>"TX", "email"=>"", "parent"=>"Kim"}, "referral_code"=>""}
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."name" = 'Kirkpatrick Middle School (KMS)') LIMIT 1[0m
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 299ms (View: 91, DB: 3) | 200 OK [http://localhost/public/register]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 17:24:15) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "attends_church"=>"on", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"6", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"", "school_name"=>"Kirkpatrick Middle School (KMS)", "parentphone"=>"9872382736", "dob(1i)"=>"1992", "dob(2i)"=>"8", "gender"=>"m", "lastname"=>"Cosgrove", "firstname"=>"Eb", "dob(3i)"=>"8", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"7912 Vista Ridge Dr N", "state"=>"TX", "email"=>"", "parent"=>"Kim"}, "referral_code"=>""}
+  [4;35;1mSchool Load (1.0ms)[0m   [0mSELECT * FROM "schools" WHERE ("schools"."name" = 'Kirkpatrick Middle School (KMS)') LIMIT 1[0m
+  [4;36;1mChurch Load (2.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 179ms (View: 96, DB: 4) | 200 OK [http://localhost/public/register]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 17:25:29) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "attends_church"=>"on", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"6", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"", "school_name"=>"Kirkpatrick Middle School (KMS)", "parentphone"=>"9872382736", "dob(1i)"=>"1992", "dob(2i)"=>"8", "gender"=>"m", "lastname"=>"Cosgrove", "firstname"=>"Eb", "dob(3i)"=>"8", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"7912 Vista Ridge Dr N", "state"=>"TX", "email"=>"", "parent"=>"Kim"}, "referral_code"=>""}
+  [4;36;1mSchool Load (2.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."name" = 'Kirkpatrick Middle School (KMS)') LIMIT 1[0m
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 189ms (View: 96, DB: 4) | 200 OK [http://localhost/public/register]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 17:27:02) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "attends_church"=>"on", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"6", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"", "school_name"=>"Kirkpatrick Middle School (KMS)", "parentphone"=>"9872382736", "dob(1i)"=>"1992", "dob(2i)"=>"8", "gender"=>"m", "lastname"=>"Cosgrove", "firstname"=>"Eb", "dob(3i)"=>"8", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"7912 Vista Ridge Dr N", "state"=>"TX", "email"=>"", "parent"=>"Kim"}, "referral_code"=>""}
+  [4;35;1mSchool Load (1.0ms)[0m   [0mSELECT * FROM "schools" WHERE ("schools"."name" = 'Kirkpatrick Middle School (KMS)') LIMIT 1[0m
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 279ms (View: 85, DB: 2) | 200 OK [http://localhost/public/register]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-05-29 17:29:23) [GET]
+  Parameters: {"search"=>"t"}
+  [4;36;1mSchool Load (3.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (name LIKE '%t%') [0m
+Rendering schools/index
+Completed in 23ms (View: 4, DB: 3) | 200 OK [http://localhost/schools?search=t]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-05-29 17:29:24) [GET]
+  Parameters: {"search"=>"tr"}
+  [4;35;1mSchool Load (2.0ms)[0m   [0mSELECT * FROM "schools" WHERE (name LIKE '%tr%') [0m
+Rendering schools/index
+Completed in 22ms (View: 3, DB: 2) | 200 OK [http://localhost/schools?search=tr]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 17:29:31) [GET]
+  Parameters: {"search"=>"m"}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%m%') [0m
+Rendering churches/index
+Completed in 36ms (View: 18, DB: 1) | 200 OK [http://localhost/churches?search=m]
+
+
+Processing PublicController#referral_lookup (for 127.0.0.1 at 2010-05-29 17:31:17) [POST]
+  Parameters: {"authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "q"=>"12317", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1.0) LIMIT 1[0m
+Completed in 47ms (View: 13, DB: 1) | 200 OK [http://localhost/public/referral_lookup]
+
+
+Processing PublicController#referral_lookup (for 127.0.0.1 at 2010-05-29 17:32:31) [POST]
+  Parameters: {"authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "q"=>"", "_"=>""}
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Completed in 35ms (View: 4, DB: 1) | 200 OK [http://localhost/public/referral_lookup]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 21:09:21) [GET]
+  [4;35;1mChurch Load (0.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 106ms (View: 58, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 22:28:58) [GET]
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 624ms (View: 449, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PublicController#referral_lookup (for 127.0.0.1 at 2010-05-29 22:31:05) [POST]
+  Parameters: {"authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "q"=>"Will Cosgrove", "_"=>""}
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Completed in 41ms (View: 6, DB: 0) | 200 OK [http://localhost/public/referral_lookup]
+
+
+Processing PublicController#referral_lookup (for 127.0.0.1 at 2010-05-29 22:31:16) [POST]
+  Parameters: {"authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "q"=>"", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Completed in 44ms (View: 5, DB: 1) | 200 OK [http://localhost/public/referral_lookup]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:31:33) [GET]
+  Parameters: {"search"=>"Firt"}
+  [4;36;1mChurch Load (34.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%Firt%') [0m
+Rendering churches/index
+Completed in 73ms (View: 19, DB: 34) | 200 OK [http://localhost/churches?search=Firt]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:31:33) [GET]
+  Parameters: {"search"=>"Firtst"}
+  [4;35;1mChurch Load (2.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%Firtst%') [0m
+Rendering churches/index
+Completed in 21ms (View: 2, DB: 2) | 200 OK [http://localhost/churches?search=Firtst]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:31:36) [GET]
+  Parameters: {"search"=>"Firtst Christian"}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%Firtst Christian%') [0m
+Rendering churches/index
+Completed in 19ms (View: 2, DB: 1) | 200 OK [http://localhost/churches?search=Firtst%20Christian]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:32:04) [GET]
+  Parameters: {"search"=>"Firtt Christian"}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%Firtt Christian%') [0m
+Rendering churches/index
+Completed in 21ms (View: 3, DB: 1) | 200 OK [http://localhost/churches?search=Firtt%20Christian]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:32:10) [GET]
+  Parameters: {"search"=>"Fir"}
+  [4;36;1mChurch Load (2.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%Fir%') [0m
+Rendering churches/index
+Completed in 21ms (View: 3, DB: 2) | 200 OK [http://localhost/churches?search=Fir]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:32:11) [GET]
+  Parameters: {"search"=>"Firs"}
+  [4;35;1mChurch Load (3.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%Firs%') [0m
+Rendering churches/index
+Completed in 45ms (View: 7, DB: 3) | 200 OK [http://localhost/churches?search=Firs]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:32:11) [GET]
+  Parameters: {"search"=>"First"}
+  [4;36;1mChurch Load (2.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%First%') [0m
+Rendering churches/index
+Completed in 22ms (View: 3, DB: 2) | 200 OK [http://localhost/churches?search=First]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-05-29 22:32:32) [GET]
+  Parameters: {"search"=>"Tri"}
+  [4;35;1mSchool Load (2.0ms)[0m   [0mSELECT * FROM "schools" WHERE (name LIKE '%Tri%') [0m
+Rendering schools/index
+Completed in 70ms (View: 21, DB: 2) | 200 OK [http://localhost/schools?search=Tri]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 22:33:36) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"7", "textmsg"=>"false", "zipcode"=>"90210", "church_name"=>"First Presbyterian Church Of Ft. Worth", "school_name"=>"Kirkpatrick Middle School (KMS)", "parentphone"=>"8172960567", "dob(1i)"=>"1993", "dob(2i)"=>"2", "gender"=>"m", "lastname"=>"fakeperson", "firstname"=>"another", "dob(3i)"=>"3", "parentemail"=>"mommy@ms-av.com", "studentphone"=>"8172960567", "address"=>"234 street", "state"=>"TX", "email"=>"davidh@MCKINNEYCHURCH.COM", "parent"=>"seth's mom"}, "referral_code"=>""}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'First Presbyterian Church Of Ft. Worth') LIMIT 1[0m
+  [4;35;1mSchool Load (2.0ms)[0m   [0mSELECT * FROM "schools" WHERE ("schools"."name" = 'Kirkpatrick Middle School (KMS)') LIMIT 1[0m
+  [4;36;1mChurch Load (0.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 190ms (View: 60, DB: 4) | 200 OK [http://localhost/public/register]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:34:43) [GET]
+  Parameters: {"search"=>"fir"}
+  [4;36;1mChurch Load (2.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%fir%') [0m
+Rendering churches/index
+Completed in 21ms (View: 3, DB: 2) | 200 OK [http://localhost/churches?search=fir]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:34:45) [GET]
+  Parameters: {"search"=>"ch"}
+  [4;35;1mChurch Load (3.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%ch%') [0m
+Rendering churches/index
+Completed in 25ms (View: 4, DB: 3) | 200 OK [http://localhost/churches?search=ch]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:35:03) [GET]
+  Parameters: {"search"=>"c"}
+  [4;36;1mChurch Load (2.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%c%') [0m
+Rendering churches/index
+Completed in 23ms (View: 5, DB: 2) | 200 OK [http://localhost/churches?search=c]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:35:03) [GET]
+  Parameters: {"search"=>"ch"}
+  [4;35;1mChurch Load (3.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%ch%') [0m
+Rendering churches/index
+Completed in 22ms (View: 4, DB: 3) | 200 OK [http://localhost/churches?search=ch]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:35:05) [GET]
+  Parameters: {"search"=>"chr"}
+  [4;36;1mChurch Load (4.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%chr%') [0m
+Rendering churches/index
+Completed in 53ms (View: 11, DB: 4) | 200 OK [http://localhost/churches?search=chr]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 22:35:14) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"7", "textmsg"=>"false", "zipcode"=>"90210", "church_name"=>"Christ Chapel Bible Church", "school_name"=>"Kirkpatrick Middle School (KMS)", "parentphone"=>"8172960567", "dob(1i)"=>"1993", "dob(2i)"=>"2", "gender"=>"m", "lastname"=>"fakeperson", "firstname"=>"another", "dob(3i)"=>"3", "parentemail"=>"mommy@davidandjenny.com", "studentphone"=>"8172960567", "address"=>"234 street", "state"=>"TX", "email"=>"davidh@MCKINNEYCHURCH.COM", "parent"=>"seth's mom"}, "referral_code"=>""}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'Christ Chapel Bible Church') LIMIT 1[0m
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."name" = 'Kirkpatrick Middle School (KMS)') LIMIT 1[0m
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 260ms (View: 170, DB: 4) | 200 OK [http://localhost/public/register]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:35:41) [GET]
+  Parameters: {"search"=>"c"}
+  [4;35;1mChurch Load (3.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%c%') [0m
+Rendering churches/index
+Completed in 27ms (View: 5, DB: 3) | 200 OK [http://localhost/churches?search=c]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:35:49) [GET]
+  Parameters: {"search"=>"chrh"}
+  [4;36;1mChurch Load (2.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%chrh%') [0m
+Rendering churches/index
+Completed in 21ms (View: 2, DB: 2) | 200 OK [http://localhost/churches?search=chrh]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:35:49) [GET]
+  Parameters: {"search"=>"chrh"}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%chrh%') [0m
+Rendering churches/index
+Completed in 20ms (View: 2, DB: 1) | 200 OK [http://localhost/churches?search=chrh]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:35:51) [GET]
+  Parameters: {"search"=>"chrh"}
+  [4;36;1mChurch Load (2.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%chrh%') [0m
+Rendering churches/index
+Completed in 20ms (View: 3, DB: 2) | 200 OK [http://localhost/churches?search=chrh]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:35:52) [GET]
+  Parameters: {"search"=>"chr"}
+  [4;35;1mChurch Load (4.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%chr%') [0m
+Rendering churches/index
+Completed in 47ms (View: 7, DB: 4) | 200 OK [http://localhost/churches?search=chr]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:35:53) [GET]
+  Parameters: {"search"=>"christ"}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%christ%') [0m
+Rendering churches/index
+Completed in 22ms (View: 4, DB: 1) | 200 OK [http://localhost/churches?search=christ]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 22:36:00) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"7", "textmsg"=>"false", "zipcode"=>"90210", "church_name"=>"Christ Chapel Bible Church", "school_name"=>"Kirkpatrick Middle School (KMS)", "parentphone"=>"8172960567", "dob(1i)"=>"1993", "dob(2i)"=>"2", "gender"=>"m", "lastname"=>"fakeperson", "firstname"=>"another", "dob(3i)"=>"3", "parentemail"=>"mommy@davidandjenny.com", "studentphone"=>"8172960567", "address"=>"234 street", "state"=>"TX", "email"=>"davidh@ms-av.com", "parent"=>"seth's mom"}, "referral_code"=>""}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'Christ Chapel Bible Church') LIMIT 1[0m
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."name" = 'Kirkpatrick Middle School (KMS)') LIMIT 1[0m
+  [4;35;1mDay Load (0.0ms)[0m   [0mSELECT * FROM "days" ORDER BY days.id DESC LIMIT 1[0m
+  [4;36;1mStampeder Create (15.0ms)[0m   [0;1mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "church_id", "day_id", "subgroup", "textmsg", "zipcode", "parentphone", "fullname", "lastname", "firstname", "gender", "notes", "parentemail", "studentphone", "online_signup", "address", "state", "created_at", "parent", "email", "friend_id", "school_id") VALUES('Fort Worth', NULL, 7, '2010-05-30 03:36:00', '1993-02-03', 9, 1, '7m', 'f', '90210', '8172960567', 'Another Fakeperson', 'Fakeperson', 'Another', 'm', '', 'mommy@davidandjenny.com', '8172960567', 't', '234 street', 'TX', '2010-05-30 03:36:00', 'seth''s mom', 'davidh@ms-av.com', NULL, 40)[0m
+Sent mail to davidh@ms-av.com
+
+Date: Sat, 29 May 2010 22:36:01 -0500
+From: registration@stampede10.com
+To: davidh@ms-av.com
+Subject: Can't wait to see ya at Stampede!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hey Another!
+
+We're so excited that you're coming to STAMPEDE!  If you've never been, STAMPEDE is an awesome event for students entering the 6th-9th grades, where you play crazy games, worship with an awesome live band, and get to hear from an incredible speaker!  Not to mention get to meet new friends from all over Fort Worth!
+
+Since online sign up is new, let me give you a run down of how you'll sign in on the first night of STAMPEDE.
+
+There will be a specific desk, labeled Sign-in for Online Registrants, for you to go to.  This way you'll be able to speed through the sign-in area, and won't have to wait like all those who didn't sign up online.  At the desk, you'll tell the registration person your name, and they will tell you which team you're on, and give you your STAMPEDE bracelet.  You'll leave this on all week, since it is what we'll use to sign you in on the other days.
+
+Now, you're going to want to get your friends (that don't attend McKinney!) from your school and your neighborhood signed up, so they'll be on your team.  The only two ways for them to sign up and be guaranteed to be on the same team as you, is if you give them this link to sign up: http://register.stampede10.com/with_friend/3976
+Or you can tell them your friend code, which is: 3976
+And they can use that when they go to sign up at the stampede website, by typing in your friend code into the friend code box on the form.
+
+If you do either one of those two steps, they will be guaranteed to be on your team. For every friend that you get to join your team, your team will get 10,000 points!  The team with the most points at the end of the week wins the STAMPEDE competition.
+
+Thanks for signing up, now go invite all your friends to the most exciting event of 2010!
+
+--
+Stampede Registration Team
+Sent mail to mommy@davidandjenny.com
+
+Date: Sat, 29 May 2010 22:36:04 -0500
+From: registration@stampede10.com
+To: mommy@davidandjenny.com
+Subject: Another has signed up for Stampede
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Another has just signed up to go to STAMPEDE June 14th-18th at McKinney Memorial Bible Church!
+
+STAMPEDE is an event for students entering 6th-9th grade, where they'll get to compete on teams all week, get to act crazy, and meet new friends.  They'll also play games, eat snacks, listen to a live band and an incredible speaker.  We'll end the week with a trip to Hurricane Harbor on Friday.  Thank you for allowing your kid to be a part of the STAMPEDE Experience! 
+
+For more information visit: http://stampede10.com
+Rendering template within layouts/public
+Rendering public/registered
+Completed in 7329ms (View: 77, DB: 17) | 200 OK [http://localhost/public/register]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 22:38:57) [GET]
+  Parameters: {"referral_code"=>"3976"}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 56.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 110ms (View: 58, DB: 3) | 200 OK [http://localhost/with_friend/3976]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 22:39:30) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"", "zipcode"=>"", "church_name"=>"", "school_name"=>"", "parentphone"=>"", "dob(1i)"=>"", "dob(2i)"=>"", "gender"=>"", "lastname"=>"", "firstname"=>"fa", "dob(3i)"=>"", "parentemail"=>"", "studentphone"=>"", "address"=>"", "state"=>"TX", "email"=>"", "parent"=>""}}
+
+NoMethodError (undefined method `match' for nil:NilClass):
+  app/controllers/public_controller.rb:15:in `register'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (185.0ms)
+Rendered rescues/_request_and_response (5.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:55:14) [GET]
+  Parameters: {"search"=>"C"}
+  [4;35;1mChurch Load (3.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%C%') [0m
+Rendering churches/index
+Completed in 23ms (View: 4, DB: 3) | 200 OK [http://localhost/churches?search=C]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 22:55:15) [GET]
+  Parameters: {"search"=>"Ch"}
+  [4;36;1mChurch Load (3.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%Ch%') [0m
+Rendering churches/index
+Completed in 22ms (View: 4, DB: 3) | 200 OK [http://localhost/churches?search=Ch]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-05-29 22:55:25) [GET]
+  Parameters: {"search"=>"Trin"}
+  [4;35;1mSchool Load (2.0ms)[0m   [0mSELECT * FROM "schools" WHERE (name LIKE '%Trin%') [0m
+Rendering schools/index
+Completed in 22ms (View: 4, DB: 2) | 200 OK [http://localhost/schools?search=Trin]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 22:55:45) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"8", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"Southcliff Baptist Church", "school_name"=>"Trinity Valley School (TVS)", "parentphone"=>"8176255555", "dob(1i)"=>"1993", "dob(2i)"=>"8", "gender"=>"m", "lastname"=>"Cosgrove", "firstname"=>"Will8", "dob(3i)"=>"5", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"79 jajajaja", "state"=>"TX", "email"=>"", "parent"=>"Kim"}}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'Southcliff Baptist Church') LIMIT 1[0m
+  [4;35;1mSchool Load (1.0ms)[0m   [0mSELECT * FROM "schools" WHERE ("schools"."name" = 'Trinity Valley School (TVS)') LIMIT 1[0m
+
+NoMethodError (undefined method `match' for nil:NilClass):
+  app/controllers/public_controller.rb:15:in `register'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (206.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-05-29 23:18:47) [GET]
+  Parameters: {"search"=>"trin"}
+  [4;36;1mSchool Load (2.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (name LIKE '%trin%') [0m
+Rendering schools/index
+Completed in 22ms (View: 3, DB: 2) | 200 OK [http://localhost/schools?search=trin]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 23:18:53) [GET]
+  Parameters: {"search"=>"Clif"}
+  [4;35;1mChurch Load (4.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%Clif%') [0m
+Rendering churches/index
+Completed in 47ms (View: 9, DB: 4) | 200 OK [http://localhost/churches?search=Clif]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 23:19:06) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"8", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"Southcliff Baptist Church", "school_name"=>"Trinity Christian Academey (TCA)", "parentphone"=>"8176255555", "dob(1i)"=>"1993", "dob(2i)"=>"8", "gender"=>"m", "lastname"=>"Cosgrove", "firstname"=>"Will8", "dob(3i)"=>"5", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"79 jajajaja", "state"=>"TX", "email"=>"", "parent"=>"Kim"}}
+  [4;36;1mChurch Load (0.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'Southcliff Baptist Church') LIMIT 1[0m
+  [4;35;1mSchool Load (2.0ms)[0m   [0mSELECT * FROM "schools" WHERE ("schools"."name" = 'Trinity Christian Academey (TCA)') LIMIT 1[0m
+
+NoMethodError (undefined method `match' for nil:NilClass):
+  app/controllers/public_controller.rb:15:in `register'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (71.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 23:20:43) [GET]
+  Parameters: {"referral_code"=>"3976"}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 56.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 147ms (View: 91, DB: 3) | 200 OK [http://localhost/with_friend/3976]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 23:21:43) [GET]
+  Parameters: {"search"=>"cli"}
+  [4;36;1mChurch Load (2.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%cli%') [0m
+Rendering churches/index
+Completed in 22ms (View: 4, DB: 2) | 200 OK [http://localhost/churches?search=cli]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 23:21:43) [GET]
+  Parameters: {"search"=>"clif"}
+  [4;35;1mChurch Load (2.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%clif%') [0m
+Rendering churches/index
+Completed in 21ms (View: 3, DB: 2) | 200 OK [http://localhost/churches?search=clif]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-05-29 23:21:50) [GET]
+  Parameters: {"search"=>"trin"}
+  [4;36;1mSchool Load (2.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (name LIKE '%trin%') [0m
+Rendering schools/index
+Completed in 23ms (View: 4, DB: 2) | 200 OK [http://localhost/schools?search=trin]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 23:23:15) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"8", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"Southcliff Baptist Church", "school_name"=>"Trinity Christian Academey (TCA)", "parentphone"=>"5555555555", "dob(1i)"=>"1993", "dob(2i)"=>"7", "gender"=>"m", "lastname"=>"Cosgrove", "firstname"=>"Will9", "dob(3i)"=>"8", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"79 jajajaja", "state"=>"TX", "email"=>"", "parent"=>"Kim"}, "referral_code"=>""}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'Southcliff Baptist Church') LIMIT 1[0m
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."name" = 'Trinity Christian Academey (TCA)') LIMIT 1[0m
+  [4;35;1mChurch Load (0.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 142ms (View: 57, DB: 3) | 200 OK [http://localhost/public/register]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 23:54:03) [GET]
+  Parameters: {"referral_code"=>"3976"}
+  [4;35;1mChurch Load (0.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 56.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+ERROR: compiling _run_erb_app47views47public47sign_up46html46erb RAISED compile error
+C:/Users/Will/stampede_app/app/views/public/sign_up.html.erb:72: syntax error, unexpected kELSE, expecting kEND
+@output_buffer.concat "      ";  else ; @output_buffer.concat "\n"
+                                     ^
+C:/Users/Will/stampede_app/app/views/public/sign_up.html.erb:136: syntax error, unexpected kENSURE, expecting kEND
+C:/Users/Will/stampede_app/app/views/public/sign_up.html.erb:138: syntax error, unexpected $end, expecting kEND
+Function body:           def _run_erb_app47views47public47sign_up46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ;  content_for :meta do ; @output_buffer.concat "\n"
+ unless params[:referral_code] == "" && !params[:referral_code].match(/\A\D*\Z/) ; @output_buffer.concat "\n"
+@output_buffer.concat "  <meta name=\"title\" content=\"Sign up for Stampede on "; @output_buffer.concat(( @friend.fullname unless @friend.nil? ).to_s); @output_buffer.concat "'s team\" />\n"
+@output_buffer.concat "  <meta name=\"description\" content=\"Stampede is an event at McKinney Church in Fort Worth.  Every year hundreds of middle schoolers and freshmen come to Stampede.\" />\n"
+@output_buffer.concat "  ";  content_for :title do ; @output_buffer.concat "Sign up for Stampede on "; @output_buffer.concat(( @friend.fullname unless @friend.nil? ).to_s); @output_buffer.concat "'s team";  end ; @output_buffer.concat "  \n"
+ end ; @output_buffer.concat "\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat "<div id=\"box\" class=\"shadow\">\n"
+@output_buffer.concat "<h1 id=\"heading-one\" class=\"fancy-heading\">Stampede Sign Up Form<span class=\"arrow\"></span></h1>\n"
+ if @friend ; @output_buffer.concat "\n"
+@output_buffer.concat "<h3 id=\"heading-three\" class=\"fancy-heading\">Referred by: "; @output_buffer.concat(( @friend.fullname ).to_s); @output_buffer.concat "<span class=\"arrow\"></span></h3>\n"
+ end ; @output_buffer.concat "\n"
+ form_for :stampeder, :url => { :controller => 'public', :action => 'register' } do |f| ; @output_buffer.concat "\n"
+@output_buffer.concat "  "; @output_buffer.concat(( error_messages_for :stampeder, :header_message => 'Ay oh!  You messed something up...<span class="error-arrow"></span>', :message => "Here's a hint..." ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :first_name ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :firstname ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :last_name ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :lastname ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :gender ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.select :gender, [['select gender', ''], ['Boy', 'm'], ['Girl', 'f']] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :'Date Of Birth' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.date_select :dob, :start_year => Time.now.year - 18, :end_year => Time.now.year - 10, :include_blank => true, :use_month_numbers => true, :order => [:month, :day, :year] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :"parent(s)" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :parent ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :emergency_phone_number ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :parentphone ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "  ";  if !params[:referral_code].blank? ; @output_buffer.concat " <!-- If Referral code exists -->\n"
+@output_buffer.concat "    <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :"Do you attend McKinney?" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    Yes "; @output_buffer.concat(( radio_button_tag 'church', @mmbc, false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();jQuery(\'#stampeder_church_name\').val(\'McKinney Memorial Bible Church\');" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    No "; @output_buffer.concat(( radio_button_tag 'church', nil, true, :onclick => "jQuery(\'#visitor_fields\').fadeIn();jQuery(\'#stampeder_church_name\').val(\'\');" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+# If they do not attend McKinney ; @output_buffer.concat "\n"
+@output_buffer.concat "    ";  content_tag :div, :id => "visitor_fields" do 
+@output_buffer.concat "      <p>\n"
+@output_buffer.concat "        "; @output_buffer.concat(( f.label :"Friend of" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        "; @output_buffer.concat(( @friend.fullname  ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        "; @output_buffer.concat(( hidden_field_tag :referral_code ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "      </p>\n"
+@output_buffer.concat "      <p>\n"
+@output_buffer.concat "        "; @output_buffer.concat(( f.label :church ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        "; @output_buffer.concat(( text_field_with_auto_complete :stampeder, :church_name, {}, { :url => churches_path, :format => :js, :method => :get, :with => "'search=' + element.value" } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "      </p>\n"
+@output_buffer.concat "      <p>\n"
+@output_buffer.concat "        "; @output_buffer.concat(( f.label :"I don't usually attend church" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        "; @output_buffer.concat(( check_box_tag :does_not_attend_church, true, false, :onclick => "var field = $('stampeder_church_name');field[field.disabled ? 'enable' : 'disable']();form.disabled = !form.disabled;" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "      </p>\n"
+@output_buffer.concat "    ";  end 
+@output_buffer.concat "  ";  else ; @output_buffer.concat " <!-- If referral code doesn't exist -->\n"
+@output_buffer.concat "    <p>\n"
+@output_buffer.concat "      "; @output_buffer.concat(( f.label :"Do you attend McKinney?" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "      Yes "; @output_buffer.concat(( radio_button_tag 'church', @mmbc, false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();jQuery(\'#stampeder_church_name\').val(\'McKinney Memorial Bible Church\');" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "      No "; @output_buffer.concat(( radio_button_tag 'church', nil, false, :onclick => "jQuery(\'#visitor_fields\').fadeIn();jQuery(\'#stampeder_church_name\').val(\'\');" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    </p>\n"
+# If they do not attend McKinney ; @output_buffer.concat "\n"
+@output_buffer.concat "      ";  if @error ; @output_buffer.concat "\n"
+@output_buffer.concat "      ";  content_tag :div, :id => "visitor_fields" do 
+@output_buffer.concat "      ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "      ";  content_tag :div, :id => "visitor_fields", :class => 'hidden' do 
+@output_buffer.concat "      ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "        <p>\n"
+@output_buffer.concat "          "; @output_buffer.concat(( f.label :friend_code ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( text_field_tag 'referral_code', params[:referral_code] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "          <span id=\"referral_lookup\"></span>\n"
+@output_buffer.concat "        </p>\n"
+@output_buffer.concat "        <p>\n"
+@output_buffer.concat "          "; @output_buffer.concat(( f.label :church ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( text_field_with_auto_complete :stampeder, :church_name, {}, { :url => churches_path, :format => :js, :method => :get, :with => "'search=' + element.value" } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        </p>\n"
+@output_buffer.concat "        <p>\n"
+@output_buffer.concat "          "; @output_buffer.concat(( f.label :"I don't usually attend church" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( check_box_tag :does_not_attend_church, true, false, :onclick => "var field = $('stampeder_church_name');field[field.disabled ? 'enable' : 'disable']();form.disabled = !form.disabled;" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        </p>\n"
+@output_buffer.concat "    ";  end 
+@output_buffer.concat "  ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :"grade you're going into" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.select :grade, [['select grade', ''], ['6th Grade', 6], ['7th Grade', 7], ['8th Grade', 8], ['9th Grade', 9]] ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :school ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( text_field_with_auto_complete :stampeder, :school_name, {}, { :url => schools_path, :format => :js, :method => :get, :with => "'search=' + element.value" } ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :"Your cell (optional)" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :studentphone ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :can_we_text_you ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    Yes "; @output_buffer.concat(( f.radio_button :textmsg, true ).to_s); @output_buffer.concat " No "; @output_buffer.concat(( f.radio_button :textmsg, false ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :"Email (optional)" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :parent_email ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :parentemail ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :city, :value => "Fort Worth" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :state ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :state, :value => "TX" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.label :zip_code ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.text_field :zipcode ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+@output_buffer.concat "  <p>\n"
+@output_buffer.concat "    "; @output_buffer.concat(( f.submit 'Sign Up' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "  </p>\n"
+ end ; @output_buffer.concat "\n"
+@output_buffer.concat(( observe_field :referral_code, :url => { :action => :referral_lookup }, :with => :q ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "</div>"; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Will/stampede_app/app/views/public/sign_up.html.erb:138:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:348:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1332:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:50:in `service'
+C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/webrick.rb:14:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+C:/Users/Will/stampede_app/app/views/public/sign_up.html.erb:72: syntax error, unexpected kELSE, expecting kEND
+@output_buffer.concat "      ";  else ; @output_buffer.concat "\n"
+                                     ^
+C:/Users/Will/stampede_app/app/views/public/sign_up.html.erb:136: syntax error, unexpected kENSURE, expecting kEND
+C:/Users/Will/stampede_app/app/views/public/sign_up.html.erb:138: syntax error, unexpected $end, expecting kEND) on line #72 of app/views/public/sign_up.html.erb:
+69:       <%-# If they do not attend McKinney %>
+70:       <% if @error %>
+71:       <% content_tag :div, :id => "visitor_fields" do -%>
+72:       <% else %>
+73:       <% content_tag :div, :id => "visitor_fields", :class => 'hidden' do -%>
+74:       <% end %>
+75:         <p>
+
+    app/views/public/sign_up.html.erb:138:in `compile!'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (98.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-29 23:56:11) [GET]
+  Parameters: {"referral_code"=>"3976"}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 56.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 134ms (View: 83, DB: 3) | 200 OK [http://localhost/with_friend/3976]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-29 23:56:56) [GET]
+  Parameters: {"search"=>"Cli"}
+  [4;35;1mChurch Load (2.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%Cli%') [0m
+Rendering churches/index
+Completed in 23ms (View: 4, DB: 2) | 200 OK [http://localhost/churches?search=Cli]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-05-29 23:57:04) [GET]
+  Parameters: {"search"=>"Trin"}
+  [4;36;1mSchool Load (2.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (name LIKE '%Trin%') [0m
+Rendering schools/index
+Completed in 22ms (View: 4, DB: 2) | 200 OK [http://localhost/schools?search=Trin]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-29 23:57:27) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"7", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"Southcliff Baptist Church", "school_name"=>"Trinity Christian Academey (TCA)", "parentphone"=>"5555555555", "dob(1i)"=>"1995", "dob(2i)"=>"7", "gender"=>"m", "lastname"=>"Cosgrover", "firstname"=>"Will10", "dob(3i)"=>"6", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"79 jajajaja", "state"=>"TX", "email"=>"", "parent"=>"Kim"}, "referral_code"=>""}
+  [4;35;1mChurch Load (0.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'Southcliff Baptist Church') LIMIT 1[0m
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."name" = 'Trinity Christian Academey (TCA)') LIMIT 1[0m
+  [4;35;1mDay Load (1.0ms)[0m   [0mSELECT * FROM "days" ORDER BY days.id DESC LIMIT 1[0m
+  [4;36;1mStampeder Create (1.0ms)[0m   [0;1mINSERT INTO "stampeders" ("city", "team_id", "grade", "updated_at", "dob", "church_id", "day_id", "subgroup", "textmsg", "zipcode", "parentphone", "fullname", "lastname", "firstname", "gender", "notes", "parentemail", "studentphone", "online_signup", "address", "state", "created_at", "parent", "email", "friend_id", "school_id") VALUES('Fort Worth', NULL, 7, '2010-05-30 04:57:27', '1995-07-06', 2, 1, '7m', 'f', '76132', '5555555555', 'Will10 Cosgrover', 'Cosgrover', 'Will10', 'm', '', 'jesusfreak210@gmail.com', '', 't', '79 jajajaja', 'TX', '2010-05-30 04:57:27', 'Kim', 'jesusfreak210@gmail.com', NULL, 50)[0m
+Sent mail to jesusfreak210@gmail.com
+
+Date: Sat, 29 May 2010 23:57:28 -0500
+From: registration@stampede10.com
+To: jesusfreak210@gmail.com
+Subject: Can't wait to see ya at Stampede!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hey Will10!
+
+We're so excited that you're coming to STAMPEDE!  If you've never been, STAMPEDE is an awesome event for students entering the 6th-9th grades, where you play crazy games, worship with an awesome live band, and get to hear from an incredible speaker!  Not to mention get to meet new friends from all over Fort Worth!
+
+Since online sign up is new, let me give you a run down of how you'll sign in on the first night of STAMPEDE.
+
+There will be a specific desk, labeled Sign-in for Online Registrants, for you to go to.  This way you'll be able to speed through the sign-in area, and won't have to wait like all those who didn't sign up online.  At the desk, you'll tell the registration person your name, and they will tell you which team you're on, and give you your STAMPEDE bracelet.  You'll leave this on all week, since it is what we'll use to sign you in on the other days.
+
+Now, you're going to want to get your friends (that don't attend McKinney!) from your school and your neighborhood signed up, so they'll be on your team.  The only two ways for them to sign up and be guaranteed to be on the same team as you, is if you give them this link to sign up: http://register.stampede10.com/with_friend/4047
+Or you can tell them your friend code, which is: 4047
+And they can use that when they go to sign up at the stampede website, by typing in your friend code into the friend code box on the form.
+
+If you do either one of those two steps, they will be guaranteed to be on your team. For every friend that you get to join your team, your team will get 10,000 points!  The team with the most points at the end of the week wins the STAMPEDE competition.
+
+Thanks for signing up, now go invite all your friends to the most exciting event of 2010!
+
+--
+Stampede Registration Team
+Sent mail to jesusfreak210@gmail.com
+
+Date: Sat, 29 May 2010 23:57:31 -0500
+From: registration@stampede10.com
+To: jesusfreak210@gmail.com
+Subject: Will10 has signed up for Stampede
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Will10 has just signed up to go to STAMPEDE June 14th-18th at McKinney Memorial Bible Church!
+
+STAMPEDE is an event for students entering 6th-9th grade, where they'll get to compete on teams all week, get to act crazy, and meet new friends.  They'll also play games, eat snacks, listen to a live band and an incredible speaker.  We'll end the week with a trip to Hurricane Harbor on Friday.  Thank you for allowing your kid to be a part of the STAMPEDE Experience! 
+
+For more information visit: http://stampede10.com
+Rendering template within layouts/public
+Rendering public/registered
+Completed in 7187ms (View: 12, DB: 3) | 200 OK [http://localhost/public/register]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-30 00:02:52) [GET]
+  [4;35;1mChurch Load (0.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 101ms (View: 53, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-30 00:03:18) [GET]
+  Parameters: {"search"=>"7"}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE (name LIKE '%7%') [0m
+Rendering churches/index
+Completed in 18ms (View: 2, DB: 1) | 200 OK [http://localhost/churches?search=7]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-30 00:03:20) [GET]
+  Parameters: {"search"=>"a"}
+  [4;36;1mChurch Load (2.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%a%') [0m
+Rendering churches/index
+Completed in 23ms (View: 4, DB: 2) | 200 OK [http://localhost/churches?search=a]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-05-30 00:03:58) [GET]
+  Parameters: {"search"=>"T"}
+  [4;35;1mSchool Load (4.0ms)[0m   [0mSELECT * FROM "schools" WHERE (name LIKE '%T%') [0m
+Rendering schools/index
+Completed in 31ms (View: 4, DB: 4) | 200 OK [http://localhost/schools?search=T]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-30 00:05:30) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"7", "textmsg"=>"false", "zipcode"=>"761", "church_name"=>"Wedgwood Baptist Church", "school_name"=>"North Richland Middle School (NRMS)", "parentphone"=>"5555555555", "dob(1i)"=>"1993", "dob(2i)"=>"7", "gender"=>"m", "lastname"=>"Cosgrove", "firstname"=>"Will", "dob(3i)"=>"3", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"hsd", "state"=>"TX", "email"=>"", "parent"=>"K"}, "referral_code"=>""}
+  [4;36;1mChurch Load (0.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'Wedgwood Baptist Church') LIMIT 1[0m
+  [4;35;1mSchool Load (1.0ms)[0m   [0mSELECT * FROM "schools" WHERE ("schools"."name" = 'North Richland Middle School (NRMS)') LIMIT 1[0m
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (0.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 139ms (View: 56, DB: 2) | 200 OK [http://localhost/public/register]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-30 00:25:27) [GET]
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 142ms (View: 89, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SchoolsController#index (for 127.0.0.1 at 2010-05-30 00:26:04) [GET]
+  Parameters: {"search"=>"T"}
+  [4;36;1mSchool Load (3.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE (name LIKE '%T%') [0m
+Rendering schools/index
+Completed in 26ms (View: 4, DB: 3) | 200 OK [http://localhost/schools?search=T]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-30 00:26:33) [POST]
+  Parameters: {"church"=>"#<Church:0x7cf621c>", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"7", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"McKinney Memorial Bible Church", "school_name"=>"North Richland Middle School (NRMS)", "parentphone"=>"7777777777", "dob(1i)"=>"1993", "dob(2i)"=>"5", "gender"=>"m", "lastname"=>"c", "firstname"=>"f", "dob(3i)"=>"5", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"", "state"=>"TX", "email"=>"", "parent"=>"k"}, "referral_code"=>""}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."name" = 'North Richland Middle School (NRMS)') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 256ms (View: 59, DB: 3) | 200 OK [http://localhost/public/register]
+
+
+Processing PublicController#referral_lookup (for 127.0.0.1 at 2010-05-30 00:31:37) [POST]
+  Parameters: {"authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "q"=>"David Hedrick", "_"=>""}
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Completed in 35ms (View: 4, DB: 1) | 200 OK [http://localhost/public/referral_lookup]
+
+
+Processing ChurchesController#index (for 127.0.0.1 at 2010-05-30 00:31:43) [GET]
+  Parameters: {"search"=>"mck"}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE (name LIKE '%mck%') [0m
+Rendering churches/index
+Completed in 20ms (View: 4, DB: 1) | 200 OK [http://localhost/churches?search=mck]
+
+
+Processing PublicController#register (for 127.0.0.1 at 2010-05-30 00:31:59) [POST]
+  Parameters: {"church"=>"on", "commit"=>"Sign Up", "authenticity_token"=>"2Pxoup+c4OBLkwUuc+6OoH7Mm2tGTBO3oy1JAYWQFmM=", "stampeder"=>{"city"=>"Fort Worth", "grade"=>"7", "textmsg"=>"false", "zipcode"=>"76132", "church_name"=>"McKinney Memorial Bible Church", "school_name"=>"Fort Worth Country Day (FWCDS)", "parentphone"=>"7777777777", "dob(1i)"=>"1993", "dob(2i)"=>"5", "gender"=>"m", "lastname"=>"c", "firstname"=>"f", "dob(3i)"=>"5", "parentemail"=>"jesusfreak210@gmail.com", "studentphone"=>"", "address"=>"", "state"=>"TX", "email"=>"", "parent"=>"k"}, "referral_code"=>"David Hedrick"}
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mSchool Load (1.0ms)[0m   [0;1mSELECT * FROM "schools" WHERE ("schools"."name" = 'Fort Worth Country Day (FWCDS)') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 175ms (View: 91, DB: 3) | 200 OK [http://localhost/public/register]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-30 00:32:28) [GET]
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 248ms (View: 59, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-30 00:44:33) [GET]
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (1.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 131ms (View: 85, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-30 00:46:06) [GET]
+  [4;35;1mChurch Load (1.0ms)[0m   [0mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;36;1mStampeder Load (0.0ms)[0m   [0;1mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 127ms (View: 82, DB: 1) | 200 OK [http://localhost/]
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 2) [0m
+  [4;36;1mStampeder Load (3.0ms)[0m   [0;1mSELECT * FROM "stampeders" ORDER BY stampeders.id DESC LIMIT 1[0m
+  [4;35;1mStampeder Update (5.0ms)[0m   [0mUPDATE "stampeders" SET "email" = 'seth@501creativegroup.com', "dob" = '1993-02-10', "parentphone" = '8176371155', "zipcode" = '76132', "notes" = '', "address" = '7912 Vista Ridge Dr N', "textmsg" = 'f', "updated_at" = '2010-05-30 07:04:53' WHERE "id" = 1[0m
+Sent mail to seth@501creativegroup.com
+
+Date: Sun, 30 May 2010 02:05:09 -0500
+From: registration@stampede10.com
+To: seth@501creativegroup.com
+Subject: Can't wait to see ya at Stampede!
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Hey Will!
+
+We're so excited that you're coming to STAMPEDE!  If you've never been, STAMPEDE is an awesome event for students entering the 6th-9th grades, where you play crazy games, worship with an awesome live band, and get to hear from an incredible speaker!  Not to mention get to meet new friends from all over Fort Worth!
+
+Since online sign up is new, let me give you a run down of how you'll sign in on the first night of STAMPEDE.
+
+There will be a specific desk, labeled Sign-in for Online Registrants, for you to go to.  This way you'll be able to speed through the sign-in area, and won't have to wait like all those who didn't sign up online.  At the desk, you'll tell the registration person your name, and they will tell you which team you're on, and give you your STAMPEDE bracelet.  You'll leave this on all week, since it is what we'll use to sign you in on the other days.
+
+Now, you're going to want to get your friends (that don't attend McKinney!) from your school and your neighborhood signed up, so they'll be on your team.  The only two ways for them to sign up and be guaranteed to be on the same team as you, is if you give them this link to sign up: http://register.stampede10.com/with_friend/71
+Or you can tell them your friend code, which is: 71
+And they can use that when they go to sign up at the stampede website, by typing in your friend code into the friend code box on the form.
+
+If you do either one of those two steps, they will be guaranteed to be on your team. For every friend that you get to join your team, your team will get 10,000 points!  The team with the most points at the end of the week wins the STAMPEDE competition.
+
+Thanks for signing up, now go invite all your friends to the most exciting event of 2010!
+
+--
+Stampede Registration Team
+  [4;36;1mStampeder Load (28.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+  [4;35;1mStampeder Update (22.0ms)[0m   [0mUPDATE "stampeders" SET "parentemail" = 'seth@501creativegroup.com', "updated_at" = '2010-05-30 07:49:43' WHERE "id" = 1[0m
+Sent mail to seth@501creativegroup.com
+
+Date: Sun, 30 May 2010 02:50:02 -0500
+From: registration@stampede10.com
+To: seth@501creativegroup.com
+Subject: Will has signed up for Stampede
+Mime-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+Will has just signed up to go to STAMPEDE June 14th-18th at McKinney Memorial Bible Church!
+
+STAMPEDE is an event for students entering 6th-9th grade, where they'll get to compete on teams all week, get to act crazy, and meet new friends.  They'll also play games, eat snacks, listen to a live band and an incredible speaker.  We'll end the week with a trip to Hurricane Harbor on Friday.  Thank you for allowing your kid to be a part of the STAMPEDE Experience! 
+
+For more information visit: http://stampede10.com
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateTeams (20100307214006)
+Migrating to CreateStampeders (20100307215806)
+Migrating to AddRelationshipToStampeders (20100307221203)
+Migrating to AddGradeGenderSubgroup (20100315173148)
+Migrating to ChangeGenderFromIntegerToString (20100315174545)
+Migrating to AddZipCodeToStampeder (20100315205326)
+Migrating to ChangePhoneFromIntegerToString (20100315210737)
+Migrating to AddingParentPhoneStudentPhoneDobParentSchoolTextEmailFriendId (20100315212037)
+Migrating to RemoveStudentphoneRenamePhoneToStudentphone (20100315221617)
+Migrating to AddFullNameToStampederForAutoComplete (20100316170547)
+Migrating to ChangeZipCodeFromIntegerToString (20100317202549)
+Migrating to RenameTextToTextmsg (20100317230410)
+Migrating to CreateSignins (20100318011642)
+Migrating to AddIndexToSigninsStampederIdColumn (20100318033113)
+Migrating to AddCounterCacheToTeams (20100319015500)
+Migrating to ChangeBarcodeFromIntegerToString (20100319061656)
+Migrating to RemoveCounterCacheFromTeams (20100326012240)
+Migrating to CreatePoints (20100326025308)
+Migrating to AddIndexToPoints (20100326031145)
+Migrating to CreateSchools (20100401202401)
+Migrating to AddSchoolIdToStampeder (20100401202654)
+Migrating to RemoveSchoolColumnFromStampeder (20100401203917)
+Migrating to AddNotesToStampeder (20100401232419)
+Migrating to AddOnlineSignupBooleanToStampeder (20100427010751)
+Migrating to CreateChurches (20100428233840)
+Migrating to AddChurchIdToStampeder (20100428234200)
+Migrating to AddParentEmailToStampeder (20100502195950)
+Migrating to RemoveBarcodeFromStampeder (20100527145910)
+Migrating to CreateDays (20100528155638)
+Migrating to AddDayIdToStampeder (20100528161345)
+Migrating to AddIndexToStampederForSignupPeriod (20100530084324)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE INDEX "index_stampeders_on_day_id" ON "stampeders" ("day_id")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100530084324')[0m
+  [4;35;1mSQL (3.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("churches")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("days")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("points")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_info('index_points_on_team_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("schools")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("signins")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_info('index_signins_on_stampeder_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("stampeders")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_day_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_church_id')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_school_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_stampeders_on_team_id')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_info('index_stampeders_on_friend_id')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("teams")[0m
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-30 04:14:06) [GET]
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (1.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 0.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 408ms (View: 252, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mStampeder Load (2.0ms)[0m   [0;1mSELECT * FROM "stampeders" LIMIT 1[0m
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-30 04:14:35) [GET]
+  Parameters: {"referral_code"=>"73"}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 116ms (View: 57, DB: 3) | 200 OK [http://localhost/with_friend/73]
+
+
+Processing PublicController#sign_up (for 127.0.0.1 at 2010-05-30 04:16:21) [GET]
+  Parameters: {"referral_code"=>"73"}
+  [4;36;1mChurch Load (1.0ms)[0m   [0;1mSELECT * FROM "churches" WHERE ("churches"."name" = 'McKinney Memorial Bible Church') LIMIT 1[0m
+  [4;35;1mStampeder Load (2.0ms)[0m   [0mSELECT * FROM "stampeders" WHERE ("stampeders"."id" = 1.0) LIMIT 1[0m
+Rendering template within layouts/public
+Rendering public/sign_up
+Completed in 160ms (View: 110, DB: 3) | 200 OK [http://localhost/with_friend/73]

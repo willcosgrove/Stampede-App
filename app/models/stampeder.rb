@@ -23,13 +23,13 @@ class Stampeder < ActiveRecord::Base
   validates_presence_of :parent, :if => :online_signup, :message => "It'd be nice if we knew your parent's name.  And by, 'It'd be nice', we mean, we need to know."
   validates_presence_of :dob, :if => :online_signup, :message => "We need to make sure you're old enough/not too old for Stampede.  So go fill in your Birthday!"
   validates_presence_of :parentphone, :if => :online_signup, :message => "We need to have your parent's phone number in case of an emergency."
-  validates_presence_of :church, :if => :online_signup, :message => "We'd like to know which church you go to."
+  validates_presence_of :church, :allow_nil => true, :if => :online_signup, :message => "We'd like to know which church you go to."
   validates_presence_of :school, :if => :online_signup, :message => "We'd like to know which school you go to."
   validates_presence_of :address, :if => :online_signup, :message => "We need to know your address."
   validates_presence_of :city, :if => :online_signup, :message => "We need to know in which city you live."
   #validates_format_of :parentphone, :with => /\A\d{10}\z/, :allow_nil => true, :allow_blank => true, :message => "- Could you please double check the emergency phone number?  I don't think it's right."
   #validates_format_of :studentphone, :with => /\d{10}/, :allow_nil => true, :allow_blank => true, :message => "- Can you make sure that the student phone number is correct?  I think it might be wrong."
-  validates_format_of :studentphone, :message => "I don't think your cell number, that you typed in, is a correct phone number.", :with => /^[\(\)0-9\- \+\.]{10}$/
+  validates_format_of :studentphone, :allow_blank => true, :message => "I don't think your cell number, that you typed in, is a correct phone number.", :with => /^[\(\)0-9\- \+\.]{10}$/
   validates_format_of :parentphone, :message => "I don't think the emergency number, that you typed in, is a correct phone number.", :with => /^[\(\)0-9\- \+\.]{10}$/
   validates_format_of :email, :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/, :allow_nil => true, :allow_blank => true, :message => "- Could you please double check the email address?  I don't think that's right."
   validates_length_of :zipcode, :is => 5, :allow_nil => true, :allow_blank => false, :message => "Could you please take a look at the zip code?  I don't think it's a real zip code."
@@ -216,5 +216,65 @@ class Stampeder < ActiveRecord::Base
     responce = HTTParty.get(url)
     responce["links_getStats_response"]["link_stat"]["like_count"].to_i
   end
+  
+  def self.total_number_of_facebook_shares
+    url = "http://api.facebook.com/restserver.php?method=links.getStats&urls="
+    Stampeder.all.each do |s|
+      url += "register.stampede10.com/with_friend/" + s.referral_code.to_s + ","
+    end
+    responce = HTTParty.get(url)
+    sum = 0
+    responce["links_getStats_response"]["link_stat"].each do |link|
+      sum += link["share_count"].to_i
+    end
+    sum
+  end
+  
+  def self.total_number_of_facebook_clicks
+    url = "http://api.facebook.com/restserver.php?method=links.getStats&urls="
+    Stampeder.all.each do |s|
+      url += "register.stampede10.com/with_friend/" + s.referral_code.to_s + ","
+    end
+    responce = HTTParty.get(url)
+    sum = 0
+    responce["links_getStats_response"]["link_stat"].each do |link|
+      sum += link["click_count"].to_i
+    end
+    sum
+  end
+  
+  def self.total_number_of_facebook_comments
+    url = "http://api.facebook.com/restserver.php?method=links.getStats&urls="
+    Stampeder.all.each do |s|
+      url += "register.stampede10.com/with_friend/" + s.referral_code.to_s + ","
+    end
+    responce = HTTParty.get(url)
+    sum = 0
+    responce["links_getStats_response"]["link_stat"].each do |link|
+      sum += link["comment_count"].to_i
+    end
+    sum
+  end
+  
+  def self.total_number_of_facebook_likes
+    url = "http://api.facebook.com/restserver.php?method=links.getStats&urls="
+    Stampeder.all.each do |s|
+      url += "register.stampede10.com/with_friend/" + s.referral_code.to_s + ","
+    end
+    responce = HTTParty.get(url)
+    sum = 0
+    responce["links_getStats_response"]["link_stat"].each do |link|
+      sum += link["like_count"].to_i
+    end
+    sum
+  end
+  
+  # def self.get_facebook_url
+  #   temp = "http://api.facebook.com/restserver.php?method=links.getStats&urls="
+  #   Stampeder.all.each do |s|
+  #     temp += "register.stampede10.com/with_friend/" + s.referral_code.to_s + ","
+  #   end
+  #   temp
+  # end
   
 end

@@ -1,14 +1,22 @@
-<% content_for :meta do %>
-<% if params[:referral_code] %>
-  <meta name="title" content="Sign up for Stampede on <%= @friend.fullname %>'s team" />
-  <meta name="description" content="Stampede is an event at McKinney Church in Fort Worth.  Every year hundreds of middle schoolers and freshmen come to Stampede." />
-  <% content_for :title do %>Sign up for Stampede on <%= @friend.fullname %>'s team<% end %>  
+<% unless params[:referral_code] == "" && !params[:referral_code].match(/\A\D*\Z/) %>
+  <% content_for :meta do %>
+    <meta name="title" content="Sign up for Stampede on <%= @friend.fullname unless @friend.nil? %>'s team" />
+  <% end %>
+  <% content_for :title do %>Sign up for Stampede on <%= @friend.fullname unless @friend.nil? %>'s team<% end %>
+<% else %>
+  <% content_for :title do %>Sign up for Stampede!<% end %>
 <% end %>
+<% content_for :meta do %>
+  <meta name="description" content="STAMPEDE is an awesome event for students entering 6th-9th grades, where you play crazy games, worship with an awesome live band, and get to hear from an incredible speaker!  Not to mention you'll meet new friends from all over Fort Worth!" />
+  <link rel="image_src" href="http://stampede10.com/assets/templates/stampede/images/stampedelogo.png" />
 <% end %>
 <div id="box" class="shadow">
+<% if @friend %>
+  <a class="what-is-stampede" href="http://stampede10.com" target="blank">Don't know what Stampede is?</a>
+<% end %>
 <h1 id="heading-one" class="fancy-heading">Stampede Sign Up Form<span class="arrow"></span></h1>
 <% if @friend %>
-<h3 id="heading-three" class="fancy-heading">Referred by: <%= @friend.fullname %><span class="arrow"></span></h3>
+  <h3 id="heading-three" class="fancy-heading">Referred by: <%= @friend.fullname %><span class="arrow"></span></h3>
 <% end %>
 <% form_for :stampeder, :url => { :controller => 'public', :action => 'register' } do |f| %>
   <%= error_messages_for :stampeder, :header_message => 'Ay oh!  You messed something up...<span class="error-arrow"></span>', :message => "Here's a hint..." %>
@@ -38,7 +46,7 @@
     <%= f.text_field :parentphone %>
   </p>
   <p>
-  <% if !params[:referral_code].blank? %> <!-- If Referral code exists -->
+  <% if !params[:referral_code].blank? && !params[:referral_code].match(/\A\D*\Z/) %> <!-- If Referral code exists -->
     <p>
     <%= f.label :"Do you attend McKinney?" %>
     Yes <%= radio_button_tag 'church', @mmbc, false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();jQuery(\'#stampeder_church_name\').val(\'McKinney Memorial Bible Church\');" %>
@@ -49,6 +57,7 @@
       <p>
         <%= f.label :"Friend of" %>
         <%= @friend.fullname  %>
+        <%= hidden_field_tag :referral_code %>
       </p>
       <p>
         <%= f.label :church %>
@@ -56,21 +65,25 @@
       </p>
       <p>
         <%= f.label :"I don't usually attend church" %>
-        <%= check_box_tag 'attends_church', 'false', false %>
+        <%= check_box_tag :does_not_attend_church, true, false, :onclick => "var field = $('stampeder_church_name');field[field.disabled ? 'enable' : 'disable']();form.disabled = !form.disabled;" %>
       </p>
     <% end -%>
   <% else %> <!-- If referral code doesn't exist -->
     <p>
       <%= f.label :"Do you attend McKinney?" %>
-      Yes <%= radio_button_tag 'church', @mmbc, false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();jQuery(\'#stampeder_church_name\').val(\'McKinney Memorial Bible Church\');" %>
-      No <%= radio_button_tag 'church', nil, false, :onclick => "jQuery(\'#visitor_fields\').fadeIn();jQuery(\'#stampeder_church_name\').val(\'\');" %>
+      Yes <%= radio_button_tag :church, @mmbc, false, :onclick => "jQuery(\'#visitor_fields\').fadeOut();jQuery(\'#stampeder_church_name\').val(\'McKinney Memorial Bible Church\');" %>
+      No <%= radio_button_tag :church, nil, false, :onclick => "jQuery(\'#visitor_fields\').fadeIn();jQuery(\'#stampeder_church_name\').val(\'\');" %>
     </p>
       <%-# If they do not attend McKinney %>
-      <% content_tag :div, :id => "visitor_fields", :class => 'hidden' do -%>
-        <p>
+      <% if @error %> 
+      <% content_tag :div, :id => "visitor_fields" do -%>
+      <p>
           <%= f.label :friend_code %>
           <%= text_field_tag 'referral_code', params[:referral_code] %>
           <span id="referral_lookup"></span>
+        </p>
+        <p>
+          You may also type in your friend's full name if you do not know their friend code
         </p>
         <p>
           <%= f.label :church %>
@@ -78,12 +91,32 @@
         </p>
         <p>
           <%= f.label :"I don't usually attend church" %>
-          <%= check_box_tag 'attends_church', 'false', false %>
+          <%= check_box_tag :does_not_attend_church, true, false, :onclick => "var field = $('stampeder_church_name');field[field.disabled ? 'enable' : 'disable']();form.disabled = !form.disabled;" %>
+        </p>
+      <% end -%>
+      <% else %>
+      <% content_tag :div, :id => "visitor_fields", :class => 'hidden' do -%>
+        <p>
+          <%= f.label :friend_code %>
+          <%= text_field_tag 'referral_code', params[:referral_code] %>
+          <span id="referral_lookup"></span>
+        </p>
+        <p>
+          You may also type in your friend's full name if you do not know their friend code
+        </p>
+        <p>
+          <%= f.label :church %>
+          <%= text_field_with_auto_complete :stampeder, :church_name, {}, { :url => churches_path, :format => :js, :method => :get, :with => "'search=' + element.value" } %>
+        </p>
+        <p>
+          <%= f.label :"I don't usually attend church" %>
+          <%= check_box_tag :does_not_attend_church, true, false, :onclick => "var field = $('stampeder_church_name');field[field.disabled ? 'enable' : 'disable']();form.disabled = !form.disabled;" %>
         </p>
     <% end -%>
+    <% end %>
   <% end %>
   <p>
-    <%= f.label :grade %>
+    <%= f.label :"grade you're going into" %>
     <%= f.select :grade, [['select grade', ''], ['6th Grade', 6], ['7th Grade', 7], ['8th Grade', 8], ['9th Grade', 9]] %>
   </p>
   <p>

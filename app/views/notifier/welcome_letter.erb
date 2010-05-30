@@ -1,18 +1,12 @@
 Hey <%= @stampeder.firstname %>!
 
-We're so excited that you're coming to Stampede!  If you've never been, Stampede is an awesome event for middle schoolers, and incoming high school freshmen, where you get to play games, worship with an awesome live band, and get to hear from an incredible speaker!
+We're so excited that you're coming to STAMPEDE! By signing up online, you’ve save yourself a lot of time on the first night! Just tell the registration person your name and they’ll give your team and STAMPEDE bracelet. Make sure you leave your bracelet on for the entire week, since that’s how you’ll sign-in each night. 
 
-Since online sign up is new, let me give you a run down of how you'll sign in on the first night of Stampede.
+STAMPEDE is even more fun when you bring your friends! And if you invite friends that don't attend McKinney, you can make sure they’re on the same team as you. There are two ways to do this. You can send them this link <%= sign_up_with_code_url(:host => "register.stampede10.com", :referral_code => @stampeder.referral_code) %> or give them your friend code, which is <%= @stampeder.referral_code %>.  They can type it into the “friend code” box when they sign up at stampede10.com.
 
-There will be a specific desk, labeled Signin for Online Registrants, for you to sign at.  This way you'll be able to speed through the signin area, and won't have to wait like all those kids who didn't sign up online.  At the desk, you'll tell the signer-iner your name, and they will tell you which team you're on, and give you your Stampede bracelet.  You'll leave this on all week, since it is what we'll use to sign you in on the other days.
+If you do either one of those two steps, they will be guaranteed to be on your team. For every friend that you get to join your team and attend STAMPEDE, your team will get 10,000 points!  The team with the most points at the end of the week wins the STAMPEDE competition.
 
-Now, you're going to want to get your friends (that don't attend McKinney!) signed up, so they'll be on your team.  The only two ways for them to sign up and be guaranteed to be on the same team as you, is if you give them this link to sign up at: <%= sign_up_with_code_url(:host => "register.stampede10.com", :referral_code => @stampeder.referral_code) %>
-Or you can tell them your friend code, which is: <%= @stampeder.referral_code %>
-And they can use that when they go to sign up at the stampede website, by typing in your friend code into the friend code box on the form.
-
-If you do either one of those two steps, they will be guaranteed to be on your team, and your team will get 10,000 points!
-
-Thanks for signing up, now go invite all your friends!
+Thanks for signing up, now go invite all your friends to the most exciting event of 2010!
 
 --
 Stampede Registration Team

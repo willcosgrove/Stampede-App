@@ -5,7 +5,6 @@ class CreateTeams < ActiveRecord::Migration
 
       t.timestamps
     end
-    Team.create([{:name => "Red"},{:name => "Green"},{:name => "Blue"},{:name => "Yellow"}])
   end
 
   def self.down

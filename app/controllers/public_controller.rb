@@ -7,6 +7,7 @@ class PublicController < ApplicationController
     @stampeder = Stampeder.new
     @mmbc = Church.find_by_name("McKinney Memorial Bible Church")
     @friend = Stampeder.find_by_id(params[:referral_code].to_i / REFERRAL_CONSTANT)
+    @error = false
   end
   
   def register
@@ -19,19 +20,21 @@ class PublicController < ApplicationController
     end
     @stampeder.online_signup = true
     @stampeder.textmsg = false if @stampeder.textmsg.nil?
+    @stampeder.church = nil if params[:does_not_attend_church] == true
     
     respond_to do |format|
       if @stampeder.save
+        flash[:notice] = "You have been signed up!"
+        format.html { redirect_to :action => "registered", :id => @stampeder.id }
+        format.xml  { render :xml => @stampeder, :status => :created, :location => @stampeder }
         Notifier.deliver_welcome_letter(@stampeder)
         Notifier.deliver_information_letter(@stampeder)
         Twilio.connect(TWILIO_SID, TWILIO_AUTH_TOKEN)
-        Twilio::Sms.message('8173304437', @stampeder.studentphone, "Hey, thanks for signing up for Stampede!  Tell all of your friends to sign up with your friend code: #{@stampeder.referral_code}") if @stampeder.textmsg
-        flash[:notice] = "You have been signed up!"
-        format.html { render :action => "registered", :id => @stampeder.id }
-        format.xml  { render :xml => @stampeder, :status => :created, :location => @stampeder }
+        Twilio::Sms.message('8173304437', @stampeder.studentphone, "Hey, thanks for signing up for Stampede!  Tell all of your friends to sign up with your friend code: #{@stampeder.referral_code}") if @stampeder.textmsg && @stampeder.studentphone
       else
         @mmbc = Church.find_by_name("McKinney Memorial Bible Church")
         @friend = Stampeder.find_by_id(params[:referral_code].to_i / REFERRAL_CONSTANT)
+        @error = true
         format.html { render :action => "sign_up" }
         format.xml  { render :xml => @stampeder.errors, :status => :unprocessable_entity }
       end
